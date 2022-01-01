@@ -1,0 +1,138 @@
+/* Ghostbusters CTE Character Sheet CSS */
+/* Version 0.1 */
+
+/*Alignment classes*/
+.l {
+    text-align: left;
+}
+
+.r {
+    text-align: right;
+}
+
+.c {
+    text-align: center;
+}
+
+/* Grid layout for character sheet*/
+.item1 { grid-area: header; }
+.item2 { grid-area: name; }
+.item3 { grid-area: alias; }
+.item4 { grid-area: traits; }
+.item5 { grid-area: talents; }
+.item6 { grid-area: goal; }
+.item7 { grid-area: brownie-points; }
+.item8 { grid-area: equipment; }
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'header header'
+        'name alias'
+        'traits talents'
+        'goal goal'
+        'brownie-points equipment';
+    grid-gap: 0px;
+    padding: 1px;
+    width: 70%;
+    margin: 0 auto;
+    background: lightgray;
+    background-image: url("http://i.imgur.com/nOk3zYE.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    border-style : solid;
+    border-width: 2px;
+
+}
+
+.grid-container * {
+    padding: 3px;
+    margin: 0px;
+}
+
+/* Header*/
+.grid-container .item1 {
+}
+
+/* Name*/
+.grid-container .item2 {
+    text-align: left;
+}
+
+/* Alias*/
+.grid-container .item3 {
+    text-align: left;
+}
+
+/* Traits*/
+.grid-container .item4  {
+}
+
+/* Talents*/
+.grid-container .item5  {
+}
+
+/* Goal*/
+.grid-container .item6  {
+    text-align: left;
+}
+
+.grid-container  div {
+    border-style: solid;
+    border-width: 0px 0px 5px 0px;
+    border-color: black;
+}
+
+.grid-container hr {
+    width: 75%;
+    margin: auto;
+    height:2px;
+    border-width:0;
+    padding: 0px;
+    color:black;
+    background-color:black;
+}
+
+body {
+    background: darkgray;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+input.sheet-equip {
+    width:15em;
+    text-align: left;
+}
+
+input.sheet-goal {
+    width: 30em;
+    text-align: left;
+}
+
+input.sheet-name {
+    width: 20em;
+    text-align: left;
+}
+
+input.sheet-number {
+    width: 3em;
+    text-align: center;
+}
+
+input.sheet-talent {
+    width: 15em;
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+ul.no-bullets {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+}

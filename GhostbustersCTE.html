@@ -1,0 +1,152 @@
+<!-- Ghostbusters CTE Character Sheet
+    Version 0.1 
+    modified from the roll20 Ghostbuster's Character Sheet -->
+<html>
+<head>
+    <link rel = "stylesheet" type = "text/css" href = "./GhostbustersCTE.css">
+</head>
+<body>
+ <div class="grid-container">
+	<div class="item1 c">
+		<h1>Ghostbuster-In-Training<br>
+			GIT # 0001</h1>
+	</div>
+
+	<div class="item2">
+		<label>Name:</label>
+		<input type="text" name="attr_character_name" class="sheet-name">
+	</div>
+	
+	<div class="item3">
+		<label>Alias:</label>
+		<input type="text" name="attr_player_name" class="sheet-name">
+	</div>  
+	
+	<div class="item4">
+		<h2>Traits</h2>
+		<hr>
+		<table style="margin: auto;">
+			<tr>
+				<td class="r">
+					<label>Brains</label>
+				</td>
+				<td class="l">	
+					<input type="number" name="attr_brains" class="sheet-number">
+				</td>
+			</tr>
+			<tr>
+				<td class="r">
+					<label>Muscles</label>
+				</td>
+				<td class="l">	
+					<input type="number" name="attr_muscles" class="sheet-number">
+				</td>
+			</tr>
+			<tr>
+				<td class="r">
+					<label>Moves</label>
+				</td>
+				<td class="l">	
+					<input type="number" name="attr_moves" class="sheet-number">
+				</td>
+			</tr>
+			<tr>
+				<td class="r">
+					<label>Cool</label>
+				</td>
+				<td class="l">	
+					<input type="number" name="attr_cool" class="sheet-number">
+				</td>
+			</tr>
+		</table>
+	</div>
+	
+	<div class="item5">
+		<h2>Talents</h2>
+		<hr>
+		<table style="margin: auto;">
+			<tr>
+				<td>
+					<input type="text" name="attr_talent_1" class="sheet-talent" placeholder="Brains Talent">
+				</td>
+				<td>	
+					<h3>+3</h3>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="text" name="attr_talent_2" class="sheet-talent" placeholder="Muscles Talent">
+				</td>
+				<td>	
+					<h3>+3</h3>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="text" name="attr_talent_3" class="sheet-talent" placeholder="Moves Talent">
+				</td>
+				<td>	
+					<h3>+3</h3>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="text" name="attr_talent_4" class="sheet-talent" placeholder="Cool Talent">
+				</td>
+				<td>	
+					<h3>+3</h3>
+				</td>
+			</tr>
+		</table>			
+	</div>
+
+	<div class="item6">
+		<label>Goal:</label>
+		<input type="text" name="attr_goal" class="sheet-goal" 
+			placeholder="Money, Fane, Serving Humanity, etc.">
+	</div>
+	
+	<div class="item7">
+		<h2>Brownie Points</h3>
+		<hr>
+		<table style="margin: auto;">
+			<tr>
+				<td class="r">
+					<label>Starting BP</label>
+				</td>
+				<td class="l">	
+					<input type="number" name="attr_starting_BP" class="sheet-number l"
+						value="20">
+				</td>
+			</tr>
+			<tr>
+				<td class="r">
+					<label>- Spent BP</label>
+				</td>
+				<td class="l">	
+					<input type="number" name="attr_spent_BP" class="sheet-number l">
+				</td>
+			</tr>
+			<tr style="border-top: 2px solid black;">
+				<td class="r">
+					<label>Remaining BP</label>
+				</td>
+				<td class="l">	
+					<input type="number" name="attr_remaining_BP" class="sheet-number l">
+				</td>
+			</tr>
+		</table>
+	</div>
+	
+	<div class="item8">
+		<h2>Equipment</h2>
+		<hr>
+		<ul class="no-bullets c">
+			<li><input type="text" name="attr_equipment1" class="sheet-equip" ></li>
+			<li><input type="text" name="attr_equipment1" class="sheet-equip" ></li>
+			<li><input type="text" name="attr_equipment1" class="sheet-equip" ></li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>
