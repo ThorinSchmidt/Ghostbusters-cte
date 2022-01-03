@@ -11,7 +11,7 @@
 .item7 { grid-area: brownie-points; }
 .item8 { grid-area: equipment; }
 
-.grid-container {
+.grid_container {
     display: grid;
     grid-template-areas:
         'header header'
@@ -76,14 +76,14 @@
     text-align: center;
 }
 
-.grid-container .section {
+.grid_container .section {
     display: grid;
     align-items: center;
     justify-items: center;
     border-bottom: 5px solid black;
 }
 
-.grid-container hr {
+.grid_container hr {
     width: 75%;
     margin: auto;
     height:2px;
@@ -93,12 +93,12 @@
     background-color:black;
 }
 
-.grid-container table {
+.grid_container table {
     margin: auto;
     border-collapse: collapse;
 }
 
-.grid-container td {
+.grid_container td {
     margin: auto;
     padding: 3px;
     border: 1px solid black;
