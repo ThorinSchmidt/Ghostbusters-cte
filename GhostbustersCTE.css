@@ -15,8 +15,7 @@
     display: grid;
     grid-template-areas:
         'header header'
-        'name name'
-        'alias alias'
+        'name alias'
         'traits talents'
         'goal goal'
         'brownie-points equipment';
