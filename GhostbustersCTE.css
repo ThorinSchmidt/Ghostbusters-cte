@@ -30,9 +30,8 @@
     color: black;
 }
 
-/* Text modifiers for use with <p> tags 'cuz i'm tired of dealing with inherited h-vales...*/
+/* Text modifiers for use with <p> tags 'cuz i'm tired of dealing with inherited h-values...*/
 .big {
-    color: black;
     font-size: 2em;
     font-weight: 800;
     padding: 0px;
@@ -40,7 +39,6 @@
 }
 
 .med {
-    color: black;
     font-size: 1.5em;
     font-weight: 600;
     padding: 0px;
@@ -48,7 +46,6 @@
 }
 
 .reg {
-    color: black;
     font-size: 1em;
     font-weight: 400;
     padding: 0px;
@@ -56,7 +53,6 @@
 }
 
 .small {
-    color: black;
     font-size: .5em;
     font-weight:200;
     padding: 0px;
@@ -80,6 +76,24 @@
     text-align: center;
 }
 
+.label {
+    background: black;
+    color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.value {
+    background: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.underline {
+    border-bottom: 2px solid black;
+}
+
 .grid_container .item1, .item4, .item5, .item7, .item8 {
     display: grid;
     align-items: center;
@@ -94,8 +108,27 @@
     border-bottom: 5px solid black;
 }
 
-.grid_container hr {
-    width: 75%;
+.fill_it {
+    display: inline-block;
+    width: 100%;
+}
+
+.heading_line {
+    width: 50%;
+    margin: auto;
+    height:4px;
+    border-width:0;
+    padding: 0px;
+    color:black;
+    background-color:black;
+}
+
+.stat-table {
+    margin: auto;
+}
+
+.underline {
+    width: 100%;
     margin: auto;
     height:2px;
     border-width:0;
@@ -103,15 +136,12 @@
     color:black;
     background-color:black;
 }
-
-.grid_container table {
-    margin: auto;
-    border-collapse: collapse;
+    
+.grid_container tbody, tr {
+    width: 100%;
 }
 
 .grid_container td {
     margin: auto;
     padding: 3px;
-    border: 1px solid black;
-    background: white;
 }

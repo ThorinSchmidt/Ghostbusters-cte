@@ -4,110 +4,119 @@
 <head>
 	<link rel = "stylesheet" type = "text/css" href = "./GhostbustersCTE.css">  
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<style>
-		body {
-			background: darkgray;
-		}
-</style>
 </head>
 <body>
+
 <!-- Testing stuff ends -->
 <!-- The HTML inside this body tag is for upload to Kanka. The other stuff is so you can test in a browser tab. -->
 
- <div class="grid-container">
-	<div class="section item1 c">
-		<h1>Ghostbuster-In-Training<br>
-			GIT # {{ $git }}</h1>
+<div class="grid_container">
+	<div class="item1 c">
+		<p class="big">Ghostbuster-In-Training<br>
+			<span class = "label">GIT #</span> <span class = "value"> {{$git}}</span></p>
 	</div>
 
-	<div class="section item2">
-		<div class=" sheet-text-xl">Name: {{ $name}}</div>
+	<div class="item2">
+		<p class="med fill_it"><span class = "label">Name:</span> <span class = "value">{{$character_name}}</span></p>
 	</div>
 	
-	<div class="section item3">
-		<div class=" sheet-text-xl">Alias: {{ $alias}}</div>
-	</div> 
+	<div class="item3">
+		<p class="med"><span class = "label">Alias:</span> <span class = "value">{{$player_name}}</span></p>
+	</div>
 	
-	<div class="section item4">
-		<h2 class="c">Traits</h2>
-		<hr>
-		<table>
-			<tr>
-				<td><h4 class="r">Brains</h4></td>
-				<td class="sheet-number l">{{ $brains }}</td>
+	<div class="item4">
+		<p class="med">Traits</p>
+		<hr class="heading_line">
+		<table class="stat_table">
+			<tr class="c">
+				<td class = "label"><p class="reg">Brains</p></td>
+				<td class = "value"><p class="reg">{{$brains}}</p></td>
 			</tr>
-			<tr>
-				<td><h4 class="r">Muscles</h4></td>
-				<td class="sheet-number l">{{ $muscles }}</td>
+			<tr class="c">
+				<td class = "label"><p class="reg">Muscles</p></td>
+				<td class = "value"><p class="reg">{{$muscles}}</p></td>
 			</tr>
-			<tr>
-				<td><h4 class="r">Moves</h4></td>
-				<td class="sheet-number l">{{ $moves }}</td>
+			<tr class="c">
+				<td class = "label"><p class="reg">Moves</p></td>
+				<td class = "value"><p class="reg">{{$moves}}</p></td>
 			</tr>
-			<tr>
-				<td><h4 class="r">Cool</h4></td>
-				<td class="sheet-number l">{{ $cool }}</td>
+			<tr class="c">
+				<td class = "label"><p class="reg">Cool</p></td>
+				<td class = "value"><p class="reg">{{$cool}}</p></td>
 			</tr>
 		</table>
 	</div>
 	
-	<div class="section item5">
-		<h2 class="c">Talents</h2>
-		<hr>
-		<table>
-			<tr>
-				<td class="sheet-text-sm r">{{ $brains-talent }}</td>
-				<td><h4 class="r">+3</h4></td>
+	<div class="item5">
+		<p class="med">Talents</p>
+		<hr class="heading_line">
+		<table class="stat_table">
+			<tr class="c">
+				<td class = "value"><p class="reg">{{ $brains_talent }}</p></td>
+				<td class = "label"><p class="reg">+3</p></td>
 			</tr>
-			<tr>
-				<td class="sheet-text-sm r">{{ $muscles-talent }}</td>
-				<td><h4 class="r">+3</h4></td>
+			<tr class="c">
+				<td class = "value"><p class="reg">{{ $muscles_talent }}</p></td>
+				<td class = "label"><p class="reg">+3</p></td>
 			</tr>
-			<tr>
-				<td class="sheet-text-sm r">{{ $moves-talent }}</td>
-				<td><h4 class="r">+3</h4></td>
+			<tr class="c">
+				<td class = "value"><p class="reg">{{ $moves_talent }}</p></td>
+				<td class = "label"><p class="reg">+3</p></td>
 			</tr>
-			<tr>
-				<td class="sheet-text-sm r">{{ $cool-talent }}</td>
-				<td><h4 class="r">+3</h4></td>
+			<tr class="c">
+				<td class = "value"><p class="reg">{{ $cool_talent }}</p></td>
+				<td class = "label"><p class="reg">+3</p></td>
 			</tr>
-		</table>			
+		</table>				
 	</div>
 
-	<div class="section item6">
-		<div class=" sheet-text-xl">Goal: {{ $goal}}</div>
-	</div>
+	<table class="item6" style="width: 100%">
+		<tr>
+			<td class="med label" style="width: 20%">Goal:</td> <td class = "med value" style="width: 80%">{{ $goal}}</td>
+		</tr>
+	</table>
 	
-	<div class="section item7">
-		<h2 class="c">Brownie Points</h3>
-		<hr>
-		<table>
-			<tr>
-				<td class="r"><h4>Starting BP</h4></td>
-				<td class="sheet-number l">{{ $bp-start }}</td>
+	<div class="item7">
+		<p class="med">Brownie Points</p>
+		<hr class="heading_line">
+		<table class="stat_table">
+			<tr class="c">
+				<td class = "label"><p class="reg">Starting BP</p></td>
+				<td class = "value"><p class="reg">{{ $bp_start }}</p></td>
+			</tr>
+			<tr class="c">
+				<td class = "label"><p class="reg">- Spent BP</p></td>
+				<td class = "value"><p class="reg">{{ $bp_spent }}</p></td>
 			</tr>
 			<tr>
-				<td class="r"><h4>- Spent BP</h4></td>
-				<td class="sheet-number l">{{ $bp-spent }}</td>
+				<td colspan = "2"><hr class="underline"></td>
 			</tr>
-			<tr style="border-top: 2px solid black;">
-				<td class="r"><h4>Remaining BP</h4></td>
-				<td class="sheet-number l">{{ $bp-left }}</td>
+			<tr class="c">
+				<td class = "label"><p class="reg">Remaining BP</p></td>
+				<td class = "value"><p class="reg">{{ $bp_left }}</p></td>
 			</tr>
 		</table>
 	</div>
 	
-	<div class="section item8">
-		<h2 class="c">Equipment</h2>
-		<hr>
-		<table>
-			<tr><td class="sheet-text-med l"><h4>{{ $equipment-1 }}</h4></td></tr>
-			<tr><td class="sheet-text-med l"><h4>{{ $equipment-2 }}</h4></td></tr>
-			<tr><td class="sheet-text-med l"><h4>{{ $equipment-3 }}</h4></td></tr>
+	<div class="item8">
+		<p class="med">Equipment</p>
+		<hr class="heading_line">
+		<table class="stat_table">
+			<tr class="c">
+				<td class = "label"><p class="reg">Item 1</p></td>
+				<td class = "value"><p class="reg">{{ $equip1 }}</p></td>
+			</tr>
+			<tr class="c">
+				<td class = "label"><p class="reg">Item2</p></td>
+				<td class = "value"><p class="reg">{{ $equip2 }}</p></td>
+			</tr>
+			<tr class="c">
+				<td class = "label"><p class="reg">Item 3</p></td>
+				<td class = "value"><p class="reg">{{ $equip3 }}</p></td>
+			</tr>
 		</table>
 	</div>
 </div>
-
 
 <!-- End of copy block for kanka-->
 </body>
