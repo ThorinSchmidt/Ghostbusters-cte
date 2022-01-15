@@ -59,6 +59,10 @@
     margin: 0px;
 }
 
+.blank_row {
+    height: 1.5em !important;
+}
+
 /* Alignment classes. JIC */
 .l {
     text-align: left;
