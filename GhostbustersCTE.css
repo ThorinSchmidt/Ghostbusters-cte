@@ -42,6 +42,10 @@
     margin: 0 0 0 0;
 }
 
+.GBCTE_CharSheet  h1, h2, h3, h4, h5, h6 {
+    color: var(--text_color_1);
+}
+
 .GBCTE_CharSheet  hr {
     color:black;
     background-color:black;
@@ -111,6 +115,7 @@
     grid-area: traits;
     display: grid;
     justify-content: center;
+    align-content: start;
     grid-template-columns: 50%;
     grid-template-rows: auto;
     grid-template-areas:
@@ -124,6 +129,7 @@
     grid-area: talents;
     display: grid;
     justify-content: center;
+    align-content: start;
     grid-template-columns: 60%;
     grid-template-rows: auto;
     grid-template-areas:
