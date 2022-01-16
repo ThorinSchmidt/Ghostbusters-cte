@@ -10,20 +10,82 @@
 <!-- Testing stuff ends -->
 <!-- The HTML inside this body tag is for upload to Kanka. The other stuff is so you can test in a browser tab. -->
 
-<div class="grid_container">
-	<div class="item1 c">
-		<p class="big">Ghostbuster-In-Training<br>
-			<span class = "label">GIT #</span> <span class = "value"> {{$git}}</span></p>
+<div class="GBCTE_CharSheet">
+	<div class="header">
+		<h1>Personnel File</h1>
 	</div>
 
-	<div class="item2">
-		<p class="med fill_it"><span class = "label">Name:</span> <span class = "value">{{$character_name}}</span></p>
+	<div class= "identify">
+		<div class="name">
+			<p><span class = "line_label">Name(player):</span>
+				<span class = "line_value">{{$character_name}}</span></p>
+		</div>
+
+		<div class="git_num">
+			<p><span class = "line_label">GIT #:</span>
+				<span class = "line_value">{{$git_num}}</span></p>
+		</div>
 	</div>
 	
-	<div class="item3">
-		<p class="med"><span class = "label">Alias:</span> <span class = "value">{{$player_name}}</span></p>
+	<div class="traits_n_talents">
+		<div class="traits">
+			<div class="traits_header">
+				<h3>Traits</h3>
+			</div>
+			<div class="traits_table">
+				<p class="brains label">Brains</p>
+				<p class="brains_val value">{{$brains}}</p>
+
+				<p class="muscles label">Muscles</p>
+				<p class="muscless_val value">{{$muscles}}</p>
+
+				<p class="moves label">Moves</p>
+				<p class="moves_val value">{{$moves}}</p>
+
+				<p class="cool label">Cool</p>
+				<p class="cool_val value">{{$cool}}</p>
+				
+				<div class="line""></div>
+				
+				<p class="power label">Power</p>
+				<p class="power_val value">{{$power}}</p>
+			</div>
+		</div>
+		
+		<div class="talents">
+			<div class="talents_header">
+				<h3>Talents</h3>
+			</div>
+			<div class="talents_table">
+				<p class="brains_t label">{{$braind_talent}}</p>
+				<p class="brains_t_val value">+3</p>
+
+				<p class="muscles_t label">{{$muscles_talent}}</p>
+				<p class="muscles_t_val value">+3</p>
+
+				<p class="moves_t label">{{$moves_talent}}</p>
+				<p class="moves_t_val value">+3</p>
+
+				<p class="cool_t label">{{$cool_talent}}</p>
+				<p class="cool_t_val value">+3</p>
+				
+				<div class="line_t"></div>
+								
+				<p class="lesser_t label">Lesser</p>
+				<p class="lesser_t_val value">{{$lesser_num}}</p>	
+				
+				<p class="greater_t label">Greater</p>
+				<p class="greater_t_val value">{{$greater_num}}</p>
+			</div>
+		</div>
 	</div>
 	
+	<div class+"goal">
+		<p>goal</p>
+	</div>
+
+</div>	
+
 	<div class="item4">
 		<p class="med">Traits</p>
 		<hr class="heading_line">
@@ -83,11 +145,11 @@
 			<td colspan=2><hr class="underline"></td>
 			</tr>
 			<tr class="c">
-				<td class = "value"><p class="reg">{{$ability1}}</p></td>
+				<td class = "value"><p class="reg">{{$numLesser}}</p></td>
 				<td class = "label"><p class="reg">Lesser</p></td>
 			</tr>
 			<tr class="c">
-				<td class = "value"><p class="reg">{{$ability2}}</p></td>
+				<td class = "value"><p class="reg">{{$numGreater}}</p></td>
 				<td class = "label"><p class="reg">Greater</p></td>
 			</tr>
 		</table>				
