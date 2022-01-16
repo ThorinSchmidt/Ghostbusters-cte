@@ -80,8 +80,7 @@
 
 .GBCTE_CharSheet  .goal {
     grid-area: goal;
-    display: flex;
-    justify-content: left;
+    display: grid;
     border-bottom: 5px solid var(--border_color_1);
 }
 
@@ -125,10 +124,10 @@
     grid-area: talents;
     display: grid;
     justify-content: center;
-    grid-template-columns: 50%;
+    grid-template-columns: 60%;
     grid-template-rows: auto;
     grid-template-areas:
-        "ttalents_header"
+        "talents_header"
         "talents_table";
     grid-column-gap: 2px;
     grid-row-gap: 2px;
@@ -147,12 +146,13 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
-        "brains brains_val"
-        "muscles muscles_val"
-        "moves moves_val"
-        "cool cool_val"
-        "line line"
-        "power power_val";
+        "brains_t brains_t_val"
+        "muscles_t muscles_t_val"
+        "moves_t moves_t_val"
+        "cool_t cool_t_val"
+        "line_t line_t"
+        "lesser_t lesser_t_val"
+        "greater_t greater_t_val";
     grid-column-gap: 2px;
     grid-row-gap: 2px;
 }

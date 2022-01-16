@@ -56,6 +56,7 @@
 			<div class="talents_header">
 				<h3>Talents</h3>
 			</div>
+			
 			<div class="talents_table">
 				<p class="brains_t label">{{$braind_talent}}</p>
 				<p class="brains_t_val value">+3</p>
@@ -80,128 +81,12 @@
 		</div>
 	</div>
 	
-	<div class+"goal">
-		<p>goal</p>
+	<div class="goal">
+			<p><span class = "line_label">Goal:</span>
+				<span class = "line_value">{{$goal}}</span></p>
 	</div>
 
 </div>	
-
-	<div class="item4">
-		<p class="med">Traits</p>
-		<hr class="heading_line">
-		<table class="stat_table">
-			<tr class="c">
-				<td class = "label"><p class="reg">Brains</p></td>
-				<td class = "value"><p class="reg">{{$brains}}</p></td>
-			</tr>
-			<tr class="c">
-				<td class = "label"><p class="reg">Muscles</p></td>
-				<td class = "value"><p class="reg">{{$muscles}}</p></td>
-			</tr>
-			<tr class="c">
-				<td class = "label"><p class="reg">Moves</p></td>
-				<td class = "value"><p class="reg">{{$moves}}</p></td>
-			</tr>
-			<tr class="c">
-				<td class = "label"><p class="reg">Cool</p></td>
-				<td class = "value"><p class="reg">{{$cool}}</p></td>
-			</tr>
-			<tr>
-			<td colspan=2><hr class="underline"></td>
-			</tr>
-			<tr class="c">
-				<td class = "label"><p class="reg">Power</p></td>
-				<td class = "value"><p class="reg">{{$power}}</p></td>
-			</tr>
-						</tr>
-			<tr class="blank_row">
-				<td colspan="2"></td>
-
-			</tr>
-		</table>
-	</div>
-	
-	<div class="item5">
-		<p class="med">Talents</p>
-		<hr class="heading_line">
-		<table class="stat_table">
-			<tr class="c">
-				<td class = "value"><p class="reg">{{ $brains_talent }}</p></td>
-				<td class = "label"><p class="reg">+3</p></td>
-			</tr>
-			<tr class="c">
-				<td class = "value"><p class="reg">{{ $muscles_talent }}</p></td>
-				<td class = "label"><p class="reg">+3</p></td>
-			</tr>
-			<tr class="c">
-				<td class = "value"><p class="reg">{{ $moves_talent }}</p></td>
-				<td class = "label"><p class="reg">+3</p></td>
-			</tr>
-			<tr class="c">
-				<td class = "value"><p class="reg">{{ $cool_talent }}</p></td>
-				<td class = "label"><p class="reg">+3</p></td>
-			</tr>
-			<tr>
-			<td colspan=2><hr class="underline"></td>
-			</tr>
-			<tr class="c">
-				<td class = "value"><p class="reg">{{$numLesser}}</p></td>
-				<td class = "label"><p class="reg">Lesser</p></td>
-			</tr>
-			<tr class="c">
-				<td class = "value"><p class="reg">{{$numGreater}}</p></td>
-				<td class = "label"><p class="reg">Greater</p></td>
-			</tr>
-		</table>				
-	</div>
-
-	<table class="item6" style="width: 100%">
-		<tr>
-			<td class="med label" style="width: 20%">Goal:</td> <td class = "med value" style="width: 80%">{{ $goal}}</td>
-		</tr>
-	</table>
-	
-	<div class="item7">
-		<p class="med">Brownie Points</p>
-		<hr class="heading_line">
-		<table class="stat_table">
-			<tr class="c">
-				<td class = "label"><p class="reg">Starting BP</p></td>
-				<td class = "value"><p class="reg">{{ $bp_start }}</p></td>
-			</tr>
-			<tr class="c">
-				<td class = "label"><p class="reg">- Spent BP</p></td>
-				<td class = "value"><p class="reg">{{ $bp_spent }}</p></td>
-			</tr>
-			<tr>
-				<td colspan = "2"><hr class="underline"></td>
-			</tr>
-			<tr class="c">
-				<td class = "label"><p class="reg">Remaining BP</p></td>
-				<td class = "value"><p class="reg">{{ $bp_left }}</p></td>
-			</tr>
-		</table>
-	</div>
-	
-	<div class="item8">
-		<p class="med">Equipment</p>
-		<hr class="heading_line">
-		<table class="stat_table">
-			<tr class="c">
-				<td class = "label"><p class="reg">Item 1</p></td>
-				<td class = "value"><p class="reg">{{ $equip1 }}</p></td>
-			</tr>
-			<tr class="c">
-				<td class = "label"><p class="reg">Item2</p></td>
-				<td class = "value"><p class="reg">{{ $equip2 }}</p></td>
-			</tr>
-			<tr class="c">
-				<td class = "label"><p class="reg">Item 3</p></td>
-				<td class = "value"><p class="reg">{{ $equip3 }}</p></td>
-			</tr>
-		</table>
-	</div>
-</div>
 
 <!-- End of copy block for kanka-->
 </body>
