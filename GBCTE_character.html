@@ -17,11 +17,15 @@
 
 	<div class= "identify">
 		<div class="name">
-			<p><span class = "line_label">Name(player):</span>
+			<p><span class = "line_label">Name:</span>
 				<span class = "line_value">{{$character_name}}</span></p>
+			<p><span class = "line_label">Goal:</span>
+				<span class = "line_value">{{$goal}}</span></p>
 		</div>
 
 		<div class="git_num">
+			<p><span class = "line_label">Alias:</span>
+				<span class = "line_value">{{$character_name}}</span></p>
 			<p><span class = "line_label">GIT #:</span>
 				<span class = "line_value">{{$git_num}}</span></p>
 		</div>
@@ -33,22 +37,22 @@
 				<h3>Traits</h3>
 			</div>
 			<div class="traits_table">
-				<p class="brains label">Brains</p>
-				<p class="brains_val value">{{$brains}}</p>
+				<p class="brains my_label  c">Brains</p>
+				<p class="brains_val my_value c">{{$brains}}</p>
 
-				<p class="muscles label">Muscles</p>
-				<p class="muscless_val value">{{$muscles}}</p>
+				<p class="muscles my_label  c">Muscles</p>
+				<p class="muscles_val my_value c">{{$muscles}}</p>
 
-				<p class="moves label">Moves</p>
-				<p class="moves_val value">{{$moves}}</p>
+				<p class="moves my_label  c">Moves</p>
+				<p class="moves_val my_value c">{{$moves}}</p>
 
-				<p class="cool label">Cool</p>
-				<p class="cool_val value">{{$cool}}</p>
+				<p class="cool my_label  c">Cool</p>
+				<p class="cool_val my_value c">{{$cool}}</p>
 				
 				<div class="line""></div>
 				
-				<p class="power label">Power</p>
-				<p class="power_val value">{{$power}}</p>
+				<p class="power my_label  c">Power</p>
+				<p class="power_val my_value c">{{$power}}</p>
 			</div>
 		</div>
 		
@@ -58,34 +62,68 @@
 			</div>
 			
 			<div class="talents_table">
-				<p class="brains_t label">{{$brains_talent}}</p>
-				<p class="brains_t_val value">+3</p>
+				<p class="brains_t my_value c">{{$brains_talent}}</p>
+				<p class="brains_t_val my_label  c">{{$brains_talent_val}}</p>
 
-				<p class="muscles_t label">{{$muscles_talent}}</p>
-				<p class="muscles_t_val value">+3</p>
+				<p class="muscles_t my_value c">{{$muscles_talent}}</p>
+				<p class="muscles_t_val my_label  c">{{$muscles_talent_val}}</p>
 
-				<p class="moves_t label">{{$moves_talent}}</p>
-				<p class="moves_t_val value">+3</p>
+				<p class="moves_t my_value c">{{$moves_talent}}</p>
+				<p class="moves_t_val my_label  c">{{$moves_talent_val}}</p>
 
-				<p class="cool_t label">{{$cool_talent}}</p>
-				<p class="cool_t_val value">+3</p>
+				<p class="cool_t my_value c">{{$cool_talent}}</p>
+				<p class="cool_t_val my_label  c">{{$cool_talent_val}}</p>
 				
 				<div class="line_t"></div>
 								
-				<p class="lesser_t label">Lesser</p>
-				<p class="lesser_t_val value">{{$lesser_num}}</p>	
-				
-				<p class="greater_t label">Greater</p>
-				<p class="greater_t_val value">{{$greater_num}}</p>
+				<p class="lesser_t my_value c">{{$lesser_ability}}</p>
+				<p class="lesser_t_val my_label  c">{{$lesser_num}}</p>	
 			</div>
 		</div>
 	</div>
 	
-	<div class="goal">
-			<p><span class = "line_label">Goal:</span>
-				<span class = "line_value">{{$goal}}</span></p>
-	</div>
+	<div class="brownie_points_n_equipment">
+		<div class="brownie_points">
+			<div class="brownie_points_header">
+				<h3>Brownie Points</h3>
+			</div>
+			<div class="brownie_points_table">
+				<p class="bp_start my_label  r">BP Start</p>
+				<p class="bp_start_val my_value c">{{$bp_start}}</p>
 
+				<p class="bp_spent my_label  r">- BP Spent</p>
+				<p class="bp_spent_val my_value c">{{$bp_spent}}</p>
+				
+				<div class="line""></div>
+				
+				<p class="bp_left my_label r">BP Left</p>
+				<p class="bp_left_val my_value c">{{$bp_left}}</p>
+			</div>
+		</div>
+		
+		<div class="equipment">
+			<div class="equipment_header">
+				<h3>Equipment</h3>
+			</div>
+			
+			<div class="equipment_table">
+				<p class="equipment_1_val my_value">{{$equip_1}}</p>
+				<p class="equipment_1 my_label c">1</p>
+
+				<p class="equipment_2_val my_value">{{$equip_2}}</p>
+				<p class="equipment_2 my_label c">2</p>
+
+				<p class="equipment_3_val my_value">{{$equip_3}}</p>
+				<p class="equipment_3 my_label c">3</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="notes">
+		<p class="my_label c">Notes</p>
+		<p class="my_value">{!! $notes !!}
+
+	</div>
 </div>	
 
 <!-- End of copy block for kanka-->

@@ -1,0 +1,26 @@
+/* Ghostbusters CTE Character Sheet Identify CSS */
+/* Version 2.0 */
+
+/* This has been separated from the main CSS for readability / maintainability.
+	It will need to be copied into the main CSS when used with sites like kanka.io */
+
+.GBCTE_CharSheet  .identify {
+    grid-area: identify;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "name git_num";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+    border-bottom: 5px solid var(--border_color_1);
+}
+
+
+.GBCTE_CharSheet .name {
+    grid-area: name;
+}
+
+.GBCTE_CharSheet .git_num {
+    grid-area: git_num;
+}

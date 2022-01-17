@@ -1,6 +1,13 @@
 /* Ghostbusters CTE Character Sheet CSS */
 /* Version 2.0 */
 
+@import "header.css";
+@import "identify.css";
+@import "traits_n_talents.css";
+@import "notes.css";
+@import "brownie_points_n_equipment.css";
+
+
 /* globals */
 :root {
   --background_color: lightgray;
@@ -23,8 +30,8 @@
         "header"
         "identify"
         "traits_n_talents"
-        "goal"
-        "brownie_points_n_equipment";
+        "brownie_points_n_equipment"
+        "notes";
     grid-gap: 5px;
     max-width: 1000px;
     color: var(--text_color_first);
@@ -51,259 +58,15 @@
     background-color:black;
 }
 
-.GBCTE_CharSheet  .header {
-    grid-area: header;
-    display: flex;
-    justify-content: center;
-    border-bottom: 5px solid var(--border_color_1);
-}
-
-.GBCTE_CharSheet  .identify {
-    grid-area: identify;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-        "name git_num";
-    grid-column-gap: 2px;
-    grid-row-gap: 2px;
-    border-bottom: 5px solid var(--border_color_1);
-}
-
-.GBCTE_CharSheet  .traits_n_talents {
-    grid-area: traits_n_talents;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-        "traits talents";
-    grid-column-gap: 2px;
-    grid-row-gap: 2px;
-    border-bottom: 5px solid var(--border_color_1);
-}
-
-.GBCTE_CharSheet  .goal {
-    grid-area: goal;
-    display: grid;
-    border-bottom: 5px solid var(--border_color_1);
-}
-
-.GBCTE_CharSheet  .brownie_points_n_equipment {
-    grid-area: brownie_points_n_equipment;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-    "brownie_points equipment";
-    grid-column-gap: 2px;
-    grid-row-gap: 2px;
-    border-bottom: 5px solid var(--border_color_1);
-}
-
-
-.GBCTE_CharSheet .name {
-    grid-area: name;
-}
-
-.GBCTE_CharSheet .git_num {
-    grid-area: git_num;
-}
-
-
-
-.GBCTE_CharSheet .traits {
-    grid-area: traits;
-    display: grid;
-    justify-content: center;
-    align-content: start;
-    grid-template-columns: 50%;
-    grid-template-rows: auto;
-    grid-template-areas:
-        "traits_header"
-        "traits_table";
-    grid-column-gap: 2px;
-    grid-row-gap: 2px;
-}
-
-.GBCTE_CharSheet .talents {
-    grid-area: talents;
-    display: grid;
-    justify-content: center;
-    align-content: start;
-    grid-template-columns: 60%;
-    grid-template-rows: auto;
-    grid-template-areas:
-        "talents_header"
-        "talents_table";
-    grid-column-gap: 2px;
-    grid-row-gap: 2px;
-}
-
-.GBCTE_CharSheet .talents_header {
-    grid-area: talents_header;
-    display: flex;
-    justify-content: center;
-    border-bottom: 5px solid var(--border_color_2);
-}
-
-.GBCTE_CharSheet .talents_table {
-    grid-area: talents_table;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-        "brains_t brains_t_val"
-        "muscles_t muscles_t_val"
-        "moves_t moves_t_val"
-        "cool_t cool_t_val"
-        "line_t line_t"
-        "lesser_t lesser_t_val"
-        "greater_t greater_t_val";
-    grid-column-gap: 2px;
-    grid-row-gap: 2px;
-}
-
-.GBCTE_CharSheet .brains_t {
-    grid-area: brains_t;
-}
-
-.GBCTE_CharSheet .brains_t_val {
-    grid-area: brains_t_val;
-}
-
-.GBCTE_CharSheet .muscles_t {
-    grid-area: muscles_t;
-}
-
-.GBCTE_CharSheet  .muscles_t_val {
-    grid-area: muscles_t_val;
-}
-
-.GBCTE_CharSheet  .moves_t {
-    grid-area: moves_t;
-}
-
-.GBCTE_CharSheet .moves_t_val {
-    grid-area: moves_t_val;
-}
-
-.GBCTE_CharSheet .cool_t {
-    grid-area: cool_t;
-}
-
-.GBCTE_CharSheet .cool_t_val {
-    grid-area: cool_t_val;
-}
-
-.GBCTE_CharSheet .line_t {
-    grid-area: line_t;
-    border-bottom: 5px solid var(--border_color_2);
-}
-
-.GBCTE_CharSheet .lesser_t {
-    grid-area: lesser_t;
-}
-
-.GBCTE_CharSheet .lesser_t_val {
-    grid-area: lesser_t_val;
-}
-
-.GBCTE_CharSheet .greater_t {
-    grid-area: greater_t;
-}
-
-.GBCTE_CharSheet .lgreater_t_val {
-    grid-area: greater_t_val;
-}
-
-.GBCTE_CharSheet .brownie_points {
-    grid-area: brownie_points;
-}
-
-.GBCTE_CharSheet .equipment {
-    grid-area: equipment;
-}
-
-.GBCTE_CharSheet .traits_header {
-    grid-area: traits_header;
-    display: flex;
-    justify-content: center;
-    border-bottom: 5px solid var(--border_color_2);
-}
-
-.GBCTE_CharSheet .traits_table {
-    grid-area: traits_table;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-        "brains brains_val"
-        "muscles muscles_val"
-        "moves moves_val"
-        "cool cool_val"
-        "line line"
-        "power power_val";
-    grid-column-gap: 2px;
-    grid-row-gap: 2px;
-}
-
-.GBCTE_CharSheet .brains {
-    grid-area: brains;
-}
-
-.GBCTE_CharSheet .brains_val {
-    grid-area: brains_val;
-}
-
-.GBCTE_CharSheet .muscles {
-    grid-area: muscles;
-}
-
-.GBCTE_CharSheet  .muscles_val {
-    grid-area: muscles_val;
-}
-
-.GBCTE_CharSheet  .moves {
-    grid-area: moves;
-}
-
-.GBCTE_CharSheet .moves_val {
-    grid-area: moves_val;
-}
-
-.GBCTE_CharSheet .cool {
-    grid-area: cool;
-}
-
-.GBCTE_CharSheet .cool_val {
-    grid-area: cool_val;
-}
-
-.GBCTE_CharSheet .line {
-    grid-area: line;
-    border-bottom: 5px solid var(--border_color_2);
-}
-
-.GBCTE_CharSheet .power {
-    grid-area: power;
-}
-
-.GBCTE_CharSheet .power_val {
-    grid-area: power_val;
-}
-
-/* non-grid classes */
-
-.line_label {
+.GBCTE_CharSheet  .line_label {
     color: var(--label_text_color);
     background: var(--label_background_color);
     float: left;
     border: 1px solid black;
     border-radius: 10px;
-    
 }
 
-.line_value {
+.GBCTE_CharSheet  .line_value {
     color: var(--value_text_color);
     background: var(--value_background_color);
     display: block;
@@ -312,16 +75,28 @@
     border-radius: 10px;
 }
 
-.label {
+.GBCTE_CharSheet  .my_label {
     color: var(--label_text_color);
     background: var(--label_background_color);
     border: 1px solid black;
     border-radius: 10px;
 }
 
-.value {
+.GBCTE_CharSheet  .my_value {
     color: var(--value_text_color);
     background: var(--value_background_color);
     border: 1px solid black;
     border-radius: 10px;
+}
+
+.GBCTE_CharSheet  .l {
+    text-align: left;
+}
+
+.GBCTE_CharSheet  .r {
+    text-align: right;
+}
+
+.GBCTE_CharSheet  .c {
+    text-align: center;
 }

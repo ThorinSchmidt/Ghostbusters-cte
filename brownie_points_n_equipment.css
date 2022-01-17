@@ -1,0 +1,142 @@
+/* Ghostbusters CTE Character Sheet Brownie_Points_n_Equipment CSS *//* Version 2.0 */
+
+/* This has been separated from the main CSS for readability / maintainability.
+	It will need to be copied into the main CSS when used with sites like kanka.io */
+
+.GBCTE_CharSheet  .brownie_points_n_equipment {
+    grid-area: brownie_points_n_equipment;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "brownie_points equipment";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+    border-bottom: 5px solid var(--border_color_1);
+}
+
+/********* ********************************************************\
+*    B R O W N I E   P O I N T S                                                                            *
+\******************************************************************/
+
+.GBCTE_CharSheet .brownie_points {
+    grid-area: brownie_points;
+	display: grid;
+    justify-content: center;
+    align-content: start;
+    grid-template-columns: 60%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "brownie_points_header"
+        "brownie_points_table";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+}
+
+.GBCTE_CharSheet .brownie_points_header {
+    grid-area: brownie_points_header;
+    display: flex;
+    justify-content: center;
+    border-bottom: 5px solid var(--border_color_2);
+}
+
+.GBCTE_CharSheet .brownie_points_table {
+    grid-area: brownie_points_table;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "bp_start bp_start_val"
+        "bp_spent bp_spent_val"
+		"line line"
+        "bp_left bp_left_val";
+		
+
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+}
+
+.GBCTE_CharSheet .bp_start {
+	grid-area: bp_start;
+}
+
+.GBCTE_CharSheet .bp_start_val {
+	grid-area: bp_start_val;
+}
+
+.GBCTE_CharSheet .bp_spent {
+	grid-area: bp_spent;
+}
+
+.GBCTE_CharSheet .bp_spent_val {
+	grid-area: bp_spent_val;
+}
+
+.GBCTE_CharSheet .bp_left {
+	grid-area: bp_left;
+}
+
+.GBCTE_CharSheet .bp_left_val {
+	grid-area: bp_left_val;
+}
+
+/********* ********************************************************\
+*    E Q U I P M E N T                                                                                            *
+\******************************************************************/
+
+.GBCTE_CharSheet .equipment {
+    grid-area: equipment;
+	display: grid;
+    justify-content: center;
+    align-content: start;
+    grid-template-columns: 60%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "equipment_header"
+        "equipment_table";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+}
+
+.GBCTE_CharSheet .equipment_header {
+    grid-area: equipment_header;
+    display: flex;
+    justify-content: center;
+    border-bottom: 5px solid var(--border_color_2);
+}
+
+.GBCTE_CharSheet .equipment_table {
+    grid-area: equipment_table;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "equipment_1_val equipment_1"
+        "equipment_2_val equipment_2"
+        "equipment_3_val equipment_3";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+}
+
+.GBCTE_CharSheet .equipment_1_val {
+	grid-area: equipment_1_val;
+}
+
+.GBCTE_CharSheet .equipment_1 {
+	grid-area: equipment_1;
+}
+.GBCTE_CharSheet .equipment_2_val {
+	grid-area: equipment_2_val;
+}
+
+.GBCTE_CharSheet .equipment_2 {
+	grid-area: equipment_2;
+}
+.GBCTE_CharSheet .equipment_3_val {
+	grid-area: equipment_3_val;
+}
+
+.GBCTE_CharSheet .equipment_3 {
+	grid-area: equipment_3;
+}
+
