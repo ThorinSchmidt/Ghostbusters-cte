@@ -4,7 +4,7 @@
 /* This has been separated from the main CSS for readability / maintainability.
 	It will need to be copied into the main CSS when used with sites like kanka.io */
 
-.GBCTE_CharSheet  .identify {
+.GBCTE .identify {
     grid-area: identify;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -13,14 +13,14 @@
         "name git_num";
     grid-column-gap: 2px;
     grid-row-gap: 2px;
-    border-bottom: 5px solid var(--border_color_1);
+    border-bottom: 5px solid var(--gb_border_color_1);
 }
 
 
-.GBCTE_CharSheet .name {
+.GBCTE .name {
     grid-area: name;
 }
 
-.GBCTE_CharSheet .git_num {
+.GBCTE .git_num {
     grid-area: git_num;
 }

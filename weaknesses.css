@@ -1,9 +1,9 @@
-/* Ghostbusters CTE Character Sheet Notes CSS */
+/* Ghostbusters CTE Character Sheet Weaknesses CSS */
 /* Version 2.0 */
 
 /* This has been separated from the main CSS for readability / maintainability.
 	It will need to be copied into the main CSS when used with sites like kanka.io */
 
-.GBCTE .notes {
-    grid-area: notes;
+.GBCTE .weaknesses {
+    grid-area: weaknesses
 }

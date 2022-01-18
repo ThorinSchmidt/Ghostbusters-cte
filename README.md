@@ -16,5 +16,6 @@ and NPC templates.
 
 ===
 ## TODO:
+* change variable names to be less generic
 * create NPC and Ghost templates
 * change Character layout slightly to accomodate GB logo and "photo"

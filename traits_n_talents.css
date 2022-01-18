@@ -4,7 +4,7 @@
 /* This has been separated from the main CSS for readability / maintainability.
 	It will need to be copied into the main CSS when used with sites like kanka.io */
 
-.GBCTE_CharSheet  .traits_n_talents {
+.GBCTE .traits_n_talents {
     grid-area: traits_n_talents;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -13,14 +13,14 @@
         "traits talents";
     grid-column-gap: 2px;
     grid-row-gap: 2px;
-    border-bottom: 5px solid var(--border_color_1);
+    border-bottom: 5px solid var(--gb_border_color_1);
 }
 
 /********* ********************************************************\
 *    T  R A I T S                                                                                                        *
 \******************************************************************/
 
-.GBCTE_CharSheet .traits {
+.GBCTE .traits {
     grid-area: traits;
     display: grid;
     justify-content: center;
@@ -34,14 +34,14 @@
     grid-row-gap: 2px;
 }
 
-.GBCTE_CharSheet .traits_header {
+.GBCTE .traits_header {
     grid-area: traits_header;
     display: flex;
     justify-content: center;
-    border-bottom: 5px solid var(--border_color_2);
+    border-bottom: 5px solid var(--gb_border_color_2);
 }
 
-.GBCTE_CharSheet .traits_table {
+.GBCTE .traits_table {
     grid-area: traits_table;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -57,48 +57,48 @@
     grid-row-gap: 2px;
 }
 
-.GBCTE_CharSheet .brains {
+.GBCTE .brains {
     grid-area: brains;
 }
 
-.GBCTE_CharSheet .brains_val {
+.GBCTE .brains_val {
     grid-area: brains_val;
 }
 
-.GBCTE_CharSheet .muscles {
+.GBCTE .muscles {
     grid-area: muscles;
 }
 
-.GBCTE_CharSheet  .muscles_val {
+.GBCTE .muscles_val {
     grid-area: muscles_val;
 }
 
-.GBCTE_CharSheet  .moves {
+.GBCTE .moves {
     grid-area: moves;
 }
 
-.GBCTE_CharSheet .moves_val {
+.GBCTE .moves_val {
     grid-area: moves_val;
 }
 
-.GBCTE_CharSheet .cool {
+.GBCTE .cool {
     grid-area: cool;
 }
 
-.GBCTE_CharSheet .cool_val {
+.GBCTE .cool_val {
     grid-area: cool_val;
 }
 
-.GBCTE_CharSheet .line {
+.GBCTE .line {
     grid-area: line;
-    border-bottom: 5px solid var(--border_color_2);
+    border-bottom: 5px solid var(--gb_border_color_2);
 }
 
-.GBCTE_CharSheet .power {
+.GBCTE .power {
     grid-area: power;
 }
 
-.GBCTE_CharSheet .power_val {
+.GBCTE .power_val {
     grid-area: power_val;
 }
 
@@ -106,7 +106,7 @@
 *    T A L E N T S                                                                                                    *
 \******************************************************************/
 
-.GBCTE_CharSheet .talents {
+.GBCTE .talents {
     grid-area: talents;
     display: grid;
     justify-content: center;
@@ -120,14 +120,14 @@
     grid-row-gap: 2px;
 }
 
-.GBCTE_CharSheet .talents_header {
+.GBCTE .talents_header {
     grid-area: talents_header;
     display: flex;
     justify-content: center;
-    border-bottom: 5px solid var(--border_color_2);
+    border-bottom: 5px solid var(--gb_border_color_2);
 }
 
-.GBCTE_CharSheet .talents_table {
+.GBCTE .talents_table {
     grid-area: talents_table;
     display: grid;
     grid-template-columns: 5fr 1fr;
@@ -144,48 +144,48 @@
     grid-row-gap: 2px;
 }
 
-.GBCTE_CharSheet .brains_t {
+.GBCTE .brains_t {
     grid-area: brains_t;
 }
 
-.GBCTE_CharSheet .brains_t_val {
+.GBCTE .brains_t_val {
     grid-area: brains_t_val;
 }
 
-.GBCTE_CharSheet .muscles_t {
+.GBCTE .muscles_t {
     grid-area: muscles_t;
 }
 
-.GBCTE_CharSheet  .muscles_t_val {
+.GBCTE .muscles_t_val {
     grid-area: muscles_t_val;
 }
 
-.GBCTE_CharSheet  .moves_t {
+.GBCTE .moves_t {
     grid-area: moves_t;
 }
 
-.GBCTE_CharSheet .moves_t_val {
+.GBCTE .moves_t_val {
     grid-area: moves_t_val;
 }
 
-.GBCTE_CharSheet .cool_t {
+.GBCTE .cool_t {
     grid-area: cool_t;
 }
 
-.GBCTE_CharSheet .cool_t_val {
+.GBCTE .cool_t_val {
     grid-area: cool_t_val;
 }
 
-.GBCTE_CharSheet .line_t {
+.GBCTE .line_t {
     grid-area: line_t;
-    border-bottom: 5px solid var(--border_color_2);
+    border-bottom: 5px solid var(--gb_border_color_2);
 }
 
-.GBCTE_CharSheet .lesser_t {
+.GBCTE .lesser_t {
     grid-area: lesser_t;
 }
 
-.GBCTE_CharSheet .lesser_t_val {
+.GBCTE .lesser_t_val {
     grid-area: lesser_t_val;
 }
 

@@ -1,0 +1,71 @@
+/* Ghostbusters CTE Character Sheet CSS */
+/* Version 2.0 */
+
+/* globals */
+:root {
+  --gb_background_color: lightgray;
+  --gb_border_color_1: red;
+  --gb_border_color_2: black;
+  --gb_text_color_1: black;
+  --gb_label_text_color: white;
+  --gb_label_background_color: black;
+  --gb_value_text_color: black;
+  --gb_value_background_color: white;
+}
+
+.GBCTE  * {
+    padding: 2px;
+    margin: 0 0 0 0;
+}
+
+.GBCTE h1, h2, h3, h4, h5, h6 {
+    color: var(--gb_text_color_1);
+}
+
+.GBCTE  hr {
+    color:black;
+    background-color:black;
+}
+
+.GBCTE  .line_label {
+    color: var(--gb_label_text_color);
+    background: var(--gb_label_background_color);
+    float: left;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.GBCTE  .line_value {
+    color: var(--gb_value_text_color);
+    background: var(--gb_value_background_color);
+    display: block;
+    overflow: hidden;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.GBCTE  .my_label {
+    color: var(--gb_label_text_color);
+    background: var(--gb_label_background_color);
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.GBCTE  .my_value {
+    color: var(--gb_value_text_color);
+    background: var(--gb_value_background_color);
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.GBCTE  .l {
+    text-align: left;
+}
+
+.GBCTE  .r {
+    text-align: right;
+}
+
+.GBCTE  .c {
+    text-align: center;
+}

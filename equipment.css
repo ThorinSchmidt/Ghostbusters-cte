@@ -1,0 +1,65 @@
+/* Ghostbusters CTE Character Sheet Brownie_Points_n_Equipment CSS *//* Version 2.0 */
+
+/* This has been separated from the main CSS for readability / maintainability.
+	It will need to be copied into the main CSS when used with sites like kanka.io */
+
+/********* ********************************************************\
+*    E Q U I P M E N T                                                                                            *
+\******************************************************************/
+
+.GBCTE .equipment {
+    grid-area: equipment;
+	display: grid;
+    justify-content: center;
+    align-content: start;
+    grid-template-columns: 60%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "equipment_header"
+        "equipment_table";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+}
+
+.GBCTE .equipment_header {
+    grid-area: equipment_header;
+    display: flex;
+    justify-content: center;
+    border-bottom: 5px solid var(--gb_border_color_2);
+}
+
+.GBCTE .equipment_table {
+    grid-area: equipment_table;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "equipment_1_val equipment_1"
+        "equipment_2_val equipment_2"
+        "equipment_3_val equipment_3";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+}
+
+.GBCTE .equipment_1_val {
+	grid-area: equipment_1_val;
+}
+
+.GBCTE .equipment_1 {
+	grid-area: equipment_1;
+}
+.GBCTE .equipment_2_val {
+	grid-area: equipment_2_val;
+}
+
+.GBCTE .equipment_2 {
+	grid-area: equipment_2;
+}
+.GBCTE .equipment_3_val {
+	grid-area: equipment_3_val;
+}
+
+.GBCTE .equipment_3 {
+	grid-area: equipment_3;
+}
+

@@ -1,0 +1,37 @@
+/* Ghostbusters CTE Character Sheet Brownie_Points_n_Equipment CSS *//* Version 2.0 */
+
+/* This has been separated from the main CSS for readability / maintainability.
+	It will need to be copied into the main CSS when used with sites like kanka.io */
+
+@import "global.css";
+@import "header.css";
+@import "identify.css";
+@import "traits_n_talents.css";
+@import "brownie_points_n_equipment.css";
+@import "brownie_points.css";
+@import "equipment.css";
+@import "notes.css";
+
+/* Grid layout for character sheet*/
+
+.GBCTE .character_sheet {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header"
+        "identify"
+        "traits_n_talents"
+        "brownie_points_n_equipment"
+        "notes";
+    grid-gap: 5px;
+    max-width: 1000px;
+    color: var(--gb_text_color_1);
+    padding: 2px;
+    margin: 0 auto;
+    background: lightgray;
+    background-image: url("http://i.imgur.com/nOk3zYE.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+}
