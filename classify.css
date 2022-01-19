@@ -1,11 +1,11 @@
-/* Ghostbusters CTE Character Sheet Identify CSS */
+/* Ghostbusters CTE NPC Sheet Classify CSS */
 /* Version 2.0 */
 
 /* This has been separated from the main CSS for readability / maintainability.
 	It will need to be copied into the main CSS when used with sites like kanka.io */
 
-.GBCTE .identify {
-    grid-area: identify;
+.GBCTE .classify {
+    grid-area: classify;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;

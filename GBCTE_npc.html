@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel = "stylesheet" type = "text/css" href = "./npc.css">  
+	<link rel = "stylesheet" type = "text/css" href = "./npccomplete.css">  
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -10,24 +10,24 @@
 <!-- Testing stuff ends -->
 <!-- The HTML inside this body tag is for upload to Kanka. The other stuff is so you can test in a browser tab. -->
 
-<div class="GBCTE character_sheet">
+<div class="GBCTE npc_sheet">
 	<div class="header">
-		<h1>Personnel File</h1>
+		<h1>Supporting Cast</h1>
 	</div>
 
 	<div class= "identify">
-		<div class="name">
+		<div class="col_left">
 			<p><span class = "line_label">Name:</span>
-				<span class = "line_value">{{$character_name}}</span></p>
+				<span class = "line_value">{{$npc_name}}</span></p>
 			<p><span class = "line_label">Goal:</span>
 				<span class = "line_value">{{$goal}}</span></p>
 		</div>
 
-		<div class="git_num">
-			<p><span class = "line_label">Alias:</span>
-				<span class = "line_value">{{$character_name}}</span></p>
-			<p><span class = "line_label">GIT #:</span>
-				<span class = "line_value">{{$git_num}}</span></p>
+		<div class="col_right">
+			<p><span class = "line_label">Occupation:</span>
+				<span class = "line_value">{{$occupation}}</span></p>
+			<p><span class = "line_label">Tags:</span>
+				<span class = "line_value">{{$npc_tags}}</span></p>
 		</div>
 	</div>
 	
@@ -77,28 +77,15 @@
 				<div class="line_t"></div>
 								
 				<p class="lesser_t my_value c">{{$lesser_ability}}</p>
-				<p class="lesser_t_val my_label  c">{{$lesser_num}}</p>	
+				<p class="lesser_t_val my_label  c">{{$lesser_ability_val}}</p>	
 			</div>
 		</div>
 	</div>
-	
-	<div class="brownie_points_n_equipment">
-		<div class="brownie_points">
-			<div class="brownie_points_header">
-				<h3>Brownie Points</h3>
-			</div>
-			<div class="brownie_points_table">
-				<p class="bp_start my_label  r">BP Start</p>
-				<p class="bp_start_val my_value c">{{$bp_start}}</p>
 
-				<p class="bp_spent my_label  r">- BP Spent</p>
-				<p class="bp_spent_val my_value c">{{$bp_spent}}</p>
-				
-				<div class="line""></div>
-				
-				<p class="bp_left my_label r">BP Left</p>
-				<p class="bp_left_val my_value c">{{$bp_left}}</p>
-			</div>
+	<div class="notes_n_equipment">
+		<div class="notes">
+			<p class="my_label c">Notes</p>
+			<p class="my_value">{!! $notes !!}</p>
 		</div>
 		
 		<div class="equipment">
@@ -117,12 +104,6 @@
 				<p class="equipment_3 my_label c">3</p>
 			</div>
 		</div>
-	</div>
-	
-	<div class="notes">
-		<p class="my_label c">Notes</p>
-		<p class="my_value">{!! $notes !!}
-
 	</div>
 </div>	
 

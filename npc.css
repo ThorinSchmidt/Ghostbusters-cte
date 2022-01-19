@@ -7,12 +7,15 @@
 @import "header.css";
 @import "identify.css";
 @import "traits_n_talents.css";
+@import "notes_n_equipment.css";
 @import "notes.css";
+@import "equipment.css";
 
 
-/* Grid layout for character sheet*/
 
-.GBCTE .character_sheet {
+/* Grid layout for npc sheet*/
+
+.GBCTE .cnpc_sheet {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -20,8 +23,7 @@
         "header"
         "identify"
         "traits_n_talents"
-        "brownie_points_n_equipment"
-        "notes";
+        "notes_n_equipment";
     grid-gap: 5px;
     max-width: 1000px;
     color: var(--gb_text_color_1);
