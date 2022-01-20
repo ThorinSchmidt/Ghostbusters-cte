@@ -1,26 +1,64 @@
-/* Ghostbusters CTE Character Sheet Identify CSS */
+/* Ghostbusters CTE Ghost Sheet Classify CSS */
 /* Version 2.0 */
 
 /* This has been separated from the main CSS for readability / maintainability.
 	It will need to be copied into the main CSS when used with sites like kanka.io */
 
-.GBCTE .identify {
-    grid-area: identify;
+.GBCTE .classify {
+    grid-area: classify;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
     grid-template-areas:
-        "col_left col_right";
+		"name name goal goal"
+        "classification description characteristic type"
+		"mindless intelligent ectoplasmic physical"
+		"tags tags tags tags";
     grid-column-gap: 2px;
     grid-row-gap: 2px;
     border-bottom: 5px solid var(--gb_border_color_1);
 }
 
-
-.GBCTE .col_left {
-    grid-area: col_left;
+.GBCTE .name {
+    grid-area: name;
 }
 
-.GBCTE .col_right {
-    grid-area: col_right;
+.GBCTE .goal {
+    grid-area: goal;
 }
+
+.GBCTE .classification {
+    grid-area: classification;
+}
+
+.GBCTE .description {
+    grid-area:description;
+}
+
+.GBCTE .characteristic {
+    grid-area: characteristic;
+}
+
+.GBCTE .type {
+    grid-area: type;
+}
+
+.GBCTE .mindless {
+    grid-area: mindless;
+}
+
+.GBCTE .intelligent {
+    grid-area: intelligente;
+}
+
+.GBCTE .ectoplsasmic {
+    grid-area: ectoplasmic;
+}
+
+.GBCTE .physical {
+    grid-area: physical;
+}
+.GBCTE .tags {
+    grid-area: tags
+}
+

@@ -1,0 +1,19 @@
+/* Ghostbusters CTE Ghost Sheet Abilities_n_Weaknesses CSS */
+/* Version 2.0 */
+
+/* This has been separated from the main CSS for readability / maintainability.
+	It will need to be copied into the main CSS when used with sites like kanka.io */
+	
+.GBCTE .abilities_n_weaknesses {
+    grid-area: abilities_n_weaknesses;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "abilities weaknesses";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+    border-bottom: 5px solid var(--gb_border_color_1);
+}
+
+.
