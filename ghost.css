@@ -21,7 +21,7 @@
         "header"
         "classify"
         "traits_n_talents"
-        /*abilities_n_weaknesses"*/
+        "abilities_n_weaknesses"
         "notes";
     grid-gap: 5px;
     max-width: 1000px;

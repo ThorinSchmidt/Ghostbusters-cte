@@ -16,4 +16,10 @@
     border-bottom: 5px solid var(--gb_border_color_1);
 }
 
-.
+.GBCTE .abilities {
+    grid-area: abilities;
+}
+
+.GBCTE .weaknesses {
+    grid-area: weaknesses;
+}

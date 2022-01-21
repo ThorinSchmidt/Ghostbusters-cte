@@ -12,7 +12,7 @@
     grid-template-areas:
 		"name name goal goal"
         "classification description characteristic type"
-		"mindless intelligent ectoplasmic physical"
+		"mental mental structure structure"
 		"tags tags tags tags";
     grid-column-gap: 2px;
     grid-row-gap: 2px;
@@ -43,21 +43,14 @@
     grid-area: type;
 }
 
-.GBCTE .mindless {
-    grid-area: mindless;
+.GBCTE .mental {
+    grid-area: mental;
 }
 
-.GBCTE .intelligent {
-    grid-area: intelligente;
+.GBCTE .structure {
+    grid-area: structure;
 }
 
-.GBCTE .ectoplsasmic {
-    grid-area: ectoplasmic;
-}
-
-.GBCTE .physical {
-    grid-area: physical;
-}
 .GBCTE .tags {
     grid-area: tags
 }

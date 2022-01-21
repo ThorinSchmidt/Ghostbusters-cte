@@ -39,13 +39,30 @@
 		
 		<div class="characteristic">
 			<p><span class = "line_label">Characteristic:</span>
-				<span class = "line_value">{{$ghost_classification}}</span></p>
+				<span class = "line_value">{{$ghost_characteristic}}</span></p>
 		</div>
 		
 		<div class="type">
 			<p><span class = "line_label">Type:</span>
-				<span class = "line_value">{{$ghost_description}}</span></p>
+				<span class = "line_value">{{$ghost_type}}</span></p>
 		</div>
+		
+		<div class="mental">
+			<p><span class = "line_label">(M)indless/(I)ntelligent:</span>
+				<span class = "line_value c">{{$ghost_mental}}</span></p>
+		</div>
+		
+		<div class="structure">
+			<p><span class = "line_label">(E)ctoplasmic   / (P)hysical:</span>
+				<span class = "line_value c">{{$ghost_structure}}</span></p>
+		</div>
+		
+		<div class="tags">
+			<p class = "my_label c">Tags:</p>
+			<p class = "my_value">{{$ghost_tags}}</p></p>
+		</div>
+	
+		
 	</div>
 	
 		<div class="traits_n_talents">
@@ -101,10 +118,21 @@
 		</div>
 	</div>
 	
+	<div class="abilities_n_weaknesses">
+		<div class="abilities">
+			<p class="my_label c">Abilities</p>
+			<p class="my_value">{!! $abilities !!}
+		</div>
+
+		<div class="weaknesses">
+			<p class="my_label c">Weaknesses</p>
+			<p class="my_value">{!! $weaknesses !!}
+		</div>
+	</div>
+	
 	<div class="notes">
 		<p class="my_label c">Notes</p>
 		<p class="my_value">{!! $notes !!}
-
 	</div>
 </div>
 </div>	
