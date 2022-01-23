@@ -2,141 +2,138 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel = "stylesheet" type = "text/css" href = "./ghost.css">  
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content=
+  "HTML Tidy for HTML5 for Windows version 5.6.0">
+  <link rel="stylesheet" type="text/css" href="./ghost.css">
+  <meta name="viewport" content=
+  "width=device-width, initial-scale=1">
+  <title></title>
 </head>
 <body>
-
-<!-- Testing stuff ends -->
-<!-- The HTML inside this body tag is for upload to Kanka. The other stuff is so you can test in a browser tab. -->
-
+  <!-- Testing stuff ends -->
+  <!-- The HTML inside this body tag is for upload to Kanka. The other stuff is so you can test in a browser tab. -->
+  
 <div class="GBCTE">
-<div class="ghost_sheet">
-	<div class="header">
-		<h1>Entity Analysis Form</h1>
-	</div>
+    <div class="ghost_sheet">
+        <div class="header">
+            <h1>Entity Analysis Form</h1>
+        </div>
 
-	<div class= "classify">
-		<div class="name">
-			<p><span class = "line_label">Name:</span>
-				<span class = "line_value">{{$ghost_name}}</span></p>
-		</div>
-		
-		<div class="goal">
-			<p><span class = "line_label">Goal:</span>
-				<span class = "line_value">{{$ghostgoal}}</span></p>
-		</div>
-
-		<div class="classification">
-			<p><span class = "line_label">Class:</span>
-				<span class = "line_value">{{$ghost_classification}}</span></p>
-		</div>
-		
-		<div class="description">
-			<p><span class = "line_label">Description:</span>
-				<span class = "line_value">{{$ghost_description}}</span></p>
-		</div>
-		
-		<div class="characteristic">
-			<p><span class = "line_label">Characteristic:</span>
-				<span class = "line_value">{{$ghost_characteristic}}</span></p>
-		</div>
-		
-		<div class="type">
-			<p><span class = "line_label">Type:</span>
-				<span class = "line_value">{{$ghost_type}}</span></p>
-		</div>
-		
-		<div class="mental">
-			<p><span class = "line_label">(M)indless/(I)ntelligent:</span>
-				<span class = "line_value c">{{$ghost_mental}}</span></p>
-		</div>
-		
-		<div class="structure">
-			<p><span class = "line_label">(E)ctoplasmic   / (P)hysical:</span>
-				<span class = "line_value c">{{$ghost_structure}}</span></p>
-		</div>
-		
-		<div class="tags">
-			<p class = "my_label c">Tags:</p>
-			<p class = "my_value">{{$ghost_tags}}</p></p>
-		</div>
-	
-		
-	</div>
-	
-		<div class="traits_n_talents">
-		<div class="traits">
-			<div class="traits_header">
-				<h3>Traits</h3>
-			</div>
-			<div class="traits_table">
-				<p class="brains my_label c">Brains</p>
-				<p class="brains_val my_value c">{{     $brains     }}</p>
-
-				<p class="muscles my_label c">Muscles</p>
-				<p class="muscles_val my_value c">{{     $muscles     }}</p>
-
-				<p class="moves my_label c">Moves</p>
-				<p class="moves_val my_value c">{{     $moves     }}</p>
-
-				<p class="cool my_label c">Cool</p>
-				<p class="cool_val my_value c">{{     $cool     }}</p>
-				
-				<div class="line"></div>
-				
-				<div class="power">
-					<p class="my_label c">Power</p>
-					<p class="my_label c">Ectopresence</p>
-				</div>
-				
-				<div class="power_val">
-					<p class="my_value c">{{ $power }}</p>
-					<p class="power_val my_value c">{{ $ectopresence }}</p>
-				</div>
-			</div>
-		</div>
-		
-		<div class="talents">
-			<div class="talents_header">
-				<h3>Talents</h3>
-			</div>
-			
-			<div class="talents_table">
-				<p class="brains_t my_value c">{{    $brains_talent    }}</p>
-				<p class="brains_t_val my_label c">{{    $brains_talent_val    }}</p>
-
-				<p class="muscles_t my_value c">{{    $muscles_talent    }}</p>
-				<p class="muscles_t_val my_label c">{{    $muscles_talent_val    }}</p>
-
-				<p class="moves_t my_value c">{{    $moves_talent    }}</p>
-				<p class="moves_t_val my_label c">{{    $moves_talent_val    }}</p>
-
-				<p class="cool_t my_value c">{{    $cool_talent    }}</p>
-				<p class="cool_t_val my_label c">{{    $cool_talent_val    }}</p>
-			</div>
-		</div>
-	</div>
-	
-	<div class="abilities_n_weaknesses">
-		<div class="abilities">
-			<p class="my_label c">Abilities</p>
-			<p class="my_value">{!! $abilities !!}
-		</div>
-
-		<div class="weaknesses">
-			<p class="my_label c">Weaknesses</p>
-			<p class="my_value">{!! $weaknesses !!}
-		</div>
-	</div>
-	
-	<div class="notes">
-		<p class="my_label c">Notes</p>
-		<p class="my_value">{!! $notes !!}
-	</div>
-</div>
-</div>	
-
-<!-- End of copy block for kanka-->
+        <div class="classify">
+            <div class="name">
+                <p><span class="line_label">Name:</span>
+                    <span class="line_value">{{ $g_name }}</span></p>
+            </div>
+            
+            <div class="goal">
+                <p><span class="line_label">Goal:</span>
+                    <span class="line_value">{{ $g_goal }}</span></p>
+            </div>
+            
+            <div class="mental">
+                <p><span class="line_label">(M)indless/(I)ntelligent:</span>
+                <span class="line_value c">{{ $g_mental }}</span></p>
+            </div>
+            
+            <div class="structure">
+                <p><span class="line_label">(E)ctoplasmic /(P)hysical:</span>
+                    <span class="line_value c">{{ $g_structure }}</span></p>
+            </div>
+            
+            <div class="species">
+                <p><span class="line_label">Species / Race:</span>
+                    <span class="line_value">{{ $g_species }}</span></p>
+            </div>
+        
+            <div class="classification">
+                <p><span class="line_label">Class:</span>
+                    <span class="line_value">{{ $g_classification }}</span></p>
+            </div>
+        
+            <div class="description">
+                <p><span class="line_label">Description:</span>
+                    <span class="line_value">{{ $g_description }}</span></p>
+            </div>
+        
+            <div class="characteristic">
+                <p><span class="line_label">Characteristic:</span>
+                    <span class="line_value">{{ $g_characteristic}}</span></p>
+            </div>
+            
+            <div class="type">
+                <p><span class="line_label">Type:</span>
+                    <span class="line_value">{{ $g_type }}</span></p>
+            </div>
+            
+            <div class="tags">
+                <p class="my_label c">Tags:</p>
+                <p class="my_value">{{ $g_tags }}</p>
+            </div>
+        </div>
+        
+      <div class="traits_n_talents">
+        <div class="traits">
+            <div class="traits_header">
+                <h3>Traits</h3>
+          </div>
+          <div class="traits_table">
+            <p class="brains my_label c">Brains</p>
+            <p class="brains_val my_value c">{{ $g_brains }}</p>
+            <p class="muscles my_label c">Muscles</p>
+            <p class="muscles_val my_value c">{{ $g_muscles }}</p>
+            <p class="moves my_label c">Moves</p>
+            <p class="moves_val my_value c">{{ $g_moves }}</p>
+            <p class="cool my_label c">Cool</p>
+            <p class="cool_val my_value c">{{ $g_cool }}</p>
+            <div class="line"></div>
+            <div class="power">
+              <p class="my_label c">Power</p>
+              <p class="my_label c">Ectopresence</p>
+            </div>
+            
+            <div class="power_val">
+              <p class="my_value c">{{ $g_power }}</p>
+              <p class="power_val my_value c">{{ $ectopresence }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="talents">
+          <div class="talents_header">
+            <h3>Talents</h3>
+          </div>
+          <div class="talents_table">
+            <p class="brains_t my_value c">{{ $g_brains_talent
+            }}</p>
+            <p class="brains_t_val my_label c">{{
+            $g_brains_talent_val }}</p>
+            <p class="muscles_t my_value c">{{ $g_muscles_talent
+            }}</p>
+            <p class="muscles_t_val my_label c">{{
+            $g_muscles_talent_val }}</p>
+            <p class="moves_t my_value c">{{ $g_moves_talent }}</p>
+            <p class="moves_t_val my_label c">{{
+            $g_moves_talent_val }}</p>
+            <p class="cool_t my_value c">{{ $g_cool_talent }}</p>
+            <p class="cool_t_val my_label c">{{ $g_cool_talent_val
+            }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="abilities_n_weaknesses">
+        <div class="abilities">
+          <p class="my_label c">Abilities</p>
+          <p class="my_value">{!! $g_abilities !!}</p>
+        </div>
+        <div class="weaknesses">
+          <p class="my_label c">Weaknesses</p>
+          <p class="my_value">{!! $g_weaknesses !!}</p>
+        </div>
+      </div>
+      <div class="notes">
+        <p class="my_label c">Notes</p>
+        <p class="my_value">{!! $g_notes !!}</p>
+      </div>
+    </div>
+  </div><!-- End of copy block for kanka-->
 </body>
 </html>

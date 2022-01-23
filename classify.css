@@ -7,13 +7,15 @@
 .GBCTE .classify {
     grid-area: classify;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     grid-template-areas:
-		"name name goal goal"
-        "classification description characteristic type"
-		"mental mental structure structure"
-		"tags tags tags tags";
+		"name goal"
+        "mental structure"
+        "species species"
+        "classification description"
+        "characteristic type"
+        "tags tags";
     grid-column-gap: 2px;
     grid-row-gap: 2px;
     border-bottom: 5px solid var(--gb_border_color_1);
@@ -25,6 +27,10 @@
 
 .GBCTE .goal {
     grid-area: goal;
+}
+
+.GBCTE .species {
+    grid-area: species;
 }
 
 .GBCTE .classification {
@@ -52,6 +58,6 @@
 }
 
 .GBCTE .tags {
-    grid-area: tags
+    grid-area: tags;
 }
 
