@@ -1,0 +1,236 @@
+<html>
+<head>
+	<link rel = "stylesheet" type = "text/css" href = "ghost.css">  
+</head>
+<body>
+<!-- begin Roll20 content -->
+<div class="ghost">
+	<div class="header">
+		<h1>Entity Analysis Form</h1>
+	</div>
+
+	<div class="classify">
+		<div class="toughness">
+			<p class="line_label">Toughness: </p>
+			<input type="text" name="attr_toughness" class="line_value">
+		</div>
+		<div class="name">
+			<p class="line_label">Name: </p>
+			<input type="text" name="attr_name" class="line_value">
+		</div>				
+		<div class="goal">
+			<p class="line_label">Goal:</p>
+			<input type="text" name="attr_goal" class="line_value">
+		</div>
+		<div class="mental">
+			<p class="line_label">Mentality:</p>
+			<input type="text" name="attr_mental" class="line_value">
+		</div>
+		<div class="structure">
+			<p class="line_label">Structure:</p>
+			<input type="text" name="attr_structure" class="line_value">
+		</div>
+		<div class="classification">
+			<p class="line_label">Class:</p>
+			<input type="text" name="attr_classification" class="line_value">
+		</div>
+		<div class="description">
+			<p class="line_label">Description:</p>
+			<input type="text" name="attr_description" class="line_value">
+		</div>
+		<div class="characteristic">
+			<p class="line_label">Characteristic:</p>
+			<input type="text" name="attr_characteristic" class="line_value">
+		</div>
+		<div class="type">
+			<p class="line_label">Type:</p>
+			<input type="text" name="attr_type" class="line_value">
+		</div>
+		<div class="tags">
+			<p class="line_label">Tags:</p>
+			<input type="text" name="attr_tags" class="line_value">
+		</div>
+	</div>	
+
+	<div class="tables">
+		<div class="traits">
+			<div class="traits_header">
+				<h3>Traits</h3>
+			</div>
+			<div class="traits_table">
+				<div class="brains">
+					<p class="table_label c">Brains</p>
+					<input type="number" name="attr_brains" class="brains_score table_value">
+					<button type="action" name="act_brains" class="sheet-d6"></button>
+				</div>
+				<div class="muscles">
+					<p class="table_label c">Muscles</p>
+					<input type="number" name="attr_muscles" class="muscles_score table_value">
+					<button type="action" name="act_muscles" class="sheet-d6"></button>
+				</div>
+				<div class="moves">
+					<p class="table_label c">Moves</p>
+					<input type="number" name="attr_moves" class="moves_score table_value">
+					<button type="action" name="act_moves" class="sheet-d6"></button>
+				</div>
+				<div class="cool">
+					<p class="table_label c">Cool</p>
+					<input type="number" name="attr_cool" class="cool_score table_value">
+					<button type="action" name="act_cool" class="sheet-d6"></button>
+				</div>
+				<div class="power">
+					<p class="table_label c">Power</p>
+					<input type="number" name="attr_power" class="power_score table_value">
+					<button type="action" name="act_power" class="sheet-d6"></button>
+				</div>
+				<div class="ectopresence">
+					<p class="table_label c">Ectopresence</p>
+					<input type="number" name="attr_ectopresence" class="ecto_score table_value">
+				</div>
+			</div>
+		</div>
+		<div class="talents">
+			<div class="talents_header">
+				<h3>Talents</h3>
+			</div>
+			<div class="talents_table">
+				<div class="brains_talent">
+					<input type="text" name="attr_brainstalnam" class="table_label c">
+					<input type="number" name="attr_brainstalval" class="table_value c">
+					<button type="action" name="act_brains_tal" class="sheet-d6"></button>
+				</div>
+				<div class="muscles_talent">
+					<input type="text" name="attr_musclestalnam" class="table_label c">
+					<input type="number" name="attr_musclestalval" class="table_value c">
+					<button type="action" name="act_muscles_tal" class="sheet-d6"></button>
+				</div>
+				<div class="moves_talent">
+					<input type="text" name="attr_movestalnam" class="table_label c">
+					<input type="number" name="attr_movestalval" class="table_value c">
+					<button type="action" name="act_moves_tal" class="sheet-d6"></button>
+				</div>
+				<div class="cool_talent">
+					<input type="text" name="attr_cooltalnam" class="table_label c">
+					<input type="number" name="attr_cooltalval" class="table_value c">
+					<button type="action" name="act_cool_tal" class="sheet-d6"></button>
+				</div>
+			</div>
+		</div>
+		<div class="extras">
+			<div class="extras_header">
+				<h3>Extras</h3>
+			</div>
+			<div class="extras_table">
+				<div class="ghost_die">
+					<p class="table_label c">Roll Ghost</p>
+					<button type="action" name="act_oneghost" class="sheet-ghostdie"></button>
+				</div>
+				<div class="one_die">
+					<p class="table_label c">Roll 1D6</p>
+					<button type="action" name="act_onedsix" class="sheet-d6"></button>
+				</div>
+		</div>
+	</div>
+<!--		
+	<hr>
+		
+	<div class="abilities">
+		<div class="abilities_header">
+			<h3>Abilities</h3>
+		</div>
+		<div class="greater">
+			<div class="greater_header">
+				<h4>Greater:</h4>
+			</div>
+			<div class="greater_table">
+				<input type="text" name="attr_gabil1nam" class="g_abil_1_nam table_label c">
+				<input type="number" name="attr_gabil1val"  class="g_abil_1_val table_value c">
+				<input type="text" name="attr_gabil2nam" class="g_abil_2_nam table_label c">
+				<input type="number" name="attr_gabil2val"  class="g_abil_2_val table_value c">
+				<input type="text" name="attr_gabil3nam" class="g_abil_3_nam table_label c">
+				<input type="number" name="attr_gabil3val"  class="g_abil_3_val table_value c">
+				<input type="text" name="attr_gabil4nam" class="g_abil_4_nam table_label c">
+				<input type="number" name="attr_gabil4val"  class="g_abil_4_val table_value c">
+				<input type="text" name="attr_gabil5nam" class="g_abil_5_nam table_label c">
+				<input type="number" name="attr_gabil5val"  class="g_abil_5_val table_value c">
+				<input type="text" name="attr_gabil6nam" class="g_abil_6_nam table_label c">
+				<input type="number" name="attr_gabil6val"  class="g_abil_6_val table_value c">
+				<input type="text" name="attr_gabil7nam" class="g_abil_7_nam table_label c">
+				<input type="number" name="attr_gabil7val"  class="g_abil_7_val table_value c">
+			</div>
+		</div>
+		<div class="lesser">
+			<div class="lesser_header">
+				<h4>Lesser:</h4>
+			</div>
+			<div class="lesser_table">
+				<input type="text" name="attr_labil1nam" class="l_abil_1_nam table_label c">
+				<input type="number" name="attr_labil1val"  class="l_abil_1_val table_value c">
+				<input type="text" name="attr_labil2nam" class="l_abil_2_nam table_label c">
+				<input type="number" name="attr_labil2val"  class="l_abil_2_val table_value c">
+				<input type="text" name="attr_labil3nam" class="l_abil_3_nam table_label c">
+				<input type="number" name="attr_labil3val"  class="l_abil_3_val table_value c">
+				<input type="text" name="attr_labil4nam" class="l_abil_4_nam table_label c">
+				<input type="number" name="attr_labil4val"  class="l_abil_4_val table_value c">
+				<input type="text" name="attr_labil5nam" class="l_abil_5_nam table_label c">
+				<input type="number" name="attr_labil5val"  class="l_abil_5_val table_value c">
+				<input type="text" name="attr_labil6nam" class="l_abil_6_nam table_label c">
+				<input type="number" name="attr_labil6val"  class="l_abil_6_val table_value c">
+				<input type="text" name="attr_labil7nam" class="l_abil_7_nam table_label c">
+				<input type="number" name="attr_labil7val"  class="l_abil_7_val table_value c">
+			</div>
+		</div>
+	</div>
+
+	<hr>
+
+	<div class="notes_n_weaknesses">
+		<div class="g_notes">
+			<div class="g_notes_header">
+				<h3>Notes:</h3>
+			</div>
+			<div class="g_notes_box">
+				<textarea class="table_value" name=attr_gnotes></textarea>
+			</div>
+		</div>
+		<div class="weaknesses">
+			<div class="weaknesses_header">
+				<h3>Weaknesses:</h3>
+			</div>
+			<div class="weaknesses_box">
+				<textarea class="table_value" name=attr_weaknesses></textarea>
+			</div>
+		</div>
+	</div>
+	
+	<hr>
+	
+</div>
+	
+<rolltemplate class="sheet-rolltemplate-gbcte">
+	<div class="sheet-spacer"></div>
+	<div class="sheet-heading">
+		<h5>{{name}}</h5>
+		<h5>{{description}}</h5>
+	</div>
+	<div class="sheet-results">
+		<h5>Regular d6s = {{roll1}}</h5>
+		<h5>Ghost Die = {{roll2}}</h5>
+		<h5>Total = {{computed::roll1}}</h5>
+	</div>
+</rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-d6">
+	<div class="sheet-spacer"></div>
+	<div class="sheet-heading">
+		<h3>{{name}}</h3>
+	</div>
+	<div class="sheet-results">
+		{{computed::roll1}}
+	</div></rolltemplate>
+-->
+<script type="text/worker">
+</script>
+<!-- End Roll20 content -->
+</body
+</html>

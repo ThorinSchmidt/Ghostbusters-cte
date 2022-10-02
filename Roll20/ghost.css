@@ -1,0 +1,353 @@
+/* CSS for ghost part of the character sheet */
+
+:root {
+  --gb_background_color: lightgray;
+  --gb_border_color_1: red;
+  --gb_border_color_2: black;
+  --gb_text_color_1: red;
+	--gb_text_color_2: black;
+  --gb_label_text_color: white;
+  --gb_label_background_color: black;
+  --gb_value_text_color: black;
+  --gb_value_background_color: white;
+}
+
+input[type=number] {
+	text-align: center;
+	width: 3em;
+}
+
+button[type=action].sheet-d6{	/*changes die roller icon to d6*/
+	height: 25px;
+	width: 25px;
+	border-color: white;
+	background-image: url(https://i.imgur.com/BhYDjpj.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+button[type=action].sheet-ghostdie{	/*changes die roller icon to GB symbol*/
+	height: 25px;
+	width: 27px;
+	border-color: white;
+	background-image: url(https://i.imgur.com/ytlqNkJ.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.ghost {
+	background-color: var(--gb_background_color);
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-areas:
+		"header"
+		"classify"
+		"tables"
+		"abilities"
+		"notes_weaknesses";
+	grid-gap: 5px;
+}
+
+.ghost * {
+  padding: 2px;
+  margin: 0 0 0 0;
+}
+
+.ghost h1, h2, h3, h4, h5, h6 {
+  color: var(--gb_text_color_2);
+	text-align: center;
+}
+
+.ghost hr {
+  color:black;
+  background-color:black;
+}
+
+.ghost .line_label {
+  color: var(--gb_label_text_color);
+  background: var(--gb_label_background_color);
+	width: 7em;
+  float: left;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.ghost .line_value {
+  color: var(--gb_value_text_color);
+  background: var(--gb_value_background_color);
+	width: 10em;
+	overflow: hidden;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.ghost .number_value {
+  color: var(--gb_value_text_color);
+  background: var(--gb_value_background_color);
+	width: 10em;
+	overflow: hidden;
+  border: 1px solid black;
+  border-radius: 10px;
+
+}
+
+.ghost .table_label {
+	float: left;
+  color: var(--gb_label_text_color);
+  background: var(--gb_label_background_color);
+	width: 7em;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.ghost .table_value {
+	float: left;
+  color: var(--gb_value_text_color);
+  background: var(--gb_value_background_color);
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.ghost .l {
+  text-align: left;
+}
+
+.ghost .r {
+  text-align: right;
+}
+
+.ghost .c {
+  text-align: center;
+}
+
+.ghost .header {
+	grid-area: header;
+	justify-self: center;
+	width: 100%;
+	border-bottom: 3px solid  var(--gb_border_color_1);
+}
+
+.ghost .classify {
+	grid-area: classify;
+	width: 100%;
+	border-bottom: 3px solid  var(--gb_border_color_1);
+	display: grid;
+	grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+	grid-template-areas:
+		". toughness name goal ."
+		". tags tags tags ."
+		". mental structure classification ."
+		". characteristic description type .";
+	grid-gap: 1px;
+	justify-items: center;
+	justify-content: center;
+}
+
+.classify .toughness {
+	grid-area: toughness;
+}
+
+.classify .name {
+	grid-area: name;
+}
+
+.classify .goal {
+	grid-area: goal;
+}
+
+.classify .tags {
+	grid-area: tags;
+	width: 99%;
+}
+
+.tags>.line_value {
+	width: 85%;
+}
+
+.classify .mental {
+	grid-area: mental;
+}
+
+.classify .structure {
+	grid-area: structure;
+}
+
+.classify .classification {
+	grid-area: classification;
+}
+
+.classify .characteristic {
+	grid-area: characteristic;
+}
+
+.classify .description {
+	grid-area: description;
+}
+
+.classify .type {
+	grid-area: type;
+}
+
+.ghost .tables {
+	grid-area: tables;
+	display: grid;
+	width: 100%;
+	border-bottom: 3px solid  var(--gb_border_color_1);
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-areas:
+		"traits talents extras";
+	grid-gap: 1px;
+	justify-items: center;
+	justify-content: center;
+}
+
+.ghost .traits {
+	grid-area: traits;
+	width: 90%;
+	display: grid;
+	align-content: start;
+	align-items: start;
+	grid-template-columns: 1fr;
+	grid-template-areas:
+		"traits_header"
+		"traits_table";
+	grid-gap: 1px;
+	justify-items: center;
+}
+
+.ghost .traits_header {
+	grid-area: traits_header;
+}
+
+.ghost .traits_table {
+	grid-area: traits_table;
+	width: 100%;
+	display: grid;
+	align-content: start;
+	align-items: start;
+	grid-template-columns: 1fr;
+	grid-template-areas:
+		"brains"
+		"muscles"
+		"moves"
+		"cool"
+		"power"
+		"ectopresence";
+	grid-gap: 1px;
+	justify-items: center;
+}
+
+.ghost .brains {
+	grid-area: brains;
+}
+
+.ghost .muscles {
+	grid-area: muscles;
+}
+
+.ghost .moves {
+	grid-area: moves;
+}
+
+.ghost .cool {
+	grid-area: cool;
+}
+
+.tghost .power {
+	grid-area: power;
+}
+
+.ghost .ectopresence {
+	grid-area: ectopresence;
+}
+
+.ghost .talents {
+	grid-area: talents;
+	width: 90%;
+	display: grid;
+	align-content: start;
+	align-items: start;
+	grid-template-columns: 1fr;
+	grid-template-areas:
+		"talents_header"
+		"talents_table";
+	grid-gap: 1px;
+	justify-items: center;
+}
+
+.ghost .talents_header {
+	grid-area: talents_header;
+}
+
+.ghost .talents_table {
+	grid-area: talents_table;
+	width: 100%;
+	display: grid;
+	align-content: start;
+	align-items: start;
+	grid-template-columns: 1fr;
+	grid-template-areas:
+		"brains_talent"
+		"muscles_talent"
+		"moves_talent"
+		"cool_talent";
+	grid-gap: 1px;
+	justify-items: center;
+	
+}
+
+.ghost .brains_talent {
+	grid-area: brains_talent;
+}
+
+.ghost .muscles_talent {
+	grid-area: muscles_talent;
+}
+
+.ghost .moves_talent {
+	grid-area: moves_talent;
+}
+
+.ghost .cool_talent {
+	grid-area: cool_talent;
+}
+
+.ghost .extras {
+	grid-area: extras;
+	width: 90%;
+	display: grid;
+	align-content: start;
+	align-items: start;
+	grid-template-columns: 1fr;
+	grid-template-areas:
+		"extras_header"
+		"extras_table";
+	grid-gap: 1px;
+	justify-items: center;
+}
+
+.ghost .extras_header {
+	grid-area: extras_header;
+}
+
+.ghost .extras_table {
+	grid-area: extras_table;
+	width: 100%;
+	display: grid;
+	align-content: start;
+	align-items: start;
+	grid-template-columns: 1fr;
+	grid-template-areas:
+		"one_die"
+		"ghost_die";
+	grid-gap: 1px;
+	justify-items: center;
+}
+
+.ghost .one_die {
+	grid-area: one_die;
+}
+
+.ghost .ghost_die {
+	grid-area: ghost_die;
+}

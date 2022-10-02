@@ -1,0 +1,71 @@
+.testgrid {
+	width: 300px;
+	height: 300px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-areas:
+		"left1 cen right1"
+		"left1 cen right2"
+		"left3 cen right3";
+	grid-gap: 5px;
+}
+
+.cen {
+	grid-area: cen;
+	background-color: gray;
+}
+
+.left1 {
+	grid-area: left1;
+	background-color: black;
+	color: white;
+}
+.left2 {
+	grid-area: left2;
+	background-color: black;
+	color: white;
+}
+.left3 {
+	grid-area: left3;
+	background-color: black;
+	color: white;
+}
+
+.right1 {
+	grid-area: right1;
+	background-color: blue;
+	color: yellow;
+}
+.right2 {
+	grid-area: right2;
+	background-color: blue;
+	color: yellow;
+}
+.right3 {
+	grid-area: right3;
+	background-color: blue;
+	color: yellow;
+}
+
+/*------Roll Template & Roll button-------*/
+button[type=action].sheet-d6 {	/*changes die roller icon to d6*/
+	display: inline-block;
+	height: 25px;
+	width: 25px;
+	border: 0 0 0 0;
+	border-color: white;
+	background-image: url(https://i.imgur.com/BhYDjpj.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+button[type=action].sheet-ghostdie {	/*changes die roller icon to GB symbol*/
+	height: 25px;
+	width: 27px;
+	border: 0 0 0 0;
+	border-color: white;
+	background-image: url(https://i.imgur.com/ytlqNkJ.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+}

@@ -1,0 +1,335 @@
+<html>
+<head>
+	<link rel = "stylesheet" type = "text/css" href = "import_r20.css">  
+</head>
+<body>
+<!-- begin Roll20 content -->
+<div class="charsheet">
+	<div>
+		<h1 class="header">Ghostbuster-In-Training ID Card</h1>
+		<div class="header">
+			<p class="header_label">GIT #:</p>
+			<input type="text" name="attr_GITnum" size="5">
+		</div>
+	</div>
+	<hr>
+	<div>
+		<p class="header_label">Name: </p>
+		<input type="text" name="attr_name" size = 25">
+		<p class="header_label">Goal: </p>
+		<input type="text" name="attr_goal" size = 25">
+	</div>
+	<hr>
+	<div class="traits c">
+		<h1 class="header">Traits</h1>
+		<p class="trait_label"> Brains: </p>
+		<input type="number" name="attr_brains_score" min="1" max="9"	value="0">
+		<button type="action" name="act_brains" class="sheet-d6"></button><br>
+		
+		<p class="trait_label"> Muscles: </p>
+		<input type="number" name="attr_muscles_score" min="1" max="9" value="0">
+		<button type="action" name="act_muscles" class="sheet-d6"></button><br>
+		
+		<p class="trait_label"> Moves: </p>
+		<input type="number" name="attr_moves_score" min="1" max="9"	value="0">
+		<button type="action" name="act_moves" class="sheet-d6"></button><br>
+		
+		<p class="trait_label"> Cool: </p>
+		<input type="number" name="attr_cool_score" min="1" max="9"	value="0">
+		<button type="action" name="act_cool" class="sheet-d6"></button><br>
+
+		<p class="trait_label"> Power: </p>
+		<input type="number" name="attr_power_score" min="1" max="9"	value="0">
+	</div>
+	
+	<div class="talents c">
+		<h1 class="header">Talents</h1>
+		<input type="text" name="attr_brains_tal_name" size="15" class="talent_name">
+		<input type="number" name="attr_brains_tal_score"	min="4" max="12" value="0">
+		<button type="action" name="act_brains_tal" class="sheet-d6"></button><br>
+
+		<input type="text" name="attr_muscles_tal_name" size="15" class="talent_name">
+		<input type="number" name="attr_muscles_tal_score" min="4" max="12"	value="0">
+		<button type="action" name="act_muscles_tal" class="sheet-d6"></button><br>
+
+		<input type="text" name="attr_moves_tal_name"	size="15" class="talent_name">
+		<input type="number" name="attr_moves_tal_score" min="4" max="12"	value="0">
+		<button type="action" name="act_moves_tal" class="sheet-d6"></button><br>
+
+		<input type="text" name="attr_cool_tal_name"	size="15" class="talent_name">
+		<input type="number" name="attr_cool_tal_score"	min="4" max="12"	value="0">
+		<button type="action" name="act_cool_tal" class="sheet-d6"></button><br>
+
+		<input type="text" name="attr_power_tal_name"	size="15" class="talent_name">
+		<button type="action" name="act_power_tal" class="sheet-d6"></button><br>
+	
+	</div>
+	<div class="bp c">
+		<h1 class="header">Brownie Points</h1>
+		<p class="bp_label">BP Max:</p>
+		<input type="number" name="attr_bp_max" min="0" max="60"
+			value="20"><br>
+		
+		<p class="bp_label">BP Spent:</p>
+		<input type="number" name="attr_bp_spent" min="0" max="60"
+			value="0"><br>
+		
+		<p class="bp_label">BP Current:</p>
+		<input type="number" name="attr_bp_current" min="0" max="60"
+			value="20"><br>
+
+		<br>
+		
+		<p class="bp_label">Add BP to Roll: </p>
+		<input type="number" name="attr_bp_add" min="0" max="60"
+			value="0"><br>
+	</div>
+	<hr style="clear:both;">
+	<div class=notes c">
+		<h1 class="header">Notes</h1>
+		<textarea name="attr_notes"></textarea>
+	</div>
+	<div class="extras c">
+		<h1 class="header">Extras</h1>
+		<p class="extras_label"> Roll 1 Ghost Die: </p>
+		<button type="action" name="act_oneghost" class="sheet-ghostdie"></button><br>
+
+		<p class="extras_label"> Roll 1 D6: </p>
+		<button type="action" name="act_onedsix" class="sheet-d6"></button><br>
+	</div>
+	<hr style="clear:both;">
+</div>
+
+<rolltemplate class="sheet-rolltemplate-gbcte">
+	<div class="sheet-spacer"></div>
+	<div class="sheet-heading">
+		<h5>{{name}}</h5>
+		<h5>{{description}}</h5>
+	</div>
+	<div class="sheet-results">
+		<h5>Regular d6s = {{roll1}}</h5>
+		<h5>Ghost Die = {{roll2}}</h5>
+		<h5>Total = {{computed::roll1}}</h5>
+	</div>
+</rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-d6">
+	<div class="sheet-spacer"></div>
+	<div class="sheet-heading">
+		<h3>{{name}}</h3>
+	</div>
+	<div class="sheet-results">
+		{{computed::roll1}}
+	</div></rolltemplate>
+
+<script type="text/worker">
+	on("change:brains_score change:muscles_score " +
+		 "change:moves_score change:cool_score " +
+		 "change:bp_max change:bp_spent sheet:opened", function() {
+		console.log("change detected!");
+		getAttrs(["brains_score", "muscles_score", "moves_score",
+							"cool_score", "bp_max", "bp_spent"], function(values) {
+			let br_tal = 3 + parseInt(values.brains_score)||0;
+			let mu_tal = 3 + parseInt(values.muscles_score)||0;
+			let mo_tal = 3 + parseInt(values.moves_score)||0;
+			let cl_tal = 3 + parseInt(values.cool_score)||0;
+			let max = parseInt(values.bp_max)||0;
+			let spent = parseInt(values.bp_spent)||0;
+			let current = max - spent;
+			
+			setAttrs({                            
+				"brains_tal_score": br_tal,
+				"muscles_tal_score": mu_tal,
+				"moves_tal_score": mo_tal,
+				"cool_tal_score": cl_tal,
+				"bp_current": current,
+			});
+		});
+	});
+
+	on('clicked:brains', (info) => {
+		console.log("Brains");
+		getAttrs(["brains_score", "bp_add", "bp_spent"], function(values) {
+			let name = "Brains";
+			let number = parseInt(values.brains_score)||0;
+			let added = parseInt(values.bp_add)||0;
+			let spent = parseInt(values.bp_spent)||0;
+			console.log("parsing:", name, number, added, spent);
+			parseRoll(name, number, added, spent);
+		});
+	});
+
+	on('clicked:muscles', (info) => {
+		console.log("Muscles");
+		getAttrs(["muscles_score", "bp_add", "bp_spent"], function(values) {
+			let name = "Muscles";
+			let number = parseInt(values.muscles_score)||0;
+			let added = parseInt(values.bp_add)||0;
+			let spent = parseInt(values.bp_spent)||0;
+			console.log("parsing:", name, number, added, spent);
+			parseRoll(name, number, added, spent);
+		});
+	});
+
+	on('clicked:moves', (info) => {
+		console.log("moves");
+		getAttrs(["moves_score", "bp_add", "bp_spent"], function(values) {
+			let name = "Moves";
+			let number = parseInt(values.moves_score)||0;
+			let added = parseInt(values.bp_add)||0;
+			let spent = parseInt(values.bp_spent)||0;
+			console.log("parsing:", name, number, added, spent);
+			parseRoll(name, number, added, spent);
+		});
+	});
+
+	on('clicked:cool', (info) => {
+		console.log("cool");
+		getAttrs(["cool_score", "bp_add", "bp_spent"], function(values) {
+			let name = "Cool";
+			let number = parseInt(values.cool_score)||0;
+			let added = parseInt(values.bp_add)||0;
+			let spent = parseInt(values.bp_spent)||0;
+			console.log("parsing:", name, number, added, spent);
+			parseRoll(name, number, added, spent);
+		});
+	});
+
+	on('clicked:brains_tal', (info) => {
+		console.log("Brains_tal");
+		getAttrs(["brains_tal_name", "brains_tal_score", "bp_add", "bp_spent"], function(values) {
+			let name = values.brains_tal_name||"blank";
+			let number = parseInt(values.brains_tal_score)||0;
+			let added = parseInt(values.bp_add)||0;
+			let spent = parseInt(values.bp_spent)||0;
+			console.log("parsing:", name, number, added, spent);
+			parseRoll(name, number, added, spent);
+		});
+	});
+
+	on('clicked:muscles_tal', (info) => {
+		console.log("muscles_tal");
+		getAttrs(["muscles_tal_name", "muscles_tal_score", "bp_add", "bp_spent"], function(values) {
+			let name = values.muscles_tal_name||"blank";
+			let number = parseInt(values.muscles_tal_score)||0;
+			let added = parseInt(values.bp_add)||0;
+			let spent = parseInt(values.bp_spent)||0;
+			console.log("parsing:", name, number, added, spent);
+			parseRoll(name, number, added, spent);
+		});
+	});
+
+	on('clicked:moves_tal', (info) => {
+		console.log("moves_tal");
+		getAttrs(["moves_tal_name", "moves_tal_score", "bp_add", "bp_spent"], function(values) {
+			let name = values.moves_tal_name||"blank";
+			let number = parseInt(values.moves_tal_score)||0;
+			let added = parseInt(values.bp_add)||0;
+			let spent = parseInt(values.bp_spent)||0;
+			console.log("parsing:", name, number, added, spent);
+			parseRoll(name, number, added, spent);
+		});
+	});
+
+	on('clicked:cool_tal', (info) => {
+		console.log("cool_tal");
+		getAttrs(["cool_tal_name", "cool_tal_score", "bp_add", "bp_spent"], function(values) {
+			let name = values.cool_tal_name||"blank";
+			let number = parseInt(values.cool_tal_score)||0;
+			let added = parseInt(values.bp_add)||0;
+			let spent = parseInt(values.bp_spent)||0;
+			console.log("parsing:", name, number, added, spent);
+			parseRoll(name, number, added, spent);
+		});
+	});
+
+	on('clicked:power_tal', (info) => {
+		console.log("power_tal");
+		getAttrs(["power_tal_name", "power_score", "bp_add", "bp_spent"], function(values) {
+			let name = values.power_tal_name||"blank";
+			let number = parseInt(values.power_score)||0;
+			let added = parseInt(values.bp_add)||0;
+			let spent = parseInt(values.bp_spent)||0;
+			console.log("parsing:", name, number, added, spent);
+			parseRoll(name, number, added, spent);
+		});
+	});
+/*
+	on('clicked:oneghost clicked:onedsix', (info) => {
+		let name = "error";
+		let img_tag = "error";
+		let url = "#";
+		
+		if (info.triggerName == "clicked:oneghost") {
+			name = "Ghost Die";
+		} else {
+			name = "1D6";
+		}
+		
+		startRoll(`&{template:d6} {{name=${name}:}} ` +
+							` {{roll1=[[1d6]]}}, (results) => {
+			
+			switch(results.roll1.result){
+				case "1" :	url = "https://i.imgur.com/JrIojik.png";
+										break;
+				case "2" :	url = "https://i.imgur.com/M0n1YuT.png";
+										break;
+				case "3" :	url = "https://i.imgur.com/Umv30Sb.png";
+										break;
+				case "4" :	url = "https://i.imgur.com/Rycjkxb.png";
+										break;
+				case "5" :	url = "https://i.imgur.com/f05S6M2.png";
+										break;
+				case "6" :	if (info.triggerName == "clicked:oneghost") {
+											url = "https://i.imgur.com/ytlqNkJ.png";
+										} else {
+											url = "https://i.imgur.com/BhYDjpj.png";
+										}
+										break;
+			}
+			
+			img_tag = "<img class=\"sheet-image\" src=\"" + url + 
+								" width=\"100\" height=\"100\">";
+			
+			finishRoll(results.rollId,
+				{
+					roll1: img_tag
+				}
+			);
+		});
+	});
+*/
+	function parseRoll(name, number, added, spent) {
+		let reg_dice = number + added - 1; // add BPs to roll and -1 for Ghost Die
+		let new_spent = spent + added;  
+		
+		//reset the "bp_add" and "bp_spent" fields. "bp_current" will update automatically. 
+		setAttrs({
+			"bp_add": 0,
+			"bp_spent": new_spent,
+		});
+			
+		startRoll(`&{template:gbcte} {{name=${name}:}} ` +
+							`{{description=Rolling ${reg_dice}d6 + Ghost Die...}}`+
+							` {{roll1=[[${reg_dice}d6]]}} {{roll2=[[1d6]]}}`,
+							(results) => {
+			let regular = results.results.roll1.result;
+			let ghost = results.results.roll2.result;
+			let total = regular;
+			
+			if (ghost < 6) {
+				total += ghost;
+			}
+
+			finishRoll(results.rollId,
+				{
+					roll1: total
+				}
+			);
+		});
+	}
+
+</script>
+<!-- End Roll20 content -->
+</body
+</html>
