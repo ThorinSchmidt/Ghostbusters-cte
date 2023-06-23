@@ -1,0 +1,37 @@
+/* Ghostbusters CTE Kanka.io sitewide CSS */
+/* Version 2.0 */
+
+.gm_note {
+  margin-left: 40px;
+  width: 80%;
+  border: 2px solid;
+  padding: 0px 5px 0px 5px;
+}
+
+.entrysidebar {
+  width: 30%;
+  float: right;
+  margin: 5px 5px 5px 5px;
+  padding: 5px 5px 5px 5px;
+  border-left: 3px solid;
+}
+
+.level0 {
+  margin-left: 0px;
+}
+
+.level1 {
+  margin-left: 10px;
+}
+
+.level2 {
+  margin-left: 20px;
+}
+
+.level3 {
+  margin-left: 30px;
+}
+
+.level4 {
+  margin-left: 40px;
+}
