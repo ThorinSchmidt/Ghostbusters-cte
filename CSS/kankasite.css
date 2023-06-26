@@ -33,23 +33,23 @@ body {
 }
 
 .level1 {
-  margin-left: 10px;
-}
-
-.level2 {
   margin-left: 20px;
 }
 
-.level3 {
-  margin-left: 30px;
-}
-
-.level4 {
+.level2 {
   margin-left: 40px;
 }
 
+.level3 {
+  margin-left: 60px;
+}
+
+.level4 {
+  margin-left: 80px;
+}
+
 .level5 {
-  margin-left: 50px;
+  margin-left: 100px;
 }
 
 .talents_table {
