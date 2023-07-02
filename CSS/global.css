@@ -69,3 +69,7 @@
 .GBCTE  .c {
     text-align: center;
 }
+
+.GBCTE .redline {
+  border-bottom: 5px solid var(--gb_border_color_1);
+}

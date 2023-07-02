@@ -37,21 +37,21 @@
 				<h3>Traits</h3>
 			</div>
 			<div class="traits_table">
-				<p class="brains my_label  c">Brains</p>
+				<p class="brains my_label c">Brains</p>
 				<p class="brains_val my_value c">{{$brains}}</p>
 
 				<p class="muscles my_label  c">Muscles</p>
 				<p class="muscles_val my_value c">{{$muscles}}</p>
 
-				<p class="moves my_label  c">Moves</p>
+				<p class="moves my_label c">Moves</p>
 				<p class="moves_val my_value c">{{$moves}}</p>
 
-				<p class="cool my_label  c">Cool</p>
+				<p class="cool my_label c">Cool</p>
 				<p class="cool_val my_value c">{{$cool}}</p>
 				
-				<div class="line""></div>
+				<div class="line"></div>
 				
-				<p class="power my_label  c">Power</p>
+				<p class="power my_label c">Power</p>
 				<p class="power_val my_value c">{{$power}}</p>
 			</div>
 		</div>
@@ -120,10 +120,156 @@
 	</div>
 	
 	<div class="notes">
-		<p class="my_label c">Notes</p>
-		<p class="my_value">{!! $notes !!}
+    <div class="the_notes">
+      <p class="my_label c">Notes</p>
+      <p class="my_value">{!! $notes !!}</p>
+      
+    </div>
 
 	</div>
+
+  <div class="page_2">
+    
+    <div class="ap_header">
+      <h1>Academic Progress</h1>
+    </div>
+    
+    <div class="academic_progress c">
+      <div class="personal_development">
+        <div class="pd_header">
+          <h2>Personal Development</h2>
+        </div>
+        
+        <div class="pd_labels">
+          <h3 class="pd_trait_lbl">Trait Name</h3>
+          <h3 class="pd_current_lbl">Current</h3>
+          <h3 class="pd_target_lbl">Target</h3>
+          
+        </div>
+        
+        <div class="pd_table">
+          <p class="pd_trait_name my_label c">{{$pd_trait_name}}</p>
+          <p class="pd_current_val my_value c">{{$pd_cv}}</p>
+          <p class="pd_target_val my_label c">{{$pd_tv}}</p>
+
+        </div>
+      
+      </div>
+
+      <div class="isp">
+        <div class="isp_header">
+          <h2>Individualized Study Program</h2>
+        </div>
+        
+        <div class="isp_labels">
+          <h3 class="old_lbl">Old Talent</h3>
+          <h3 class="new_lbl">New Talent</h3>
+          <h3 class="current_lbl">Current</h3>
+          <h3 class="target_lbl">Target</h3>
+          
+        </div>
+        
+        <div class="isp_table">
+          <p class="current_1 my_label c">{{$current_1}}</p>
+          <p class="new_1 my_value c">{{$new_1}}</p>
+          <p class="current_val_1 my_value c">{{$cv1}}</p>
+          <p class="target_val_1 my_label c">30</p>
+        
+          <p class="current_2 my_label c">{{$current_2}}</p>
+          <p class="new_2 my_value c">{{$new_2}}</p>
+          <p class="current_val_2 my_value c">{{$cv2}}</p>
+          <p class="target_val_2 my_label c">30</p>
+
+        
+          <p class="current_3 my_label c">{{$current_3}}</p>
+          <p class="new_3 my_value c">{{$new_3}}</p>
+          <p class="current_val_3 my_value c">{{$cv3}}</p>
+          <p class="target_val_3 my_label c">30</p>
+
+        
+          <p class="current_4 my_label c">{{$current_4}}</p>
+          <p class="new_4 my_value c">{{$new_4}}</p>
+          <p class="current_val_4 my_value c">{{$cv4}}</p>
+          <p class="target_val_4 my_label c">30</p>
+        
+        </div>
+
+      </div>
+
+    </div>
+      
+    <div class="financial">
+      <div class="financial_header">
+        <h2>Financial Standing</h2>
+      </div>
+      
+      <div class="financial_table">
+        <p class="credit_lbl my_label">Credits</p>
+        <p class="credits my_value">{{$credit}}</p>
+        
+        <p class="debit_lbl my_label">Debits</p>
+        <p class="debits my_value">{{$debit}}</p>
+        
+        <div class="line"></div>
+        
+        <p class="net_lbl my_label">Net</p>
+        <p class="net my_value">{{$net}}</p>
+      </div>
+    
+    </div>
+      
+    <div class="signatures c">
+      <div class="signatures_header">
+        <h2>Signatures</h2>
+      </div>
+      
+      <div class="signatures_explanation">
+        <p>By checking the "Yes" box and signing the appropriate box, each staff
+          member attests that the Ghostbuster In Training has completed their
+          academic course and have met all the requirements and obligations for
+          the completion of the Ghostbusters Vocational Education Training 
+          Program as administered by Ghostbuster Training Center #
+          <span class="my_value">&emsp;&emsp;</span>.
+        </p>
+      </div>
+      
+      <div class="signatures_labels">
+        <h3 class="staff_lbl">Staff</h3>
+        <h3 class="no_lbl">No</h3>
+        <h3 class="yes_lbl">Yes</h3>
+        <h3 class="signature_lbl">Signature</h3>
+      </div>
+      
+      <div class="signatures_table">
+        <p class="instructor my_label">Instructor</p>
+        <p class="ins_no my_value">{{$i_no}}</p>
+        <p class="ins_yes my_value">{{$i_yes}}</p>
+        <p class="ins_sig my_value">{{$i_sig}}</p>
+        
+        <p class="counselor my_label">Counselor</p>
+        <p class="cou_no my_value">{{$i_no}}</p>
+        <p class="cou_yes my_value">{{$i_yes}}</p>
+        <p class="cou_sig my_value">{{$i_sig}}</p>
+        
+        <p class="tresurer my_label">Treasurer</p>
+        <p class="tre_no my_value">{{$i_no}}</p>
+        <p class="tre_yes my_value">{{$i_yes}}</p>
+        <p class="tre_sig my_value">{{$i_sig}}</p>
+        
+        <p class="director my_label">Director</p>
+        <p class="dir_no my_value">{{$i_no}}</p>
+        <p class="dir_yes my_value">{{$i_yes}}</p>
+        <p class="dir_sig my_value">{{$i_sig}}</p>
+        
+        
+      </div>
+    
+    </div>
+    
+  </div>
+  
+  <div class="redline"></div>
+  
 </div>	
 
 <!-- End of copy block for kanka-->

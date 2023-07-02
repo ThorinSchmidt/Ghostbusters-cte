@@ -1,0 +1,487 @@
+/* Ghostbusters CTE Character Sheet academic_progress CSS *//* Version 2.0 */
+
+/* This has been separated from the main CSS for readability / maintainability.
+	It will need to be copied into the main CSS when used with sites like kanka.io */
+
+.GBCTE .page_2 {
+  display: grid;
+  width:60%;
+  margin: auto;
+  justify-content:center;
+  grid-template-areas:
+    "ap_header"
+    "academic_progress"
+    "financial"
+    "signatures";
+  grid-column-gap: 2px;
+  grid-row-gap: 2px;
+  border-right: 5px solid var(--gb_border_color_2);
+  border-left: 5px solid var(--gb_border_color_2);
+}
+
+.GBCTE .ap_header {
+    grid-area: ap_header;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 5px solid var(--gb_border_color_1);
+}
+
+.GBCTE  .academic_progress {
+    grid-area: academic_progress;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "personal_development"
+      "isp";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+}
+
+/******************************************************************\
+*    I S P                                                        *
+\******************************************************************/
+
+.GBCTE .isp {
+    grid-area: isp;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "isp_header"
+    "isp_labels"
+    "isp_table";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+    border-bottom: 5px solid var(--gb_border_color_1);
+}
+    
+.GBCTE .isp_header {
+    grid-area: isp_header;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .isp_labels {
+    grid-area: isp_labels;
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "old_lbl new_lbl current_lbl target_lbl";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+    border-bottom: 5px solid var(--gb_border_color_2);
+}
+
+.GBCTE .old_lbl {
+    grid-area: old_lbl;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .new_lbl {
+    grid-area: new_lbl;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .current_lbl {
+    grid-area: current_lbl;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .target_lbl {
+    grid-area: target_lbl;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.GBCTE .isp_table {
+    grid-area: isp_table;
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "current_1 new_1 current_val_1 target_val_1"
+      "current_2 new_2 current_val_2 target_val_2"
+      "current_3 new_3 current_val_3 target_val_3"
+      "current_4 new_4 current_val_4 target_val_4";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+}
+
+
+.GBCTE .current_1 {
+    grid-area: current_1;
+}
+
+.GBCTE .current_2 {
+    grid-area: current_2;
+}
+
+.GBCTE .current_3 {
+    grid-area: current_3;
+}
+
+.GBCTE .current_4 {
+    grid-area: current_4;
+}
+
+.GBCTE .new_1 {
+    grid-area: new_1;
+}
+
+.GBCTE .new_2 {
+    grid-area: new_2;
+}
+
+.GBCTE .new_3 {
+    grid-area: new_3;
+}
+
+.GBCTE .new_4 {
+    grid-area: new_4;
+}
+
+.GBCTE .current_val_1 {
+    grid-area: current_val_1;
+}
+
+.GBCTE .current_val_2 {
+    grid-area: current_val_2;
+}
+
+.GBCTE .current_val_3 {
+    grid-area: current_val_3;
+}
+
+.GBCTE .current_val_4 {
+    grid-area: current_val_4;
+}
+
+.GBCTE .target_val_1 {
+    grid-area: target_val_1;
+}
+
+.GBCTE .target_val_2 {
+    grid-area: target_val_2;
+}
+
+.GBCTE .target_val_3 {
+    grid-area: target_val_3;
+}
+
+.GBCTE .target_val_4 {
+    grid-area: target_val_4;
+}
+
+/******************************************************************\
+*    P E R S O N A L   D E V E L O P M E N T                      *
+\******************************************************************/
+
+.GBCTE .personal_development {
+    grid-area: personal_development;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "pd_header"
+    "pd_labels"
+    "pd_table";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+    border-bottom: 5px solid var(--gb_border_color_1);
+}
+   
+.GBCTE .pd_header {
+    grid-area: pd_header;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .pd_labels {
+    grid-area: pd_labels;
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "pd_trait_lbl pd_current_lbl pd_target_lbl";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+    border-bottom: 5px solid var(--gb_border_color_2);
+}
+
+.GBCTE .pd_trait_lbl {
+    grid-area: pd_trait_lbl;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .pd_current_lbl {
+    grid-area: pd_current_lbl;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .pd_target_lbl {
+    grid-area: pd_target_lbl;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .pd_table {
+    grid-area: pd_table;
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "pd_trait_name pd_current_val pd_target_val";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+}
+
+.GBCTE .pd_trait_name {
+    grid-area: pd_trait_name;
+}
+
+.GBCTE .pd_current_val {
+    grid-area: pd_current_val;
+}
+
+.GBCTE .pd_target_val {
+    grid-area: pd_target_val;
+}
+
+/******************************************************************\
+*    F I N A N C I A L                                            *
+\******************************************************************/
+
+.GBCTE .financial {
+    grid-area: financial ;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "financial_header"
+      "financial_table";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+    border-bottom: 5px solid var(--gb_border_color_1);
+}
+
+.GBCTE  .financial_header {
+    grid-area: financial_header;
+    display: flex;
+    justify-content: center;
+    border-bottom: 5px solid var(--gb_border_color_2);
+}
+
+.GBCTE .financial_table {
+    grid-area: financial_table ;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "credit_lbl credits"
+      "debit_lbl debits"
+      "line line"
+      "net_lbl net";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+}
+
+
+.GBCTE  .credit_lbl {
+    grid-area: credit_lbl;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE  .credits {
+    grid-area: credits;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE  .debit_lbl {
+    grid-area: debit_lbl;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE  .debits {
+    grid-area: debits;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE  .net_lbl {
+    grid-area: net_lbl;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE  .net {
+    grid-area: net;
+    display: flex;
+    justify-content: center;
+}
+
+/******************************************************************\
+*    S I G N A T U R E S                                          *
+\******************************************************************/
+
+.GBCTE .signatures {
+    grid-area: signatures ;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "signatures_header"
+      "signatures_explanation"
+      "signatures_labels"
+      "signatures_table";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+}
+
+.GBCTE  .signatures_header {
+    grid-area: signatures_header;
+    display: flex;
+    justify-content: center;
+    border-bottom: 5px solid var(--gb_border_color_2);
+}
+
+.GBCTE  .signatures_explanation {
+    grid-area: signatures_explanation;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .signatures_labels {
+    grid-area: signatures_labels;
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 4fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "staff_lbl no_lbl yes_lbl siganture_lbl";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+    border-bottom: 5px solid var(--gb_border_color_2);
+}
+
+.GBCTE .signatures_table {
+    grid-area: signatures_table ;
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 4fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "instructor ins_no ins_yes ins_sig"
+      "counselor  cou_no cou_yes cou_sig"
+      "treasurer  tre_no tre_yes tre_sig"
+      "director   dir_no dir_yes dir_sig";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+}
+
+.GBCTE .instructor {
+    grid-area: instructor;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .ins_no {
+    grid-area: ins_no;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .ins_yes {
+    grid-area: ins_yes;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .ins_sig {
+    grid-area: ins_sig;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .counselor {
+    grid-area: counselor;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .cou_no {
+    grid-area: cou_no;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .cou_yes {
+    grid-area: cou_yes;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .cou_sig {
+    grid-area: cou_sig;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .treasurer {
+    grid-area: treasurer;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .tre_no {
+    grid-area: tre_no;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .tre_yes {
+    grid-area: tre_yes;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .tre_sig {
+    grid-area: tre_sig;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .directoror {
+    grid-area: director;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .dir_no {
+    grid-area: dir_no;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .dir_yes {
+    grid-area: dir_yes;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .dir_sig {
+    grid-area: dir_sig;
+    display: flex;
+    justify-content: center;
+}
+

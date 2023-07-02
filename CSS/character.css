@@ -12,6 +12,7 @@
 @import "brownie_points.css";
 @import "equipment.css";
 @import "notes.css";
+@import "academic_progress.css";
 
 /* Grid layout for character sheet*/
 
@@ -24,7 +25,9 @@
         "identify"
         "traits_n_talents"
         "brownie_points_n_equipment"
-        "notes";
+        "notes"
+        "ap_header"
+        "academic_progress";
     grid-gap: 5px;
     max-width: 1000px;
     color: var(--gb_text_color_1);
