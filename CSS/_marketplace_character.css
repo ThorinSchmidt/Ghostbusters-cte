@@ -1,0 +1,943 @@
+:root {
+  --gb_background_color: lightgray;
+  --gb_border_color_1: red;
+  --gb_border_color_2: black;
+  --gb_text_color_1: black;
+  --gb_label_text_color: white;
+  --gb_label_background_color: black;
+  --gb_value_text_color: black;
+  --gb_value_background_color: white;
+}
+
+.GBCTE  * {
+    padding: 2px;
+    margin: 0 0 0 0;
+}
+
+.GBCTE h1, h2, h3, h4, h5, h6 {
+    color: var(--gb_text_color_1);
+}
+
+.GBCTE  hr {
+    color:black;
+    background-color:black;
+}
+
+.GBCTE  .line_label {
+    color: var(--gb_label_text_color);
+    background: var(--gb_label_background_color);
+    float: left;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.GBCTE  .line_value {
+    color: var(--gb_value_text_color);
+    background: var(--gb_value_background_color);
+    display: block;
+    overflow: hidden;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.GBCTE  .my_label {
+    color: var(--gb_label_text_color);
+    background: var(--gb_label_background_color);
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.GBCTE  .my_value {
+    color: var(--gb_value_text_color);
+    background: var(--gb_value_background_color);
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.GBCTE  .l {
+    text-align: left;
+}
+
+.GBCTE  .r {
+    text-align: right;
+}
+
+.GBCTE  .c {
+    text-align: center;
+}
+
+.GBCTE .redline {
+  border-bottom: 5px solid var(--gb_border_color_1);
+}
+
+.GBCTE .header {
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    border-bottom: 5px solid var(--gb_border_color_1);
+}
+
+.GBCTE .identify {
+    grid-area: identify;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "col_left col_right";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+    border-bottom: 5px solid var(--gb_border_color_1);
+}
+
+
+.GBCTE .col_left {
+    grid-area: col_left;
+}
+
+.GBCTE .col_right {
+    grid-area: col_right;
+}
+
+.GBCTE .traits_n_talents {
+    grid-area: traits_n_talents;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "traits talents";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+    border-bottom: 5px solid var(--gb_border_color_1);
+}
+
+/********* ********************************************************\
+*    T  R A I T S                                                                                                        *
+\******************************************************************/
+
+.GBCTE .traits {
+    grid-area: traits;
+    display: grid;
+    justify-content: center;
+    align-content: start;
+    grid-template-columns: 60%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "traits_header"
+        "traits_table";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+}
+
+.GBCTE .traits_header {
+    grid-area: traits_header;
+    display: flex;
+    justify-content: center;
+    border-bottom: 5px solid var(--gb_border_color_2);
+}
+
+.GBCTE .traits_table {
+    grid-area: traits_table;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "brains brains_val"
+        "muscles muscles_val"
+        "moves moves_val"
+        "cool cool_val"
+        "line line"
+        "power power_val";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+}
+
+.GBCTE .brains {
+    grid-area: brains;
+}
+
+.GBCTE .brains_val {
+    grid-area: brains_val;
+}
+
+.GBCTE .muscles {
+    grid-area: muscles;
+}
+
+.GBCTE .muscles_val {
+    grid-area: muscles_val;
+}
+
+.GBCTE .moves {
+    grid-area: moves;
+}
+
+.GBCTE .moves_val {
+    grid-area: moves_val;
+}
+
+.GBCTE .cool {
+    grid-area: cool;
+}
+
+.GBCTE .cool_val {
+    grid-area: cool_val;
+}
+
+.GBCTE .line {
+    grid-area: line;
+    border-bottom: 5px solid var(--gb_border_color_2);
+}
+
+.GBCTE .power {
+    grid-area: power;
+}
+
+.GBCTE .power_val {
+    grid-area: power_val;
+}
+
+/********* ********************************************************\
+*    T A L E N T S                                                                                                    *
+\******************************************************************/
+
+.GBCTE .talents {
+    grid-area: talents;
+    display: grid;
+    justify-content: center;
+    align-content: start;
+    grid-template-columns: 60%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "talents_header"
+        "talents_table";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+}
+
+.GBCTE .talents_header {
+    grid-area: talents_header;
+    display: flex;
+    justify-content: center;
+    border-bottom: 5px solid var(--gb_border_color_2);
+}
+
+.GBCTE .talents_table {
+    grid-area: talents_table;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "brains_t brains_t_val"
+        "muscles_t muscles_t_val"
+        "moves_t moves_t_val"
+        "cool_t cool_t_val"
+        "line_t line_t"
+        "lesser_t lesser_t_val"
+        "greater_t greater_t_val";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+}
+
+.GBCTE .brains_t {
+    grid-area: brains_t;
+}
+
+.GBCTE .brains_t_val {
+    grid-area: brains_t_val;
+}
+
+.GBCTE .muscles_t {
+    grid-area: muscles_t;
+}
+
+.GBCTE .muscles_t_val {
+    grid-area: muscles_t_val;
+}
+
+.GBCTE .moves_t {
+    grid-area: moves_t;
+}
+
+.GBCTE .moves_t_val {
+    grid-area: moves_t_val;
+}
+
+.GBCTE .cool_t {
+    grid-area: cool_t;
+}
+
+.GBCTE .cool_t_val {
+    grid-area: cool_t_val;
+}
+
+.GBCTE .line_t {
+    grid-area: line_t;
+    border-bottom: 5px solid var(--gb_border_color_2);
+}
+
+.GBCTE .lesser_t {
+    grid-area: lesser_t;
+}
+
+.GBCTE .lesser_t_val {
+    grid-area: lesser_t_val;
+}
+
+.GBCTE  .brownie_points_n_equipment {
+    grid-area: brownie_points_n_equipment;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "brownie_points equipment";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+    border-bottom: 5px solid var(--gb_border_color_1);
+}
+
+/********* ********************************************************\
+*    B R O W N I E   P O I N T S                                                                            *
+\******************************************************************/
+
+.GBCTE .brownie_points {
+    grid-area: brownie_points;
+	display: grid;
+    justify-content: center;
+    align-content: start;
+    grid-template-columns: 60%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "brownie_points_header"
+        "brownie_points_table";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+}
+
+.GBCTE .brownie_points_header {
+    grid-area: brownie_points_header;
+    display: flex;
+    justify-content: center;
+    border-bottom: 5px solid var(--gb_border_color_2);
+}
+
+.GBCTE .brownie_points_table {
+    grid-area: brownie_points_table;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "bp_start bp_start_val"
+        "bp_spent bp_spent_val"
+		"line line"
+        "bp_left bp_left_val";
+		
+
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+}
+
+.GBCTE .bp_start {
+	grid-area: bp_start;
+}
+
+.GBCTE .bp_start_val {
+	grid-area: bp_start_val;
+}
+
+.GBCTE .bp_spent {
+	grid-area: bp_spent;
+}
+
+.GBCTE .bp_spent_val {
+	grid-area: bp_spent_val;
+}
+
+.GBCTE .bp_left {
+	grid-area: bp_left;
+}
+
+.GBCTE .bp_left_val {
+	grid-area: bp_left_val;
+}
+
+/********* ********************************************************\
+*    E Q U I P M E N T                                                                                            *
+\******************************************************************/
+
+.GBCTE .equipment {
+    grid-area: equipment;
+	display: grid;
+    justify-content: center;
+    align-content: start;
+    grid-template-columns: 60%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "equipment_header"
+        "equipment_table";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+}
+
+.GBCTE .equipment_header {
+    grid-area: equipment_header;
+    display: flex;
+    justify-content: center;
+    border-bottom: 5px solid var(--gb_border_color_2);
+}
+
+.GBCTE .equipment_table {
+    grid-area: equipment_table;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "equipment_1_val equipment_1"
+        "equipment_2_val equipment_2"
+        "equipment_3_val equipment_3";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+}
+
+.GBCTE .equipment_1_val {
+	grid-area: equipment_1_val;
+}
+
+.GBCTE .equipment_1 {
+	grid-area: equipment_1;
+}
+.GBCTE .equipment_2_val {
+	grid-area: equipment_2_val;
+}
+
+.GBCTE .equipment_2 {
+	grid-area: equipment_2;
+}
+.GBCTE .equipment_3_val {
+	grid-area: equipment_3_val;
+}
+
+.GBCTE .equipment_3 {
+	grid-area: equipment_3;
+}
+
+.GBCTE .notes {
+    grid-area: notes;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "the_notes";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+    border-bottom: 15px double var(--gb_border_color_1);
+}
+
+.GBCTE .the_notes {
+    grid-area: the_notes;
+}
+
+.GBCTE .page_2 {
+  display: grid;
+  width:60%;
+  margin: auto;
+  justify-content:center;
+  grid-template-areas:
+    "ap_header"
+    "academic_progress"
+    "financial"
+    "signatures";
+  grid-column-gap: 2px;
+  grid-row-gap: 2px;
+  border-right: 5px solid var(--gb_border_color_2);
+  border-left: 5px solid var(--gb_border_color_2);
+}
+
+.GBCTE .ap_header {
+    grid-area: ap_header;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 5px solid var(--gb_border_color_1);
+}
+
+.GBCTE  .academic_progress {
+    grid-area: academic_progress;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "personal_development"
+      "isp";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+}
+
+/******************************************************************\
+*    I S P                                                        *
+\******************************************************************/
+
+.GBCTE .isp {
+    grid-area: isp;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "isp_header"
+    "isp_labels"
+    "isp_table";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+    border-bottom: 5px solid var(--gb_border_color_1);
+}
+    
+.GBCTE .isp_header {
+    grid-area: isp_header;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .isp_labels {
+    grid-area: isp_labels;
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "old_lbl new_lbl current_lbl target_lbl";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+    border-bottom: 5px solid var(--gb_border_color_2);
+}
+
+.GBCTE .old_lbl {
+    grid-area: old_lbl;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .new_lbl {
+    grid-area: new_lbl;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .current_lbl {
+    grid-area: current_lbl;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .target_lbl {
+    grid-area: target_lbl;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.GBCTE .isp_table {
+    grid-area: isp_table;
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "current_1 new_1 current_val_1 target_val_1"
+      "current_2 new_2 current_val_2 target_val_2"
+      "current_3 new_3 current_val_3 target_val_3"
+      "current_4 new_4 current_val_4 target_val_4";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+}
+
+
+.GBCTE .current_1 {
+    grid-area: current_1;
+}
+
+.GBCTE .current_2 {
+    grid-area: current_2;
+}
+
+.GBCTE .current_3 {
+    grid-area: current_3;
+}
+
+.GBCTE .current_4 {
+    grid-area: current_4;
+}
+
+.GBCTE .new_1 {
+    grid-area: new_1;
+}
+
+.GBCTE .new_2 {
+    grid-area: new_2;
+}
+
+.GBCTE .new_3 {
+    grid-area: new_3;
+}
+
+.GBCTE .new_4 {
+    grid-area: new_4;
+}
+
+.GBCTE .current_val_1 {
+    grid-area: current_val_1;
+}
+
+.GBCTE .current_val_2 {
+    grid-area: current_val_2;
+}
+
+.GBCTE .current_val_3 {
+    grid-area: current_val_3;
+}
+
+.GBCTE .current_val_4 {
+    grid-area: current_val_4;
+}
+
+.GBCTE .target_val_1 {
+    grid-area: target_val_1;
+}
+
+.GBCTE .target_val_2 {
+    grid-area: target_val_2;
+}
+
+.GBCTE .target_val_3 {
+    grid-area: target_val_3;
+}
+
+.GBCTE .target_val_4 {
+    grid-area: target_val_4;
+}
+
+/******************************************************************\
+*    P E R S O N A L   D E V E L O P M E N T                      *
+\******************************************************************/
+
+.GBCTE .personal_development {
+    grid-area: personal_development;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "pd_header"
+    "pd_labels"
+    "pd_table";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+    border-bottom: 5px solid var(--gb_border_color_1);
+}
+   
+.GBCTE .pd_header {
+    grid-area: pd_header;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .pd_labels {
+    grid-area: pd_labels;
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "pd_trait_lbl pd_current_lbl pd_target_lbl";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+    border-bottom: 5px solid var(--gb_border_color_2);
+}
+
+.GBCTE .pd_trait_lbl {
+    grid-area: pd_trait_lbl;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .pd_current_lbl {
+    grid-area: pd_current_lbl;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .pd_target_lbl {
+    grid-area: pd_target_lbl;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .pd_table {
+    grid-area: pd_table;
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "pd_trait_name pd_current_val pd_target_val";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+}
+
+.GBCTE .pd_trait_name {
+    grid-area: pd_trait_name;
+}
+
+.GBCTE .pd_current_val {
+    grid-area: pd_current_val;
+}
+
+.GBCTE .pd_target_val {
+    grid-area: pd_target_val;
+}
+
+/******************************************************************\
+*    F I N A N C I A L                                            *
+\******************************************************************/
+
+.GBCTE .financial {
+    grid-area: financial ;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "financial_header"
+      "financial_table";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+    border-bottom: 5px solid var(--gb_border_color_1);
+}
+
+.GBCTE  .financial_header {
+    grid-area: financial_header;
+    display: flex;
+    justify-content: center;
+    border-bottom: 5px solid var(--gb_border_color_2);
+}
+
+.GBCTE .financial_table {
+    grid-area: financial_table ;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "credit_lbl credits"
+      "debit_lbl debits"
+      "line line"
+      "net_lbl net";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+}
+
+
+.GBCTE  .credit_lbl {
+    grid-area: credit_lbl;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE  .credits {
+    grid-area: credits;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE  .debit_lbl {
+    grid-area: debit_lbl;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE  .debits {
+    grid-area: debits;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE  .net_lbl {
+    grid-area: net_lbl;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE  .net {
+    grid-area: net;
+    display: flex;
+    justify-content: center;
+}
+
+/******************************************************************\
+*    S I G N A T U R E S                                          *
+\******************************************************************/
+
+.GBCTE .signatures {
+    grid-area: signatures ;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "signatures_header"
+      "signatures_explanation"
+      "signatures_labels"
+      "signatures_table";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+}
+
+.GBCTE  .signatures_header {
+    grid-area: signatures_header;
+    display: flex;
+    justify-content: center;
+    border-bottom: 5px solid var(--gb_border_color_2);
+}
+
+.GBCTE  .signatures_explanation {
+    grid-area: signatures_explanation;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .signatures_labels {
+    grid-area: signatures_labels;
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 4fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "staff_lbl no_lbl yes_lbl siganture_lbl";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+    border-bottom: 5px solid var(--gb_border_color_2);
+}
+
+.GBCTE .signatures_table {
+    grid-area: signatures_table ;
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 4fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "instructor ins_no ins_yes ins_sig"
+      "counselor  cou_no cou_yes cou_sig"
+      "treasurer  tre_no tre_yes tre_sig"
+      "director   dir_no dir_yes dir_sig";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+}
+
+.GBCTE .instructor {
+    grid-area: instructor;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .ins_no {
+    grid-area: ins_no;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .ins_yes {
+    grid-area: ins_yes;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .ins_sig {
+    grid-area: ins_sig;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .counselor {
+    grid-area: counselor;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .cou_no {
+    grid-area: cou_no;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .cou_yes {
+    grid-area: cou_yes;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .cou_sig {
+    grid-area: cou_sig;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .treasurer {
+    grid-area: treasurer;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .tre_no {
+    grid-area: tre_no;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .tre_yes {
+    grid-area: tre_yes;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .tre_sig {
+    grid-area: tre_sig;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .directoror {
+    grid-area: director;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .dir_no {
+    grid-area: dir_no;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .dir_yes {
+    grid-area: dir_yes;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .dir_sig {
+    grid-area: dir_sig;
+    display: flex;
+    justify-content: center;
+}
+
+.GBCTE .character_sheet {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header"
+        "identify"
+        "traits_n_talents"
+        "brownie_points_n_equipment"
+        "notes"
+        "ap_header"
+        "academic_progress";
+    grid-gap: 5px;
+    max-width: 1000px;
+    color: var(--gb_text_color_1);
+    padding: 2px;
+    margin: 0 auto;
+    background: lightgray;
+    background-image: url("http://i.imgur.com/nOk3zYE.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+}

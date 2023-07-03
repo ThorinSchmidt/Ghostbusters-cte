@@ -17,41 +17,41 @@
 	<div class="traits c">
 		<h1 class="header">Traits</h1>
 		<p class="trait_label"> Brains: </p>
-		<input type="number" name="attr_brains_score" min="1" max="9"	value="0">
+		<input type="number" class="shortnum" name="attr_brains_score" min="1" max="9"	value="0">
 		<button type="action" name="act_brains" class="sheet-d6"></button><br>
 		
 		<p class="trait_label"> Muscles: </p>
-		<input type="number" name="attr_muscles_score" min="1" max="9" value="0">
+		<input type="number" class="shortnum" name="attr_muscles_score" min="1" max="9" value="0">
 		<button type="action" name="act_muscles" class="sheet-d6"></button><br>
 		
 		<p class="trait_label"> Moves: </p>
-		<input type="number" name="attr_moves_score" min="1" max="9"	value="0">
+		<input type="number" class="shortnum" name="attr_moves_score" min="1" max="9"	value="0">
 		<button type="action" name="act_moves" class="sheet-d6"></button><br>
 		
 		<p class="trait_label"> Cool: </p>
-		<input type="number" name="attr_cool_score" min="1" max="9"	value="0">
+		<input type="number" class="shortnum" name="attr_cool_score" min="1" max="9"	value="0">
 		<button type="action" name="act_cool" class="sheet-d6"></button><br>
 
 		<p class="trait_label"> Power: </p>
-		<input type="number" name="attr_power_score" min="1" max="9"	value="0">
+		<input type="number" class="shortnum" name="attr_power_score" min="0" max="9"	value="0">
 	</div>
 	
 	<div class="talents c">
 		<h1 class="header">Talents</h1>
 		<input type="text" name="attr_brains_tal_name" size="15" class="talent_name">
-		<input type="number" name="attr_brains_tal_score"	min="4" max="12" value="0">
+		<input type="number" class="shortnum" name="attr_brains_tal_score"	min="4" max="12" value="0">
 		<button type="action" name="act_brains_tal" class="sheet-d6"></button><br>
 
 		<input type="text" name="attr_muscles_tal_name" size="15" class="talent_name">
-		<input type="number" name="attr_muscles_tal_score" min="4" max="12"	value="0">
+		<input type="number" class="shortnum" name="attr_muscles_tal_score" min="4" max="12"	value="0">
 		<button type="action" name="act_muscles_tal" class="sheet-d6"></button><br>
 
 		<input type="text" name="attr_moves_tal_name"	size="15" class="talent_name">
-		<input type="number" name="attr_moves_tal_score" min="4" max="12"	value="0">
+		<input type="number" class="shortnum" name="attr_moves_tal_score" min="4" max="12"	value="0">
 		<button type="action" name="act_moves_tal" class="sheet-d6"></button><br>
 
 		<input type="text" name="attr_cool_tal_name"	size="15" class="talent_name">
-		<input type="number" name="attr_cool_tal_score"	min="4" max="12"	value="0">
+		<input type="number" class="shortnum" name="attr_cool_tal_score"	min="4" max="12"	value="0">
 		<button type="action" name="act_cool_tal" class="sheet-d6"></button><br>
 
 		<input type="text" name="attr_power_tal_name"	size="15" class="talent_name">
@@ -61,21 +61,21 @@
 	<div class="bp c">
 		<h1 class="header">Brownie Points</h1>
 		<p class="bp_label">BP Max:</p>
-		<input type="number" name="attr_bp_max" min="0" max="60"
+		<input type="number" class="shortnum" name="attr_bp_max" min="0" max="60"
 			value="20"><br>
 		
 		<p class="bp_label">BP Spent:</p>
-		<input type="number" name="attr_bp_spent" min="0" max="60"
+		<input type="number" class="shortnum" name="attr_bp_spent" min="0" max="60"
 			value="0"><br>
 		
 		<p class="bp_label">BP Current:</p>
-		<input type="number" name="attr_bp_current" min="0" max="60"
+		<input type="number" class="shortnum" name="attr_bp_current" min="0" max="60"
 			value="20"><br>
 
 		<br>
 		
 		<p class="bp_label">Add BP to Roll: </p>
-		<input type="number" name="attr_bp_add" min="0" max="60"
+		<input type="number" class="shortnum" name="attr_bp_add" min="0" max="60"
 			value="0"><br>
 	</div>
 	<hr style="clear:both;">
@@ -91,6 +91,115 @@
 		<p class="extras_label"> Roll 1 D6: </p>
 		<button type="action" name="act_onedsix" class="sheet-d6"></button><br>
 	</div>
+	<hr style="clear:both;">
+  <h1 class="header">Academic Progress Record</h1>
+  <div class="isp">
+    <table class="c">
+      <caption><h3>Individualized Study Program</h3></caption>
+      <thead>
+        <tr>
+          <th>Old Talent</th>
+          <th>New Talent</th>
+          <th>Progress</th>
+          <th>Target</th>
+        </tr>
+      </thead>
+      <tr>
+        <td><input type="text" name="attr_old_tal_1" size="15" 
+          class="talent_name"></td>
+        <td><input type="text" name="attr_new_tal_1" size="15" 
+          class="talent_name"></td>
+        <td><input type="number" class="shortnum" name="attr_progress_1"	min="0" value="0"></td>
+        <td><input type="number" class="shortnum" name="attr_target_1"	  min="30" max="30"
+          value="30"></td>
+      </tr>
+      <tr>
+        <td><input type="text" name="attr_old_tal_2" size="15" 
+          class="talent_name"></td>
+        <td><input type="text" name="attr_new_tal_2" size="15" 
+          class="talent_name"></td>
+        <td><input type="number" class="shortnum" name="attr_progress_2"	min="0" value="0"></td>
+        <td><input type="number" class="shortnum" name="attr_target_2"	  min="30" max="30"
+          value="30"></td>
+      </tr>
+      <tr>
+        <td><input type="text" name="attr_old_tal_3" size="15" 
+          class="talent_name"></td>
+        <td><input type="text" name="attr_new_tal_3" size="15" 
+          class="talent_name"></td>
+        <td><input type="number" class="shortnum" name="attr_progress_3"	min="0" value="0"></td>
+        <td><input type="number" class="shortnum" name="attr_target_3"	  min="30" max="30"
+          value="30"></td>
+      </tr>
+      <tr>
+        <td><input type="text" name="attr_old_tal_4" size="15" 
+          class="talent_name"></td>
+        <td><input type="text" name="attr_new_tal_4" size="15" 
+          class="talent_name"></td>
+        <td><input type="number" class="shortnum" name="attr_progress_4"	min="0" value="0"></td>
+        <td><input type="number" class="shortnum" name="attr_target_4"	  min="0" max="30"
+          value="30"></td>
+      </tr>
+    </table>
+    <table class="c">
+      <caption><h3>Personal Development</h3></caption>
+      <thead>
+        <tr>
+          <th>Chosen Traio</th>
+          <th>Progress</th>
+          <th>Target</th>
+        </tr>
+      </thead>
+      <tr>
+        <td><input type="text" name="attr_chosen_trait" size="15" 
+          class="trait_name"></td>
+        <td><input type="number" class="shortnum" name="attr_progress_trait"
+          min="0" value="0"></td>
+        <td><input type="number" class="shortnum" name="attr_target_trait"
+          min="30" max="60" step="30" value="30"></td>
+      </tr>
+    </table>
+  </div>
+  <div class="financial">
+    <table class="c">
+      <caption><h3>Financial Standing</h3></caption>
+      <tr>
+        <td>Credits:</td><td>$</td>
+        <td><input type="text" class="longnum" name="attr_credits"
+          size="10" value="0"></td>
+        <td>.00</td>
+      </tr>
+      <tr>
+        <td> - Debits: </td><td>$</td>
+        <td><input type="text" class="longnum" name="attr_debits"
+          size="10" value="0"></td>
+        <td>.00</td>
+      </tr>
+      <tr><td colspan="3"><hr></td></tr>
+      <tr>
+        <td> = Net:    </td><td>$</td>
+        <td><input type="text" class="longnum" name="attr_net"
+          size="10" value="0"></td>
+        <td>.00</td>
+      </tr>
+      <tr><td colspan="3"><hr class="dbl_hr"></td></tr>
+      <tr>
+        <td>Student Obligation: </td><td>$</td>
+        <td><input type="text" class="longnum" name="attr_amt_owed"
+          size="10" value="0"></td>
+        <td>.00</td>
+      </tr>
+      <tr>
+        <td>Student Award:      </td><td>$</td>
+        <td><input type="text" class="longnum" name="attr_amt_award"
+          size="10" value="0"></td>
+        <td>.00</td>
+      </tr>
+    </table>  
+  </div>
+  <div>
+    
+  </div>
 	<hr style="clear:both;">
 </div>
 
@@ -122,6 +231,32 @@
 </rolltemplate>
 
 <script type="text/worker">
+
+  on("change:credits change:debits", function() {
+    console.log("Financial Change Detected!!");
+    getAttrs(["credits", "debits"], function(values) {
+      let credit_int = parseInt(values.credits)||0;
+      let debit_int = parseInt(values.debits)||0;
+      let net_int = credit_int - debit_int;
+      let award_int = 0;
+      let owed_int = 0;
+      
+      if (net_int < 0) {
+        award_int = 0;
+        owed_int = Math.round(Math.abs(net_int) * .7);
+      } else {
+        owed_int = 0;
+        award_int = Math.round(net_int * .7);
+      }
+      
+      setAttrs({                            
+				"net": net_int,
+				"amt_owed": owed_int,
+				"amt_award": award_int,
+			});
+    });
+  });
+
 	on("change:brains_score change:muscles_score " +
 		 "change:moves_score change:cool_score " +
 		 "change:bp_max change:bp_spent sheet:opened", function() {
@@ -251,7 +386,9 @@
 			let added = parseInt(values.bp_add)||0;
 			let spent = parseInt(values.bp_spent)||0;
 			console.log("parsing:", name, number, added, spent);
-			parseRoll(name, number, added, spent);
+			if (number > 0) {
+			    parseRoll(name, number, added, spent);
+			}
 		});
 	});
 

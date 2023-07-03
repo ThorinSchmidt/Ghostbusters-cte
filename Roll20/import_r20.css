@@ -9,9 +9,18 @@ hr {
 	border-top: 3px solid black;
 }
 
-input[type=number] {
-	text-align: center;
-	width: 3em;
+.dbl_hr {
+  height: 6px;
+  border-top: 2px solid black;
+	border-bottom: 2px solid black;
+}
+
+table th {
+  border-bottom: 3px solid black;
+}
+
+caption h3 {
+  margin: 1 1 1 1;
 }
 
 textarea {
@@ -19,9 +28,39 @@ textarea {
 	height: 8em;
 }
 
+td {
+  text-align: center;
+}
+
+.financial td {
+  text-align: right;
+}
+
+.shortnum {
+	text-align: center;
+	width: 3em;
+}
+
+.longnum {
+	text-align: right;
+}
+
+.text_input_label {
+  display: inline-block;
+  text-align: center;
+  width: 30en;
+}
+
+.num_input_label {
+  display: inline-block;
+  text-align: center;
+  width: 3em;
+}  
+
 .c {
 	text-align: center;
-	margin: auto;
+	margin-left: auto;
+  margin-right: auto;
 }
 
 .header {
@@ -39,17 +78,17 @@ textarea {
 	text-align: right;
 }
 
-.traits, .bp, .extras {
-	float: left;
-	width: 30%;
+.trait_name {
+	text-align: center;
 }
 
-.talents {
+.traits, .bp, .extras, .financial,
+.talents, .pd {
 	float: left;
-	width 40%;
+	width: 33%;
 }
 
-.notes {
+.notes, .isp {
 	float: left;
 	width: 66%;
 }
