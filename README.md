@@ -1,21 +1,23 @@
 # Ghostbusters-CTE
 
-## Template for Kanka.io
+## Files for Kanka.io and Roll20
 
-These files are for creating a custom attribute tenplate for Kanka.io.
-
-It uses the Ghostbusters RPG system by West End Games.
+This project uses the Ghostbusters RPG system by West End Games.
 Their system uses pools of d6's and sliding difficulty
 scales instead of the standard d20 SRD most are familiar with.
 
 ===
-## Changelog:
-* version 1 was a very rough prototype
-* version 2.0 first usable version.  It will become the baseline for the Ghost
-and NPC templates.
-
-===
 ## TODO:
-* change variable names to be less generic
-* create NPC and Ghost templates
-* change Character layout slightly to accomodate GB logo and "photo"
+* enable the diceroller functions to use images instead of just text.
+* Finish creating Notes entries for all ghosts in Tobin's Spirit Guide.
+* Add Ghost entries for all ghosts in Tobin's Spirit Guide.
+* Create a script for a welcome video to new student ghostbusters.
+* Convince Martin to make the video.
+* Finish the Student Handbook.
+* Create NPCs for a default Ghostbuster Training Center.
+* Finish The Player's guide.
+* Finish the Ghostmaster's Guide.
+* Create a map for the default Training Center.
+* Finish Creating Items for Kanka and Item Cards for Roll20.
+* Create Maps for Kanka and Roll20 for default setting of St. Louis.
+* Create Spirit Guide entries for world regions outside the scope of Tobin's.
