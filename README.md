@@ -11,10 +11,10 @@ scales instead of the standard d20 SRD most are familiar with.
 ## TODO:
 - [ ] add GBI Routines to Kanaka
     - [X] Car Chase
-    - [] Obtaining a Permoit
-    - [] Going to Court
-    - [] Document Research
-    - [] Going to the Hospital 
+    - [x] Obtaining a Permoit
+    - [x] Going to Court
+    - [x] Document Research
+    - [x] Going to the Hospital 
 - [ ] create additional routines:
     - [ ] Go to Jail
     - [ ] First Date
