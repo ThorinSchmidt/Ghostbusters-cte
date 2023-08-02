@@ -9,6 +9,19 @@ scales instead of the standard d20 SRD most are familiar with.
 <hr>
 
 ## TODO:
+- [x] add GBI Routines to Kanaka
+    - [X] Car Chase
+    - [x] Obtaining a Permoit
+    - [x] Going to Court
+    - [x] Document Research
+    - [x] Going to the Hospital 
+- [ ] create additional routines:
+    - [ ] Go to Jail
+    - [ ] First Date
+    - [ ] Get Interviewed by Journalist
+    - [ ] Earning a new Talent
+    - [ ] Raising a Trait
+    - [ ] Gaining The Power Trait
 - [ ] enable the diceroller functions to use images instead of just text.
 - [ ] Finish creating Notes entries for all ghosts in Tobin's Spirit Guide.
 - [ ] Add Ghost entries for all ghosts in Tobin's Spirit Guide.
