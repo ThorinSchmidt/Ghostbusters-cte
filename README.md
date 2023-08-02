@@ -9,7 +9,7 @@ scales instead of the standard d20 SRD most are familiar with.
 <hr>
 
 ## TODO:
-- [ ] add GBI Routines to Kanaka
+- [x] add GBI Routines to Kanaka
     - [X] Car Chase
     - [x] Obtaining a Permoit
     - [x] Going to Court
