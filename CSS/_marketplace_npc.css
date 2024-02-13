@@ -1,0 +1,444 @@
+/* Grid layout for npc sheet*/
+
+/* globals */
+:root {
+  --gb_background_color: lightgray;
+  --gb_border_color_1: red;
+  --gb_border_color_2: black;
+  --gb_text_color_1: black;
+  --gb_label_text_color: white;
+  --gb_label_background_color: black;
+  --gb_value_text_color: black;
+  --gb_value_background_color: white;
+}
+
+.GBCTE  * {
+    padding: 2px;
+    margin: 0 0 0 0;
+}
+
+.GBCTE h1, h2, h3, h4, h5, h6 {
+    color: var(--gb_text_color_1);
+}
+
+.GBCTE  hr {
+    color:black;
+    background-color:black;
+}
+
+.GBCTE  .line_label {
+    color: var(--gb_label_text_color);
+    background: var(--gb_label_background_color);
+    float: left;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.GBCTE  .line_value {
+    color: var(--gb_value_text_color);
+    background: var(--gb_value_background_color);
+    display: block;
+    overflow: hidden;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.GBCTE  .my_label {
+    color: var(--gb_label_text_color);
+    background: var(--gb_label_background_color);
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.GBCTE  .my_value {
+    color: var(--gb_value_text_color);
+    background: var(--gb_value_background_color);
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.GBCTE  .l {
+    text-align: left;
+}
+
+.GBCTE  .r {
+    text-align: right;
+}
+
+.GBCTE  .c {
+    text-align: center;
+}
+
+.GBCTE .redline {
+  border-bottom: 5px solid var(--gb_border_color_1);
+}
+
+.GBCTE .npc_sheet {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header"
+        "identify"
+        "traits_n_talents"
+        "notes_n_equipment";
+    grid-gap: 5px;
+    max-width: 1000px;
+    color: var(--gb_text_color_1);
+    padding: 2px;
+    margin: 0 auto;
+    background: lightgray;
+    background-image: url("http://i.imgur.com/nOk3zYE.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+}
+
+/* globals */
+:root {
+  --gb_background_color: lightgray;
+  --gb_border_color_1: red;
+  --gb_border_color_2: black;
+  --gb_text_color_1: black;
+  --gb_label_text_color: white;
+  --gb_label_background_color: black;
+  --gb_value_text_color: black;
+  --gb_value_background_color: white;
+}
+
+.GBCTE  * {
+    padding: 2px;
+    margin: 0 0 0 0;
+}
+
+.GBCTE h1, h2, h3, h4, h5, h6 {
+    color: var(--gb_text_color_1);
+}
+
+.GBCTE  hr {
+    color:black;
+    background-color:black;
+}
+
+.GBCTE  .line_label {
+    color: var(--gb_label_text_color);
+    background: var(--gb_label_background_color);
+    float: left;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.GBCTE  .line_value {
+    color: var(--gb_value_text_color);
+    background: var(--gb_value_background_color);
+    display: block;
+    overflow: hidden;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.GBCTE  .my_label {
+    color: var(--gb_label_text_color);
+    background: var(--gb_label_background_color);
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.GBCTE  .my_value {
+    color: var(--gb_value_text_color);
+    background: var(--gb_value_background_color);
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.GBCTE  .l {
+    text-align: left;
+}
+
+.GBCTE  .r {
+    text-align: right;
+}
+
+.GBCTE  .c {
+    text-align: center;
+}
+
+.GBCTE .redline {
+  border-bottom: 5px solid var(--gb_border_color_1);
+}
+
+.GBCTE .traits_n_talents {
+    grid-area: traits_n_talents;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "traits talents";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+    border-bottom: 5px solid var(--gb_border_color_1);
+}
+
+/********* ********************************************************\
+*    T  R A I T S                                                                                                        *
+\******************************************************************/
+
+.GBCTE .traits {
+    grid-area: traits;
+    display: grid;
+    justify-content: center;
+    align-content: start;
+    grid-template-columns: 60%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "traits_header"
+        "traits_table";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+}
+
+.GBCTE .traits_header {
+    grid-area: traits_header;
+    display: flex;
+    justify-content: center;
+    border-bottom: 5px solid var(--gb_border_color_2);
+}
+
+.GBCTE .traits_table {
+    grid-area: traits_table;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "brains brains_val"
+        "muscles muscles_val"
+        "moves moves_val"
+        "cool cool_val"
+        "line line"
+        "power power_val";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+}
+
+.GBCTE .brains {
+    grid-area: brains;
+}
+
+.GBCTE .brains_val {
+    grid-area: brains_val;
+}
+
+.GBCTE .muscles {
+    grid-area: muscles;
+}
+
+.GBCTE .muscles_val {
+    grid-area: muscles_val;
+}
+
+.GBCTE .moves {
+    grid-area: moves;
+}
+
+.GBCTE .moves_val {
+    grid-area: moves_val;
+}
+
+.GBCTE .cool {
+    grid-area: cool;
+}
+
+.GBCTE .cool_val {
+    grid-area: cool_val;
+}
+
+.GBCTE .line {
+    grid-area: line;
+    border-bottom: 5px solid var(--gb_border_color_2);
+}
+
+.GBCTE .power {
+    grid-area: power;
+}
+
+.GBCTE .power_val {
+    grid-area: power_val;
+}
+
+/********* ********************************************************\
+*    T A L E N T S                                                                                                    *
+\******************************************************************/
+
+.GBCTE .talents {
+    grid-area: talents;
+    display: grid;
+    justify-content: center;
+    align-content: start;
+    grid-template-columns: 60%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "talents_header"
+        "talents_table";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+}
+
+.GBCTE .talents_header {
+    grid-area: talents_header;
+    display: flex;
+    justify-content: center;
+    border-bottom: 5px solid var(--gb_border_color_2);
+}
+
+.GBCTE .talents_table {
+    grid-area: talents_table;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "brains_t brains_t_val"
+        "muscles_t muscles_t_val"
+        "moves_t moves_t_val"
+        "cool_t cool_t_val"
+        "line_t line_t"
+        "lesser_t lesser_t_val"
+        "greater_t greater_t_val";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+}
+
+.GBCTE .brains_t {
+    grid-area: brains_t;
+}
+
+.GBCTE .brains_t_val {
+    grid-area: brains_t_val;
+}
+
+.GBCTE .muscles_t {
+    grid-area: muscles_t;
+}
+
+.GBCTE .muscles_t_val {
+    grid-area: muscles_t_val;
+}
+
+.GBCTE .moves_t {
+    grid-area: moves_t;
+}
+
+.GBCTE .moves_t_val {
+    grid-area: moves_t_val;
+}
+
+.GBCTE .cool_t {
+    grid-area: cool_t;
+}
+
+.GBCTE .cool_t_val {
+    grid-area: cool_t_val;
+}
+
+.GBCTE .line_t {
+    grid-area: line_t;
+    border-bottom: 5px solid var(--gb_border_color_2);
+}
+
+.GBCTE .lesser_t {
+    grid-area: lesser_t;
+}
+
+.GBCTE .lesser_t_val {
+    grid-area: lesser_t_val;
+}
+
+
+.GBCTE  .notes_n_equipment {
+    grid-area: notes_n_equipment;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "notes equipment";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+    border-bottom: 5px solid var(--gb_border_color_1);
+}
+
+.GBCTE .notes {
+    grid-area: notes;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "the_notes";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+    /*border-bottom: 15px double var(--gb_border_color_1);*/
+}
+
+.GBCTE .the_notes {
+    grid-area: the_notes;
+}
+
+/********* ********************************************************\
+*    E Q U I P M E N T                                                                                            *
+\******************************************************************/
+
+.GBCTE .equipment {
+    grid-area: equipment;
+	display: grid;
+    justify-content: center;
+    align-content: start;
+    grid-template-columns: 60%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "equipment_header"
+        "equipment_table";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+}
+
+.GBCTE .equipment_header {
+    grid-area: equipment_header;
+    display: flex;
+    justify-content: center;
+    border-bottom: 5px solid var(--gb_border_color_2);
+}
+
+.GBCTE .equipment_table {
+    grid-area: equipment_table;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "equipment_1_val equipment_1"
+        "equipment_2_val equipment_2"
+        "equipment_3_val equipment_3";
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+}
+
+.GBCTE .equipment_1_val {
+	grid-area: equipment_1_val;
+}
+
+.GBCTE .equipment_1 {
+	grid-area: equipment_1;
+}
+.GBCTE .equipment_2_val {
+	grid-area: equipment_2_val;
+}
+
+.GBCTE .equipment_2 {
+	grid-area: equipment_2;
+}
+.GBCTE .equipment_3_val {
+	grid-area: equipment_3_val;
+}
+
+.GBCTE .equipment_3 {
+	grid-area: equipment_3;
+}
+
+
