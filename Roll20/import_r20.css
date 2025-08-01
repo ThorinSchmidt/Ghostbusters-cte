@@ -82,8 +82,17 @@ td {
 	text-align: center;
 }
 
-.traits, .bp, .extras, .financial,
-.talents, .pd {
+.traits, .bp {
+	float: left;
+	width: 31%;
+}
+
+.talents {
+	float: left;
+	width: 38%;
+}
+
+.extras, .financial, .pd {
 	float: left;
 	width: 33%;
 }
@@ -91,6 +100,12 @@ td {
 .notes, .isp {
 	float: left;
 	width: 66%;
+}
+
+.ghost-die {
+	height: 25px;
+	width: 25px;
+	border-color: white;
 }
 
 /*------Roll Template & Roll button-------*/
@@ -107,7 +122,7 @@ button[type=action].sheet-ghostdie{	/*changes die roller icon to GB symbol*/
 	height: 25px;
 	width: 27px;
 	border-color: white;
-	background-image: url(https://i.imgur.com/ytlqNkJ.png);
+	background-image: url(https://i.imgur.com/9v0MQRd.png);
 	background-size: contain;
 	background-repeat: no-repeat;
 }
@@ -131,6 +146,23 @@ button[type=action].sheet-ghostdie{	/*changes die roller icon to GB symbol*/
 	align-items: center;
 }
 
+.sheet-rolltemplate-ghostdie {
+	width: 200px;
+	height: 230px;
+	color: #000000;
+	background: url("https://i.imgur.com/nnyLjww.png") no-repeat;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 35px 1fr 5fr;
+	grid-template-areas:
+		"spacer"
+		"heading"
+		"ghost";
+	grid-gap: 5px;
+	justify-items: center;
+	align-items: center;
+}
+
 .sheet-rolltemplate-d6 {
 	width: 200px;
 	height: 230px;
@@ -147,6 +179,13 @@ button[type=action].sheet-ghostdie{	/*changes die roller icon to GB symbol*/
 	justify-items: center;
 	align-items: center;
 }
+
+.sheet-rolltemplate-d6 img {
+	height: 50px;
+	width: 54px;
+	border-color: white;
+}
+
 .sheet-rolltemplate-gbcte *,
 .sheet-rolltemplate-d6 {
 	margin-top: 1px;

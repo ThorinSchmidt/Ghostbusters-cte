@@ -62,8 +62,8 @@
 
 		<input type="text" name="attr_power_tal_name"	size="15" class="talent_name">
 		<button type="action" name="act_power_tal" class="sheet-d6"></button><br>
-	
 	</div>
+	
 	<div class="bp c">
 		<h1 class="header">Brownie Points</h1>
 		<p class="bp_label">BP Max:</p>
@@ -84,11 +84,13 @@
 		<input type="number" class="shortnum" name="attr_bp_add" min="0" max="60"
 			value="0"><br>
 	</div>
+	
 	<hr style="clear:both;">
 	<div class=notes c">
 		<h1 class="header">Notes</h1>
 		<textarea name="attr_notes"></textarea>
 	</div>
+	
 	<div class="extras c">
 		<h1 class="header">Extras</h1>
 		<p class="extras_label"> Roll 1 Ghost Die: </p>
@@ -97,115 +99,129 @@
 		<p class="extras_label"> Roll 1 D6: </p>
 		<button type="action" name="act_onedsix" class="sheet-d6"></button><br>
 	</div>
+	
 	<hr style="clear:both;">
-  <h1 class="header">Academic Progress Record</h1>
-  <div class="isp">
-    <table class="c">
-      <caption><h3>Individualized Study Program</h3></caption>
-      <thead>
-        <tr>
-          <th>Old Talent</th>
-          <th>New Talent</th>
-          <th>Progress</th>
-          <th>Target</th>
-        </tr>
-      </thead>
-      <tr>
-        <td><input type="text" name="attr_old_tal_1" size="15" 
-          class="talent_name"></td>
-        <td><input type="text" name="attr_new_tal_1" size="15" 
-          class="talent_name"></td>
-        <td><input type="number" class="shortnum" name="attr_progress_1"	min="0" value="0"></td>
-        <td><input type="number" class="shortnum" name="attr_target_1"	  min="30" max="30"
-          value="30"></td>
-      </tr>
-      <tr>
-        <td><input type="text" name="attr_old_tal_2" size="15" 
-          class="talent_name"></td>
-        <td><input type="text" name="attr_new_tal_2" size="15" 
-          class="talent_name"></td>
-        <td><input type="number" class="shortnum" name="attr_progress_2"	min="0" value="0"></td>
-        <td><input type="number" class="shortnum" name="attr_target_2"	  min="30" max="30"
-          value="30"></td>
-      </tr>
-      <tr>
-        <td><input type="text" name="attr_old_tal_3" size="15" 
-          class="talent_name"></td>
-        <td><input type="text" name="attr_new_tal_3" size="15" 
-          class="talent_name"></td>
-        <td><input type="number" class="shortnum" name="attr_progress_3"	min="0" value="0"></td>
-        <td><input type="number" class="shortnum" name="attr_target_3"	  min="30" max="30"
-          value="30"></td>
-      </tr>
-      <tr>
-        <td><input type="text" name="attr_old_tal_4" size="15" 
-          class="talent_name"></td>
-        <td><input type="text" name="attr_new_tal_4" size="15" 
-          class="talent_name"></td>
-        <td><input type="number" class="shortnum" name="attr_progress_4"	min="0" value="0"></td>
-        <td><input type="number" class="shortnum" name="attr_target_4"	  min="0" max="30"
-          value="30"></td>
-      </tr>
-    </table>
-    <table class="c">
-      <caption><h3>Personal Development</h3></caption>
-      <thead>
-        <tr>
-          <th>Chosen Traio</th>
-          <th>Progress</th>
-          <th>Target</th>
-        </tr>
-      </thead>
-      <tr>
-        <td><input type="text" name="attr_chosen_trait" size="15" 
-          class="trait_name"></td>
-        <td><input type="number" class="shortnum" name="attr_progress_trait"
-          min="0" value="0"></td>
-        <td><input type="number" class="shortnum" name="attr_target_trait"
-          min="30" max="60" step="30" value="30"></td>
-      </tr>
-    </table>
-  </div>
-  <div class="financial">
-    <table class="c">
-      <caption><h3>Financial Standing</h3></caption>
-      <tr>
-        <td>Credits:</td><td>$</td>
-        <td><input type="text" class="longnum" name="attr_credits"
-          size="10" value="0"></td>
-        <td>.00</td>
-      </tr>
-      <tr>
-        <td> - Debits: </td><td>$</td>
-        <td><input type="text" class="longnum" name="attr_debits"
-          size="10" value="0"></td>
-        <td>.00</td>
-      </tr>
-      <tr><td colspan="3"><hr></td></tr>
-      <tr>
-        <td> = Net:    </td><td>$</td>
-        <td><input type="text" class="longnum" name="attr_net"
-          size="10" value="0"></td>
-        <td>.00</td>
-      </tr>
-      <tr><td colspan="3"><hr class="dbl_hr"></td></tr>
-      <tr>
-        <td>Student Obligation: </td><td>$</td>
-        <td><input type="text" class="longnum" name="attr_amt_owed"
-          size="10" value="0"></td>
-        <td>.00</td>
-      </tr>
-      <tr>
-        <td>Student Award:      </td><td>$</td>
-        <td><input type="text" class="longnum" name="attr_amt_award"
-          size="10" value="0"></td>
-        <td>.00</td>
-      </tr>
-    </table>  
-  </div>
-  <div>
-    
-  </div>
+	<h1 class="header">Academic Progress Record</h1>
+	<div class="isp">
+		<table class="c">
+		    <caption><h3>Individualized Study Program</h3></caption>
+		    <thead>
+				<tr>
+					<th>Old Talent</th>
+					<th>New Talent</th>
+					<th>Progress</th>
+					<th>Target</th>
+				</tr>
+		    </thead>
+		    <tr>
+				<td><input type="text" name="attr_old_tal_1" size="15" 
+				    class="talent_name"></td>
+				<td><input type="text" name="attr_new_tal_1" size="15" 
+				    class="talent_name"></td>
+				<td><input type="number" class="shortnum" name="attr_progress_1"
+				    min="0" value="0"></td>
+				<td><input type="number" class="shortnum" name="attr_target_1"
+				    min="30" max="30" value="30"></td>
+		    </tr>
+		    <tr>
+			    <td><input type="text" name="attr_old_tal_2" size="15" 
+			        class="talent_name"></td>
+			    <td><input type="text" name="attr_new_tal_2" size="15" 
+			        class="talent_name"></td>
+			    <td><input type="number" class="shortnum" name="attr_progress_2"
+				    min="0" value="0"></td>
+			    <td><input type="number" class="shortnum" name="attr_target_2"
+				    min="30" max="30" value="30"></td>
+		    </tr>
+		    <tr>
+			    <td><input type="text" name="attr_old_tal_3" size="15" 
+					class="talent_name"></td>
+				<td><input type="text" name="attr_new_tal_3" size="15" 
+					class="talent_name"></td>
+				<td><input type="number" class="shortnum" name="attr_progress_3"
+					min="0" value="0"></td>
+				<td><input type="number" class="shortnum" name="attr_target_3"
+					min="30" max="30" value="30"></td>
+		    </tr>
+		    <tr>
+				<td><input type="text" name="attr_old_tal_4" size="15" 
+					class="talent_name"></td>
+				<td><input type="text" name="attr_new_tal_4" size="15" 
+					class="talent_name"></td>
+				<td><input type="number" class="shortnum" name="attr_progress_4"
+					min="0" value="0"></td>
+				<td><input type="number" class="shortnum" name="attr_target_4"
+					min="0" max="30" value="30"></td>
+		    </tr>
+		</table>
+	
+		<table class="c">
+			<caption><h3>Personal Development</h3></caption>
+			<thead>
+				<tr>
+					<th>Chosen Trait</th>
+					<th>Progress</th>
+					<th>Target</th>
+				</tr>
+			</thead>
+				<tr>
+					<td><input type="text" name="attr_chosen_trait" size="15" 
+						class="trait_name"></td>
+					<td><input type="number" class="shortnum" 
+						name="attr_progress_trait" min="0" value="0"></td>
+					<td><input type="number" class="shortnum" 
+						name="attr_target_trait" min="30" max="60" step="30" 
+						value="30"></td>
+				</tr>
+		</table>
+	
+	</div>
+  
+	<div class="financial">
+		<table class="c">
+			<caption><h3>Financial Standing</h3></caption>
+			<tr>
+				<td>Credits:</td><td>$</td>
+				<td><input type="text" class="longnum" name="attr_credits"
+					size="10" value="0"></td>
+				<td>.00</td>
+			</tr>
+			<tr>
+				<td> - Debits: </td><td>$</td>
+				<td><input type="text" class="longnum" name="attr_debits"
+					size="10" value="0"></td>
+				<td>.00</td>
+			</tr>
+			<tr>
+				<td colspan="3"><hr></td>
+			</tr>
+			<tr>
+				<td> = Net:    </td>
+				<td>$</td>
+				<td><input type="text" class="longnum" name="attr_net"
+					size="10" value="0"></td>
+				<td>.00</td>
+			</tr>
+			<tr>
+				<td colspan="3"><hr class="dbl_hr"></td>
+			</tr>
+			<tr>
+				<td>Student Obligation: </td>
+				<td>$</td>
+				<td><input type="text" class="longnum" name="attr_amt_owed"
+					size="10" value="0"></td>
+				<td>.00</td>
+			</tr>
+			<tr>
+				<td>Student Award:      </td>
+				<td>$</td>
+				<td><input type="text" class="longnum" name="attr_amt_award"
+					size="10" value="0"></td>
+				<td>.00</td>
+			</tr>
+		</table>  
+	</div>
+
 	<hr style="clear:both;">
 </div>
 
@@ -215,12 +231,23 @@
 		<h4>{{name}}</h4>
 		<p>{{description}}</p>
 	</div>
+	
 	<div class="regular">
 		<h3>Regular d6s: {{roll1}}</h3>
 	</div>
+	
 	<div class="ghost">
-		<h3>Ghost Die: {{computed::roll1}}</h3>
+		{{#rollLess() computed::roll1 6}}
+			<h3>Ghost Die: {{computed::roll1}}</h3>
+		{{/rollLess() computed::roll1 6}}
+		{{#^rollLess() computed::roll1 6}}
+			<span>
+				<h3 style-"display: inline;">Ghost Die: </h3>
+				<img class="ghost-die" src="https://i.imgur.com/ytlqNkJ.png">
+			</span>
+		{{/^rollLess() computed::roll1 6}}
 	</div>
+	
 	<div class="total">
 		<h2>Total: {{computed::roll2}}</h2>
 	</div>
@@ -232,7 +259,12 @@
 		<h3>{{name}}</h3>
 	</div>
 	<div class="ghost">
-		<h1>{{computed::roll1}}</h1>
+		{{#rollLess() computed::roll1 6}}
+			<h1>{{computed::roll1}}</h1>
+		{{/rollLess() computed::roll1 6}}
+		{{#^rollLess() computed::roll1 6}}
+			<img src="https://i.imgur.com/ytlqNkJ.png">
+		{{/^rollLess() computed::roll1 6}}
 	</div>
 </rolltemplate>
 
@@ -446,9 +478,6 @@
 			
 			if (ghost < 6) {
 				total += ghost;
-				ghost_roll = ghost.toString();
-			} else {
-				ghost_roll = "GHOST!";
 			}
 						
 			finishRoll(results.rollId,
