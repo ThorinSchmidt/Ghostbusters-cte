@@ -16,6 +16,7 @@ hr {
 select {
 	font-size: 1.5em;
 	margin-bottom: 5px;
+	width: 14em;
 }
 
 table th {
