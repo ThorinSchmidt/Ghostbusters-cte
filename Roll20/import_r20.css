@@ -2,11 +2,55 @@
 	box-sizing: border-box;
 }
 
+caption h3 {
+  margin: 1 1 1 1;
+}
+
 hr {
 	margin-top: 5px;
 	margin-bottom: 5px;
 	border: 0;
 	border-top: 3px solid black;
+}
+
+select {
+	font-size: 1.5em;
+	margin-bottom: 5px;
+}
+
+table th {
+  border-bottom: 3px solid black;
+}
+
+td {
+  text-align: center;
+}
+
+
+textarea {
+	width: 100%;
+	height: 8em;
+}
+
+/***
+---------------- CLASSES -----------------
+***/
+
+.bp, .extras, .notes, .traits {
+	float: left;
+	width: 31%;
+}
+
+.bp_label, .equipment_label, .extras_label, .header_label, .trait_label {
+	display: inline-block;
+	width: 7em;
+	text-align: right;
+}
+
+.c {
+	text-align: center;
+	margin-left: auto;
+  margin-right: auto;
 }
 
 .dbl_hr {
@@ -15,40 +59,34 @@ hr {
 	border-bottom: 2px solid black;
 }
 
-table th {
-  border-bottom: 3px solid black;
+.equipment, .talents {
+	float: left;
+	width: 37%;
 }
 
-caption h3 {
-  margin: 1 1 1 1;
-}
-
-textarea {
-	width: 100%;
-	height: 8em;
-}
-
-td {
-  text-align: center;
+.financial, .isp, .pd {
+	width: 66%;
+	margin-bottom: 10px;
+	
 }
 
 .financial td {
   text-align: right;
 }
 
-.shortnum {
+.ghost-die {
+	height: 25px;
+	width: 25px;
+	border-color: white;
+}
+
+.header {
 	text-align: center;
-	width: 3em;
+	color: red;
 }
 
 .longnum {
 	text-align: right;
-}
-
-.text_input_label {
-  display: inline-block;
-  text-align: center;
-  width: 30en;
 }
 
 .num_input_label {
@@ -57,21 +95,9 @@ td {
   width: 3em;
 }  
 
-.c {
+.shortnum {
 	text-align: center;
-	margin-left: auto;
-  margin-right: auto;
-}
-
-.header {
-	text-align: center;
-	color: red;
-}
-
-.bp_label, .extras_label, .trait_label, .header_label {
-	display: inline-block;
-	width: 7em;
-	text-align: right;
+	width: 3em;
 }
 
 .talent_name {
@@ -82,33 +108,16 @@ td {
 	text-align: center;
 }
 
-.traits, .bp {
-	float: left;
-	width: 31%;
+.text_input_label {
+  display: inline-block;
+  text-align: center;
+  width: 30en;
 }
 
-.talents {
-	float: left;
-	width: 38%;
-}
+/***
+------ ROLL TEMPLATE & ROLL BUTTON -------
+***/
 
-.extras, .financial, .pd {
-	float: left;
-	width: 33%;
-}
-
-.notes, .isp {
-	float: left;
-	width: 66%;
-}
-
-.ghost-die {
-	height: 25px;
-	width: 25px;
-	border-color: white;
-}
-
-/*------Roll Template & Roll button-------*/
 button[type=action].sheet-d6{	/*changes die roller icon to d6*/
 	height: 25px;
 	width: 25px;

@@ -44,23 +44,24 @@
 	
 	<div class="talents c">
 		<h1 class="header">Talents</h1>
-		<input type="text" name="attr_brains_tal_name" size="15" class="talent_name">
+		
+		<input type="text" name="attr_brains_tal_name" size="12" class="talent_name">
 		<input type="number" class="shortnum" name="attr_brains_tal_score"	min="4" max="12" value="0">
 		<button type="action" name="act_brains_tal" class="sheet-d6"></button><br>
 
-		<input type="text" name="attr_muscles_tal_name" size="15" class="talent_name">
+		<input type="text" name="attr_muscles_tal_name" size="12" class="talent_name">
 		<input type="number" class="shortnum" name="attr_muscles_tal_score" min="4" max="12"	value="0">
 		<button type="action" name="act_muscles_tal" class="sheet-d6"></button><br>
 
-		<input type="text" name="attr_moves_tal_name"	size="15" class="talent_name">
+		<input type="text" name="attr_moves_tal_name"	size="12" class="talent_name">
 		<input type="number" class="shortnum" name="attr_moves_tal_score" min="4" max="12"	value="0">
 		<button type="action" name="act_moves_tal" class="sheet-d6"></button><br>
 
-		<input type="text" name="attr_cool_tal_name"	size="15" class="talent_name">
+		<input type="text" name="attr_cool_tal_name"	size="12" class="talent_name">
 		<input type="number" class="shortnum" name="attr_cool_tal_score"	min="4" max="12"	value="0">
 		<button type="action" name="act_cool_tal" class="sheet-d6"></button><br>
 
-		<input type="text" name="attr_power_tal_name"	size="15" class="talent_name">
+		<input type="text" name="attr_power_tal_name"	size="12" class="talent_name">
 		<button type="action" name="act_power_tal" class="sheet-d6"></button><br>
 	</div>
 	
@@ -86,9 +87,42 @@
 	</div>
 	
 	<hr style="clear:both;">
+	
 	<div class=notes c">
 		<h1 class="header">Notes</h1>
 		<textarea name="attr_notes"></textarea>
+	</div>
+	
+	<div class="equipment c">
+		<h1 class="header">Equipment</h1>
+		
+		<select>
+			<option value="---">---</option>
+			<option value="protonpack">Proton Pack</option>
+			<option value="slimeblower">Slime Blower</option>
+			<option value="ghosttrap">Ghost Trap</option>
+			<option value="pkemeter">PKE Meter</option>
+			
+		</select>
+		<br>
+		<select>
+			<option value="---">---</option>
+			<option value="protonpack">Proton Pack</option>
+			<option value="slimeblower">Slime Blower</option>
+			<option value="ghosttrap">Ghost Trap</option>
+			<option value="pkemeter">PKE Meter</option>
+			
+		</select>
+		<br>
+		<select>
+			<option value="---">---</option>
+			<option value="protonpack">Proton Pack</option>
+			<option value="slimeblower">Slime Blower</option>
+			<option value="ghosttrap">Ghost Trap</option>
+			<option value="pkemeter">PKE Meter</option>
+			
+		</select>
+		
 	</div>
 	
 	<div class="extras c">
@@ -102,7 +136,8 @@
 	
 	<hr style="clear:both;">
 	<h1 class="header">Academic Progress Record</h1>
-	<div class="isp">
+	
+	<div class="isp c">
 		<table class="c">
 		    <caption><h3>Individualized Study Program</h3></caption>
 		    <thead>
@@ -177,7 +212,7 @@
 	
 	</div>
   
-	<div class="financial">
+	<div class="financial c">
 		<table class="c">
 			<caption><h3>Financial Standing</h3></caption>
 			<tr>
@@ -237,35 +272,39 @@
 	</div>
 	
 	<div class="ghost">
-		{{#rollLess() computed::roll1 6}}
 			<h3>Ghost Die: {{computed::roll1}}</h3>
-		{{/rollLess() computed::roll1 6}}
-		{{#^rollLess() computed::roll1 6}}
-			<span>
-				<h3 style-"display: inline;">Ghost Die: </h3>
-				<img class="ghost-die" src="https://i.imgur.com/ytlqNkJ.png">
-			</span>
-		{{/^rollLess() computed::roll1 6}}
 	</div>
 	
 	<div class="total">
 		<h2>Total: {{computed::roll2}}</h2>
 	</div>
+	
 </rolltemplate>
 
 <rolltemplate class="sheet-rolltemplate-d6">
 	<div class="spacer"></div>
+	
 	<div class="heading">
 		<h3>{{name}}</h3>
 	</div>
+	
 	<div class="ghost">
-		{{#rollLess() computed::roll1 6}}
 			<h1>{{computed::roll1}}</h1>
-		{{/rollLess() computed::roll1 6}}
-		{{#^rollLess() computed::roll1 6}}
-			<img src="https://i.imgur.com/ytlqNkJ.png">
-		{{/^rollLess() computed::roll1 6}}
 	</div>
+	
+</rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-ghostdie">
+	<div class="spacer"></div>
+	
+	<div class="heading">
+		<h3>{{name}}</h3>
+	</div>
+	
+	<div class="ghost">
+		<h1>{{roll1}}</h1>
+	</div>
+	
 </rolltemplate>
 
 <script type="text/worker">
@@ -430,37 +469,47 @@
 		});
 	});
 
-	on('clicked:oneghost clicked:onedsix', (info) => {
-		let name = "Ghost Die";
+	on('clicked:onedsix', (info) => {
+		let name = "1D6";
 		let die_roll = 0;
-		let die_result = "0";
-		
-		if (info.triggerName == "clicked:onedsix") {
-			name = "1D6";
-		}
 
 		startRoll(`&{template:d6} {{name=${name}:}} {{roll1=[[1d6]]}}`, (results) => {
 			
 			die_roll = results.results.roll1.result;
-			die_result = die_roll.toString();
-			
-			if (info.triggerName == "clicked:oneghost" &&
-					die_roll == 6) {
-				die_result = "GHOST!";
-			}
 			
 			finishRoll(results.rollId,
 				{
-					roll1: die_result
+					roll1: die_roll
 				}
 			);
 		});
 	});
-	
+
+	on('clicked:oneghost', (info) => {
+		let name = "Ghost Die";
+		let die_roll = 0;
+		let die_text = "0";
+
+		startRoll(`&{template:ghostdie} {{name=${name}:}} {{roll1=[[1d6]]}}`, (results) => {
+			die_roll = results.results.roll1.result;
+			die_text = die_roll.toString();
+			
+			if (die_roll == 6) {
+				die_text = "GHOST"
+			}
+
+			finishRoll(results.rollId,
+				{
+					roll1: die_text
+				}
+			);
+		});
+	});
+
 	function parseRoll(name, number, added, spent) {
 		let reg_dice = number + added - 1; // add BPs to roll and -1 for Ghost Die
 		let new_spent = spent + added;  
-		let ghost_roll = "#";
+		let ghost_roll = "0";
 		
 		//reset the "bp_add" and "bp_spent" fields. "bp_current" will update automatically. 
 		setAttrs({
@@ -469,7 +518,7 @@
 		});
 			
 		startRoll(`&{template:gbcte} {{name=${name}:}} ` +
-							`{{description=Rolling ${reg_dice}d6 + Ghost Die...}}`+
+							`{{description=Rolling ${reg_dice}d6 + 1 Ghost Die...}}`+
 							` {{roll1=[[${reg_dice}d6]]}} {{roll2=[[1d6]]}}`,
 							(results) => {
 			let regular = results.results.roll1.result;
@@ -478,8 +527,12 @@
 			
 			if (ghost < 6) {
 				total += ghost;
+				ghost_roll = ghost.toString();
 			}
-						
+			else {
+				ghost_roll = "GHOST"
+			}
+				
 			finishRoll(results.rollId,
 				{
 					roll1: ghost_roll,
