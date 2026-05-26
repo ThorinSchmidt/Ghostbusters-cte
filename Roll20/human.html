@@ -1,17 +1,29 @@
 <html>
 <head>
+<!--
+  <link rel = "stylesheet" type = "text/css" href = "Ghostbusters.css">-->
 	<link rel = "stylesheet" type = "text/css" href = "import_r20.css">  
 </head>
 <body>
 <!-- begin Roll20 content -->
 <div class="charsheet">
-	<div>
-		<h1 class="header">Ghostbuster-In-Training ID Card</h1>
+  <h1 class="header">Ghostbuster-In-Training ID Card</h1>
+  
+  <hr class="sheet-rule">
+  
+  <p></p>
+  <input type="radio" name="attr_tab" class="sheet-tab sheet-tab1" value="1" title="Humans" checked="checked" />
+  <span class="sheet-tab sheet-tab1"> Mortal </span>
+  <input type="radio" name="attr_tab" class="sheet-tab sheet-tab2" value="2" title="Ghosts" />
+  <span class="sheet-tab sheet-tab2"> Ghost </span>
+  <p></p>
+    
+  <div class="sheet-section-core">
 		<div class="header">
 			<p class="header_label">GIT #:</p>
 			<input type="text" name="attr_GITnum" size="5">
 		</div>
-	</div>
+  </div>
 	
 	<hr>
 	
@@ -21,34 +33,66 @@
 		<p class="header_label">Goal: </p>
 		<input type="text" name="attr_goal" size = 25">
 	</div>
-	
-	<hr>
+  
+  <div class="sheet-section-ghost">
+    <p class="header_label">Class: </p>
+		<input type="text" name="attr_class" size = 25">
+		<p class="header_label">Manifestation: </p>
+		<input type="text" name="attr_manifest" size = 25">
+    <br>
+    <p class="header_label">Type:</p>
+		<input type="text" name="attr_class" size = 25">
+		<p class="header_label">Description: </p>
+		<input type="text" name="attr_manifest" size = 25">
+    <br>
+    <p class="header_label">Characteristic:</p>
+		<input type="text" name="attr_characteristic" size = 25">
+  </div>
+  
+	<hr style="clear:both;">
 		
-	<div class="traits c">
+  <div class="traits c">
 		<h1 class="header">Traits</h1>
-		<p class="trait_label"> Brains: </p>
-		<input type="number" class="shortnum" name="attr_brains_score" min="1" max="9"	value="0">
+    
+    <p class="trait_label">&nbsp; </p>
+    <p class="input_spacer">MAX</p>
+    <p class="input_spacer">CUR</p>
+    <p class ="btn_spacer">&nbsp;</p>
+    <br>
+    <p class="trait_label"> Brains: </p>
+		<input type="number" class="shortnum" name="attr_brains_max" min="1" max="99"	value="0">
+    <input type="number" class="shortnum" name="attr_brains_score" min="0" max="99"	value="0">
 		<button type="action" name="act_brains" class="sheet-d6"></button><br>
 		
 		<p class="trait_label"> Muscles: </p>
-		<input type="number" class="shortnum" name="attr_muscles_score" min="1" max="9" value="0">
+    <input type="number" class="shortnum" name="attr_muscles_max" min="1" max="99"	value="0">
+		<input type="number" class="shortnum" name="attr_muscles_score" min="0" max="99" value="0">
 		<button type="action" name="act_muscles" class="sheet-d6"></button><br>
 		
 		<p class="trait_label"> Moves: </p>
-		<input type="number" class="shortnum" name="attr_moves_score" min="1" max="9"	value="0">
+    <input type="number" class="shortnum" name="attr_moves_max" min="1" max="99"	value="0">
+		<input type="number" class="shortnum" name="attr_moves_score" min="0" max="99"	value="0">
 		<button type="action" name="act_moves" class="sheet-d6"></button><br>
 		
 		<p class="trait_label"> Cool: </p>
-		<input type="number" class="shortnum" name="attr_cool_score" min="1" max="9"	value="0">
+    <input type="number" class="shortnum" name="attr_Cool_max" min="1" max="99"	value="0">
+		<input type="number" class="shortnum" name="attr_cool_score" min="0" max="99"	value="0">
 		<button type="action" name="act_cool" class="sheet-d6"></button><br>
 
 		<p class="trait_label"> Power: </p>
-		<input type="number" class="shortnum" name="attr_power_score" min="0" max="9"	value="0">
-	</div>
+    <input type="number" class="shortnum" name="attr_power_max" min="1" max="99"	value="0">
+		<input type="number" class="shortnum" name="attr_power_score" min="0" max="99"	value="0" style="margin-top: 5px;">
+    <p class ="btn_spacer">&nbsp;</p>
+  </div>
 	
 	<div class="talents c">
 		<h1 class="header">Talents</h1>
 		
+    <p class="talent_spacer">Name</p>
+    <p class="input_spacer">Score</p>
+    <p class="btn_spacer">&nbsp;</p>
+    <br>
+    
 		<input type="text" name="attr_brains_tal_name" size="12" class="talent_name">
 		<input type="number" class="shortnum" name="attr_brains_tal_score"	min="4" max="12" value="0">
 		<button type="action" name="act_brains_tal" class="sheet-d6"></button><br>
@@ -67,6 +111,7 @@
 
 		<input type="text" name="attr_power_tal_name"	size="12" class="talent_name">
 		<button type="action" name="act_power_tal" class="sheet-d6"></button><br>
+    <br>
 	</div>
 	
 	<div class="bp c">
@@ -75,10 +120,10 @@
 		<input type="number" class="shortnum" name="attr_bp_max" min="0" max="60"
 			value="20"><br>
 		
-		<p class="bp_label">BP Spent:</p>
+		<p class="bp_label">- BP Spent:</p>
 		<input type="number" class="shortnum" name="attr_bp_spent" min="0" max="60"
 			value="0"><br>
-		
+		<hr>
 		<p class="bp_label">BP Current:</p>
 		<input type="number" class="shortnum" name="attr_bp_current" min="0" max="60"
 			value="20"><br>
@@ -89,7 +134,15 @@
 		<input type="number" class="shortnum" name="attr_bp_add" min="0" max="60"
 			value="0"><br>
 	</div>
-	
+  
+  <div class="sheet-section-ghost ep c">
+		<p class="trait_label"> Ectopresence: </p>
+    <input type="number" class="shortnum" name="attr_power_max" min="1" max="99"	value="0">
+		<input type="number" class="shortnum" name="attr_power_score" min="0" max="99"	value="0" style="margin-top: 5px;margin-bottom: 5px;">
+    <p class ="btn_spacer">&nbsp;</p>
+    <br>
+  </div>
+  
 	<hr style="clear:both;">
 	
 	<div class=notes c">
@@ -97,123 +150,23 @@
 		<textarea name="attr_notes"></textarea>
 	</div>
 	
-	<div class="equipment c">
+	<div class="sheet-section-core equipment c">
 		<h1 class="header">Equipment</h1>
 		
-		<select>
-			<option value="standard">---Standard---</option>
-			<option value="auravideoanalyzer">Aura Video Analyver</option>
-			<option value="climbinggear">Climbing Gear</option>
-			<option value="beachkit">Beach Kit</option>
-			<option value="bullhorn">Bulhorn</option>
-			<option value="ectogoggles">Ecto Goggles</option>
-			<option value="ectobuskeys">EctoBus Keys</option>
-			<option value="ghosttrap">Ghost Trap</option>
-			<option value="gigameter">Giga Meter</option>
-			<option value="pkemeter">PKE Meter</option>
-			<option value="parachute">Parachute</option>		
-			<option value="protonpack">Proton Pack</option>
-			<option value="scubadear">Scuba Gear</option>
-			<option value="slimeblower">Slime Blower</option>
-			<option value="walkietalkie">Walkie Talkie</option>
-			
-			<option value="special">---Special---</option>
-			<option value="bosoonupgradepack">Boson Upgrade Pack</option>
-			<option value="darkmattergenerator">Dark Matter Generator</option>
-			<option value="ectolamp">Ecto Lamp</option>
-			<option value="ghostbeacon">Ghost Beacon</option>
-			<option value="kudmeter">K.U.D. Meter</option>
-			<option value="polarityrectifiers">Polarity Rectifiers</option>
-			<option value="protonpistol">Proton Pistol</option>
-			<option value="slimegrenades">Slime Grenades</option>
-			
-			<option value="experimental">---Experimental</option>
-			<option value="armmountedpack">Arm-Mounted Proton Pack</option>
-			<option value="entropyamplifier">Entropy Amplifier</option>
-			<option value="mentalcomm">Mental Comm Gear</option>
-			
-			<option value="unauthorized">---UNAUTHORIZED!---</option>
-			<option value="tactialcommgear">Tactical Comm Gear</option>
-									
-		</select>
+    <input type="text" name="attr_equipment_1" size="20" class="gear">
 		<br>
-		<select>
-			<option value="standard">---Standard---</option>
-			<option value="auravideoanalyzer">Aura Video Analyver</option>
-			<option value="climbinggear">Climbing Gear</option>
-			<option value="beachkit">Beach Kit</option>
-			<option value="bullhorn">Bulhorn</option>
-			<option value="ectogoggles">Ecto Goggles</option>
-			<option value="ectobuskeys">EctoBus Keys</option>
-			<option value="ghosttrap">Ghost Trap</option>
-			<option value="gigameter">Giga Meter</option>
-			<option value="pkemeter">PKE Meter</option>
-			<option value="parachute">Parachute</option>		
-			<option value="protonpack">Proton Pack</option>
-			<option value="scubadear">Scuba Gear</option>
-			<option value="slimeblower">Slime Blower</option>
-			<option value="walkietalkie">Walkie Talkie</option>
-			
-			<option value="special">---Special---</option>
-			<option value="bosoonupgradepack">Boson Upgrade Pack</option>
-			<option value="darkmattergenerator">Dark Matter Generator</option>
-			<option value="ectolamp">Ecto Lamp</option>
-			<option value="ghostbeacon">Ghost Beacon</option>
-			<option value="kudmeter">K.U.D. Meter</option>
-			<option value="polarityrectifiers">Polarity Rectifiers</option>
-			<option value="protonpistol">Proton Pistol</option>
-			<option value="slimegrenades">Slime Grenades</option>
-			
-			<option value="experimental">---Experimental</option>
-			<option value="armmountedpack">Arm-Mounted Proton Pack</option>
-			<option value="entropyamplifier">Entropy Amplifier</option>
-			<option value="mentalcomm">Mental Comm Gear</option>
-			
-			<option value="unauthorized">---UNAUTHORIZED!---</option>
-			<option value="tactialcommgear">Tactical Comm Gear</option>
-									
-		</select>
+		<input type="text" name="attr_equipment_2" size="20" class="gear">
 		<br>
-		<select>
-			<option value="standard">---Standard---</option>
-			<option value="auravideoanalyzer">Aura Video Analyver</option>
-			<option value="climbinggear">Climbing Gear</option>
-			<option value="beachkit">Beach Kit</option>
-			<option value="bullhorn">Bulhorn</option>
-			<option value="ectogoggles">Ecto Goggles</option>
-			<option value="ectobuskeys">EctoBus Keys</option>
-			<option value="ghosttrap">Ghost Trap</option>
-			<option value="gigameter">Giga Meter</option>
-			<option value="pkemeter">PKE Meter</option>
-			<option value="parachute">Parachute</option>		
-			<option value="protonpack">Proton Pack</option>
-			<option value="scubadear">Scuba Gear</option>
-			<option value="slimeblower">Slime Blower</option>
-			<option value="walkietalkie">Walkie Talkie</option>
-			
-			<option value="special">---Special---</option>
-			<option value="bosoonupgradepack">Boson Upgrade Pack</option>
-			<option value="darkmattergenerator">Dark Matter Generator</option>
-			<option value="ectolamp">Ecto Lamp</option>
-			<option value="ghostbeacon">Ghost Beacon</option>
-			<option value="kudmeter">K.U.D. Meter</option>
-			<option value="polarityrectifiers">Polarity Rectifiers</option>
-			<option value="protonpistol">Proton Pistol</option>
-			<option value="slimegrenades">Slime Grenades</option>
-			
-			<option value="experimental">---Experimental</option>
-			<option value="armmountedpack">Arm-Mounted Proton Pack</option>
-			<option value="entropyamplifier">Entropy Amplifier</option>
-			<option value="mentalcomm">Mental Comm Gear</option>
-			
-			<option value="unauthorized">---UNAUTHORIZED!---</option>
-			<option value="tactialcommgear">Tactical Comm Gear</option>
-									
-		</select>
-		
+		<input type="text" name="attr_equipment_3" size="20" class="gear">
+		<br>			
 	</div>
 	
-	<div class="extras c">
+  <div class="sheet-section-ghost abilities c">
+		<h1 class="header">Abilities</h1>
+    <textarea name="attr_abilities"></textarea>		
+	</div>
+	
+	<div class="sheet-section-core extras c">
 		<h1 class="header">Extras</h1>
 		<p class="extras_label"> Roll 1 Ghost Die: </p>
 		<button type="action" name="act_oneghost" class="sheet-ghostdie"></button><br>
@@ -222,129 +175,183 @@
 		<button type="action" name="act_onedsix" class="sheet-d6"></button><br>
 	</div>
 	
-	<hr style="clear:both;">
-	<h1 class="header">Academic Progress Record</h1>
-	
-	<div class="isp c">
-		<table class="c">
-		    <caption><h3>Individualized Study Program</h3></caption>
-		    <thead>
-				<tr>
-					<th>Old Talent</th>
-					<th>New Talent</th>
-					<th>Progress</th>
-					<th>Target</th>
-				</tr>
-		    </thead>
-		    <tr>
-				<td><input type="text" name="attr_old_tal_1" size="15" 
-				    class="talent_name"></td>
-				<td><input type="text" name="attr_new_tal_1" size="15" 
-				    class="talent_name"></td>
-				<td><input type="number" class="shortnum" name="attr_progress_1"
-				    min="0" value="0"></td>
-				<td><input type="number" class="shortnum" name="attr_target_1"
-				    min="30" max="30" value="30"></td>
-		    </tr>
-		    <tr>
-			    <td><input type="text" name="attr_old_tal_2" size="15" 
-			        class="talent_name"></td>
-			    <td><input type="text" name="attr_new_tal_2" size="15" 
-			        class="talent_name"></td>
-			    <td><input type="number" class="shortnum" name="attr_progress_2"
-				    min="0" value="0"></td>
-			    <td><input type="number" class="shortnum" name="attr_target_2"
-				    min="30" max="30" value="30"></td>
-		    </tr>
-		    <tr>
-			    <td><input type="text" name="attr_old_tal_3" size="15" 
-					class="talent_name"></td>
-				<td><input type="text" name="attr_new_tal_3" size="15" 
-					class="talent_name"></td>
-				<td><input type="number" class="shortnum" name="attr_progress_3"
-					min="0" value="0"></td>
-				<td><input type="number" class="shortnum" name="attr_target_3"
-					min="30" max="30" value="30"></td>
-		    </tr>
-		    <tr>
-				<td><input type="text" name="attr_old_tal_4" size="15" 
-					class="talent_name"></td>
-				<td><input type="text" name="attr_new_tal_4" size="15" 
-					class="talent_name"></td>
-				<td><input type="number" class="shortnum" name="attr_progress_4"
-					min="0" value="0"></td>
-				<td><input type="number" class="shortnum" name="attr_target_4"
-					min="0" max="30" value="30"></td>
-		    </tr>
-		</table>
-	
-		<table class="c">
-			<caption><h3>Personal Development</h3></caption>
-			<thead>
-				<tr>
-					<th>Chosen Trait</th>
-					<th>Progress</th>
-					<th>Target</th>
-				</tr>
-			</thead>
-				<tr>
-					<td><input type="text" name="attr_chosen_trait" size="15" 
-						class="trait_name"></td>
-					<td><input type="number" class="shortnum" 
-						name="attr_progress_trait" min="0" value="0"></td>
-					<td><input type="number" class="shortnum" 
-						name="attr_target_trait" min="30" max="60" step="30" 
-						value="30"></td>
-				</tr>
-		</table>
-	
+  <div class="sheet-section-ghost weaknesses c">
+		<h1 class="header">Weaknesses</h1>
+    <textarea name="attr_weaknesses"></textarea>		
 	</div>
   
-	<div class="financial c">
-		<table class="c">
-			<caption><h3>Financial Standing</h3></caption>
-			<tr>
-				<td>Credits:</td><td>$</td>
-				<td><input type="text" class="longnum" name="attr_credits"
-					size="10" value="0"></td>
-				<td>.00</td>
-			</tr>
-			<tr>
-				<td> - Debits: </td><td>$</td>
-				<td><input type="text" class="longnum" name="attr_debits"
-					size="10" value="0"></td>
-				<td>.00</td>
-			</tr>
-			<tr>
-				<td colspan="3"><hr></td>
-			</tr>
-			<tr>
-				<td> = Net:    </td>
-				<td>$</td>
-				<td><input type="text" class="longnum" name="attr_net"
-					size="10" value="0"></td>
-				<td>.00</td>
-			</tr>
-			<tr>
-				<td colspan="3"><hr class="dbl_hr"></td>
-			</tr>
-			<tr>
-				<td>Student Obligation: </td>
-				<td>$</td>
-				<td><input type="text" class="longnum" name="attr_amt_owed"
-					size="10" value="0"></td>
-				<td>.00</td>
-			</tr>
-			<tr>
-				<td>Student Award:      </td>
-				<td>$</td>
-				<td><input type="text" class="longnum" name="attr_amt_award"
-					size="10" value="0"></td>
-				<td>.00</td>
-			</tr>
-		</table>  
-	</div>
-
+  <hr style="clear:both;">
+  <div class="sheet-section-core">
+    <h1 class="header">Academic Progress Record</h1>
+    
+    <div class="isp c">
+      <table class="c">
+          <caption><h3>Individualized Study Program</h3></caption>
+          <thead>
+          <tr>
+            <th>Old Talent</th>
+            <th>New Talent</th>
+            <th>Progress</th>
+            <th>Target</th>
+          </tr>
+          </thead>
+          <tr>
+          <td><input type="text" name="attr_old_tal_1" size="15" 
+              class="talent_name"></td>
+          <td><input type="text" name="attr_new_tal_1" size="15" 
+              class="talent_name"></td>
+          <td><input type="number" class="shortnum" name="attr_progress_1"
+              min="0" value="0"></td>
+          <td><input type="number" class="shortnum" name="attr_target_1"
+              min="30" max="30" value="30"></td>
+          </tr>
+          <tr>
+            <td><input type="text" name="attr_old_tal_2" size="15" 
+                class="talent_name"></td>
+            <td><input type="text" name="attr_new_tal_2" size="15" 
+                class="talent_name"></td>
+            <td><input type="number" class="shortnum" name="attr_progress_2"
+              min="0" value="0"></td>
+            <td><input type="number" class="shortnum" name="attr_target_2"
+              min="30" max="30" value="30"></td>
+          </tr>
+          <tr>
+            <td><input type="text" name="attr_old_tal_3" size="15" 
+            class="talent_name"></td>
+          <td><input type="text" name="attr_new_tal_3" size="15" 
+            class="talent_name"></td>
+          <td><input type="number" class="shortnum" name="attr_progress_3"
+            min="0" value="0"></td>
+          <td><input type="number" class="shortnum" name="attr_target_3"
+            min="30" max="30" value="30"></td>
+          </tr>
+          <tr>
+          <td><input type="text" name="attr_old_tal_4" size="15" 
+            class="talent_name"></td>
+          <td><input type="text" name="attr_new_tal_4" size="15" 
+            class="talent_name"></td>
+          <td><input type="number" class="shortnum" name="attr_progress_4"
+            min="0" value="0"></td>
+          <td><input type="number" class="shortnum" name="attr_target_4"
+            min="0" max="30" value="30"></td>
+          </tr>
+      </table>
+    
+      <table class="c">
+        <caption><h3>Personal Development</h3></caption>
+        <thead>
+          <tr>
+            <th>Chosen Trait</th>
+            <th>Progress</th>
+            <th>Target</th>
+          </tr>
+        </thead>
+          <tr>
+            <td><input type="text" name="attr_chosen_trait" size="15" 
+              class="trait_name"></td>
+            <td><input type="number" class="shortnum" 
+              name="attr_progress_trait" min="0" value="0"></td>
+            <td><input type="number" class="shortnum" 
+              name="attr_target_trait" min="30" max="60" step="30" 
+              value="30"></td>
+          </tr>
+      </table>
+    </div>
+    
+    <div class="lifestyle c">
+      <table class="c">
+        <caption><h3>Cost of Living</h3></caption>
+        <thead>
+          <th>Cost</th>
+          <th></th>
+          <th>Lifestyle</th>
+          <th>Trait Recovery</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>$0</td>
+            <td><input type="radio" id="school" name="lifestyle" value="0"></td>
+            <td><label for="school">Live At the School</label></td>
+            <td>0 *</td>
+          </tr>
+          <tr>
+            <td>$1000</td>
+            <td><input type="radio" id="flop" name="lifestyle" value="1000"></td>
+            <td><label for="flop">"Flophouse" Room</label></td>
+            <td>0.5 **</td>
+          </tr>
+          <tr>
+            <td>$2000</td>
+            <td><input type="radio" id="studio" name="lifestyle" value="2000"></td>
+            <td><label for="studio">Studio Apartment</label></td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>$3000</td>
+            <td><input type="radio" id="twobed" name="lifestyle" value="3000"></td>
+            <td><label for="twobed">2 Bdrm Apartment</label></td>
+            <td>1.5 **</td>
+          </tr>
+          <tr>
+            <td>$4000</td>
+            <td><input type="radio" id="condo" name="lifestyle" value="4000"></td>
+            <td><label for="condo">3 Bdrm Condo</label></td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>$5000</td>
+            <td><input type="radio" id="house" name="lifestyle" value="5000"></td>
+            <td><label for="house">4 Bdrm House</label></td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>$6000</td>
+            <td><input type="radio" id="pool" name="lifestyle" value="6000"></td>
+            <td><label for="">4 Bdrm House<br>with Pool</label></td>
+            <td>All</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <div class="financial c">
+      <table class="c">
+        <caption><h3>Financial Standing</h3></caption>
+        <tr>
+          <td>Student Debt:</td><td>$</td>
+          <td><input type="text" class="longnum" name="attr_credits"
+            size="10" value="0"></td>
+          <td>.00</td>
+        </tr>
+        <tr>
+          <td> - Student Earnings: </td><td>$</td>
+          <td><input type="text" class="longnum" name="attr_debits"
+            size="10" value="0"></td>
+          <td>.00</td>
+        </tr>
+        <tr>
+          <td colspan="3"><hr></td>
+        </tr>
+        <tr>
+          <td> = Net:    </td>
+          <td>$</td>
+          <td><input type="text" class="longnum" name="attr_net"
+            size="10" value="0"></td>
+          <td>.00</td>
+        </tr>
+        <tr>
+          <td colspan="3"><hr class="dbl_hr"></td>
+        </tr>
+        <tr>
+          <td colspan="3" style="text-align: left">* - 1 Trait Point can be recovered for every $1000 spent at the Spa.</td>
+        </tr>
+        <tr>
+          <td colspan="3" style="text-align: left">** - 1/2 Trait Point can be recovered for every $500 spent at the Spa.</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  
 	<hr style="clear:both;">
 </div>
 
@@ -403,21 +410,9 @@
       let credit_int = parseInt(values.credits)||0;
       let debit_int = parseInt(values.debits)||0;
       let net_int = credit_int - debit_int;
-      let award_int = 0;
-      let owed_int = 0;
-      
-      if (net_int < 0) {
-        award_int = 0;
-        owed_int = Math.round(Math.abs(net_int) * .7);
-      } else {
-        owed_int = 0;
-        award_int = Math.round(net_int * .7);
-      }
       
       setAttrs({                            
-				"net": net_int,
-				"amt_owed": owed_int,
-				"amt_award": award_int,
+				"net": net_int
 			});
     });
   });
